@@ -26,10 +26,14 @@ def db(*args):
     print("")
 
 
-def gen_func(funcname, params, tag):
+def gen_func(funcname, params, tag, is_callback):
     """generates a sublime-completions line based on a function"""
 
-    out = '{"name": "%s", "tag": "%s", "args": [' % (funcname, tag)
+    out = '{"name": "%s", "tag": "%s", "is_callback": "%s", "args": [' % (
+        funcname,
+        tag,
+        str(is_callback).lower()
+    )
 
     out += ', '.join([
         f'"{param}"'
@@ -86,6 +90,7 @@ def scan_contents(contents):
     in_function_params = False
     pos_function_name = -1
     pos_function_param = -1
+    is_function_callback = False
     data_function_tag = "_"
     data_function_name = ""
     data_function_params = []
@@ -329,6 +334,7 @@ def scan_contents(contents):
                     data_function_name,
                     data_function_params,
                     data_function_tag,
+                    is_function_callback,
                 )
                 in_function = False
                 print("[EXTRACTED] FUNCTION '%s' PARAMS: %s" % (
@@ -344,8 +350,9 @@ def scan_contents(contents):
                 skip_until_whitespace_start = True
                 in_function = True
                 in_function_params = False
-                data_function_name = ""
+                is_function_callback = contents.startswith('forward', i)
                 data_function_tag = "_"
+                data_function_name = ""
                 data_function_params = []
                 no_function_params = False
                 continue
