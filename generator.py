@@ -29,7 +29,7 @@ def db(*args):
 def gen_func(funcname, params):
     """generates a sublime-completions line based on a function"""
 
-    out = '\t\t{"trigger": "%s", "contents": "%s(' % (funcname, funcname)
+    out = '{"name": "%s(' % (funcname,)
 
     for i, param in enumerate(params):
         out += '${%d:%s}' % (i + 1, param.replace('\\', '\\\\').replace('"', '\\\"'))
@@ -71,12 +71,7 @@ def scan_contents(contents):
     functions
     """
 
-    output_contents = """
-{
-    "scope": "source.pawn - variable.other.pawn",
-    "completions":
-    [
-"""
+    output_contents = ""
 
     skip_until_newline = False
     skip_until_whitespace_start = False
@@ -345,18 +340,12 @@ def scan_contents(contents):
                 in_function = True
                 in_function_params = False
                 data_function_name = ""
+                data_function_tag = "_"
                 data_function_params = []
                 no_function_params = False
                 continue
 
-    output_contents = output_contents.rstrip("\n,")
-
-    output_contents += """
-    ]
-}
-"""
-
-    return output_contents
+    return output_contents.rstrip("\n,") + '\n'
 
 
 def process_file(filename):
@@ -374,29 +363,27 @@ def process_file(filename):
 
     output_contents = scan_contents(contents)
 
-    with open(filename + '.sublime-completions', 'w') as output_file:
+    with open(filename + '.json', 'w') as output_file:
         output_file.write(output_contents)
 
 
 def main():
+    if len(sys.argv) < 2:
+        print(f'Usage: {sys.argv[0]} path_to_inc_files')
+        return
 
-    if len(sys.argv) > 1:
-        path = sys.argv[1]
-    else:
-        path = "E:\\Games\\Projects\\SA-MP\\pawno\\include\\autocomplete\\"
+    path = sys.argv[1]
 
-    print(path)
+    if not os.path.exists(path):
+        print("File not found.")
+        return
 
     if os.path.isfile(path):
         process_file(path)
+        return
 
-    else:
-        if not os.path.exists(path):
-            print("Directory not found.")
-            return
-
-        for f in glob.glob(path + '*.pwn'):
-            process_file(f)
+    for f in glob.glob(os.path.join(path, '*.inc')):
+        process_file(f)
 
 
 if __name__ == '__main__':
