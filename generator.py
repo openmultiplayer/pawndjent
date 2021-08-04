@@ -43,7 +43,7 @@ class Argument:
         r'''
         (const\s+)?      # Const specifier
         (&)?             # Reference
-        (\w+:)?          # Tag
+        (?:(\w+):\s*)?   # Tag
         (\w+)            # Name
         (\[\])?          # Array
         (?:\s*=\s*(.*))? # Default value
@@ -79,7 +79,7 @@ class Argument:
         )
         is_const = bool(is_const)
         is_reference = bool(is_reference)
-        tag = tag[:-1] if tag else '_'  # Trailing ':'
+        tag = tag if tag else '_'
         is_array = bool(is_array)
 
         if default_value:

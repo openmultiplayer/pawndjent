@@ -89,7 +89,7 @@ native max(value1, value2);
 /// <param name="value">The value to force in a range</param>
 /// <param name="min">The low bound of the range (optional=<b><c>cellmin</c></b>)</param>
 /// <param name="max">The high bound of the range (optional=<b><c>cellmax</c></b>)</param>
-/// <returns>value, if it is in the range min–max, min, if value is lower than min or max, if value is higher than max.</returns>
+/// <returns>value, if it is in the range min-max, min, if value is lower than min or max, if value is higher than max.</returns>
 native clamp(value, min=cellmin, max=cellmax);
 
 /// <summary>Get a specific property from the memory, the string is returned as a packed string!.</summary>
