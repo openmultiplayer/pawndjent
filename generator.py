@@ -103,8 +103,11 @@ class Argument:
 
     def to_dict(self):
         return {
-            field.name: getattr(self, field.name)
-            for field in fields(self)
+            **{
+                field.name: getattr(self, field.name)
+                for field in fields(self)
+            },
+            'is_reference': self.is_reference,
         }
 
 
