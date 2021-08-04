@@ -1,0 +1,64 @@
+{
+    "constants": [
+        "SAMP_CONST_CORRECT",
+        "HTTP_GET",
+        "HTTP_POST",
+        "HTTP_HEAD",
+        "HTTP_ERROR_BAD_HOST",
+        "HTTP_ERROR_NO_SOCKET",
+        "HTTP_ERROR_CANT_CONNECT",
+        "HTTP_ERROR_CANT_WRITE",
+        "HTTP_ERROR_CONTENT_TOO_BIG",
+        "HTTP_ERROR_MALFORMED_RESPONSE"
+    ],
+    "functions": [
+        {
+            "name": "HTTP",
+            "tag": "_",
+            "is_callback": false,
+            "is_variadic": false,
+            "arguments": [
+                {
+                    "name": "index",
+                    "tag": "_",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": null,
+                    "is_reference": false
+                },
+                {
+                    "name": "type",
+                    "tag": "_",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": null,
+                    "is_reference": false
+                },
+                {
+                    "name": "url",
+                    "tag": "_",
+                    "is_const": true,
+                    "is_array": true,
+                    "default_value": null,
+                    "is_reference": false
+                },
+                {
+                    "name": "data",
+                    "tag": "_",
+                    "is_const": true,
+                    "is_array": true,
+                    "default_value": null,
+                    "is_reference": false
+                },
+                {
+                    "name": "callback",
+                    "tag": "_",
+                    "is_const": true,
+                    "is_array": true,
+                    "default_value": null,
+                    "is_reference": false
+                }
+            ]
+        }
+    ]
+}

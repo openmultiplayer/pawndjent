@@ -62,7 +62,7 @@ class Argument:
     @classmethod
     def from_string_list(cls, string_list):
         return [
-            Argument.from_str(string)
+            cls.from_str(string)
             for string in string_list
             if string != '...'
         ]
