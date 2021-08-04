@@ -1,0 +1,535 @@
+{
+    "constants": [
+        "strformat(%0,%1,%2,%3)"
+    ],
+    "functions": [
+        {
+            "name": "strlen",
+            "tag": "_",
+            "is_callback": false,
+            "is_variadic": false,
+            "arguments": [
+                {
+                    "name": "string",
+                    "tag": "_",
+                    "is_const": true,
+                    "is_array": true,
+                    "default_value": null,
+                    "is_reference": false
+                }
+            ]
+        },
+        {
+            "name": "strpack",
+            "tag": "_",
+            "is_callback": false,
+            "is_variadic": false,
+            "arguments": [
+                {
+                    "name": "dest",
+                    "tag": "_",
+                    "is_const": false,
+                    "is_array": true,
+                    "default_value": null,
+                    "is_reference": true
+                },
+                {
+                    "name": "source",
+                    "tag": "_",
+                    "is_const": true,
+                    "is_array": true,
+                    "default_value": null,
+                    "is_reference": false
+                },
+                {
+                    "name": "maxlength",
+                    "tag": "_",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": "sizeof dest",
+                    "is_reference": false
+                }
+            ]
+        },
+        {
+            "name": "strunpack",
+            "tag": "_",
+            "is_callback": false,
+            "is_variadic": false,
+            "arguments": [
+                {
+                    "name": "dest",
+                    "tag": "_",
+                    "is_const": false,
+                    "is_array": true,
+                    "default_value": null,
+                    "is_reference": true
+                },
+                {
+                    "name": "source",
+                    "tag": "_",
+                    "is_const": true,
+                    "is_array": true,
+                    "default_value": null,
+                    "is_reference": false
+                },
+                {
+                    "name": "maxlength",
+                    "tag": "_",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": "sizeof dest",
+                    "is_reference": false
+                }
+            ]
+        },
+        {
+            "name": "strcat",
+            "tag": "_",
+            "is_callback": false,
+            "is_variadic": false,
+            "arguments": [
+                {
+                    "name": "dest",
+                    "tag": "_",
+                    "is_const": false,
+                    "is_array": true,
+                    "default_value": null,
+                    "is_reference": true
+                },
+                {
+                    "name": "source",
+                    "tag": "_",
+                    "is_const": true,
+                    "is_array": true,
+                    "default_value": null,
+                    "is_reference": false
+                },
+                {
+                    "name": "maxlength",
+                    "tag": "_",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": "sizeof dest",
+                    "is_reference": false
+                }
+            ]
+        },
+        {
+            "name": "strmid",
+            "tag": "_",
+            "is_callback": false,
+            "is_variadic": false,
+            "arguments": [
+                {
+                    "name": "dest",
+                    "tag": "_",
+                    "is_const": false,
+                    "is_array": true,
+                    "default_value": null,
+                    "is_reference": true
+                },
+                {
+                    "name": "source",
+                    "tag": "_",
+                    "is_const": true,
+                    "is_array": true,
+                    "default_value": null,
+                    "is_reference": false
+                },
+                {
+                    "name": "start",
+                    "tag": "_",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": null,
+                    "is_reference": false
+                },
+                {
+                    "name": "end",
+                    "tag": "_",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": null,
+                    "is_reference": false
+                },
+                {
+                    "name": "maxlength",
+                    "tag": "_",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": "sizeof dest",
+                    "is_reference": false
+                }
+            ]
+        },
+        {
+            "name": "strins",
+            "tag": "bool",
+            "is_callback": false,
+            "is_variadic": false,
+            "arguments": [
+                {
+                    "name": "string",
+                    "tag": "_",
+                    "is_const": false,
+                    "is_array": true,
+                    "default_value": null,
+                    "is_reference": true
+                },
+                {
+                    "name": "substr",
+                    "tag": "_",
+                    "is_const": true,
+                    "is_array": true,
+                    "default_value": null,
+                    "is_reference": false
+                },
+                {
+                    "name": "pos",
+                    "tag": "_",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": null,
+                    "is_reference": false
+                },
+                {
+                    "name": "maxlength",
+                    "tag": "_",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": "sizeof string",
+                    "is_reference": false
+                }
+            ]
+        },
+        {
+            "name": "strdel",
+            "tag": "bool",
+            "is_callback": false,
+            "is_variadic": false,
+            "arguments": [
+                {
+                    "name": "string",
+                    "tag": "_",
+                    "is_const": false,
+                    "is_array": true,
+                    "default_value": null,
+                    "is_reference": true
+                },
+                {
+                    "name": "start",
+                    "tag": "_",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": null,
+                    "is_reference": false
+                },
+                {
+                    "name": "end",
+                    "tag": "_",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": null,
+                    "is_reference": false
+                }
+            ]
+        },
+        {
+            "name": "strcmp",
+            "tag": "_",
+            "is_callback": false,
+            "is_variadic": false,
+            "arguments": [
+                {
+                    "name": "string1",
+                    "tag": "_",
+                    "is_const": true,
+                    "is_array": true,
+                    "default_value": null,
+                    "is_reference": false
+                },
+                {
+                    "name": "string2",
+                    "tag": "_",
+                    "is_const": true,
+                    "is_array": true,
+                    "default_value": null,
+                    "is_reference": false
+                },
+                {
+                    "name": "ignorecase",
+                    "tag": "boo",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": "false",
+                    "is_reference": false
+                },
+                {
+                    "name": "length",
+                    "tag": "_",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": "cellmax",
+                    "is_reference": false
+                }
+            ]
+        },
+        {
+            "name": "strfind",
+            "tag": "_",
+            "is_callback": false,
+            "is_variadic": false,
+            "arguments": [
+                {
+                    "name": "string",
+                    "tag": "_",
+                    "is_const": true,
+                    "is_array": true,
+                    "default_value": null,
+                    "is_reference": false
+                },
+                {
+                    "name": "sub",
+                    "tag": "_",
+                    "is_const": true,
+                    "is_array": true,
+                    "default_value": null,
+                    "is_reference": false
+                },
+                {
+                    "name": "ignorecase",
+                    "tag": "boo",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": "false",
+                    "is_reference": false
+                },
+                {
+                    "name": "pos",
+                    "tag": "_",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": 0,
+                    "is_reference": false
+                }
+            ]
+        },
+        {
+            "name": "strval",
+            "tag": "_",
+            "is_callback": false,
+            "is_variadic": false,
+            "arguments": [
+                {
+                    "name": "string",
+                    "tag": "_",
+                    "is_const": true,
+                    "is_array": true,
+                    "default_value": null,
+                    "is_reference": false
+                }
+            ]
+        },
+        {
+            "name": "valstr",
+            "tag": "_",
+            "is_callback": false,
+            "is_variadic": false,
+            "arguments": [
+                {
+                    "name": "dest",
+                    "tag": "_",
+                    "is_const": false,
+                    "is_array": true,
+                    "default_value": null,
+                    "is_reference": true
+                },
+                {
+                    "name": "value",
+                    "tag": "_",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": null,
+                    "is_reference": false
+                },
+                {
+                    "name": "pack",
+                    "tag": "boo",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": "false",
+                    "is_reference": false
+                }
+            ]
+        },
+        {
+            "name": "ispacked",
+            "tag": "bool",
+            "is_callback": false,
+            "is_variadic": false,
+            "arguments": [
+                {
+                    "name": "string",
+                    "tag": "_",
+                    "is_const": true,
+                    "is_array": true,
+                    "default_value": null,
+                    "is_reference": false
+                }
+            ]
+        },
+        {
+            "name": "strformat__",
+            "tag": "_",
+            "is_callback": false,
+            "is_variadic": true,
+            "arguments": [
+                {
+                    "name": "dest",
+                    "tag": "_",
+                    "is_const": false,
+                    "is_array": true,
+                    "default_value": null,
+                    "is_reference": true
+                },
+                {
+                    "name": "size",
+                    "tag": "_",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": "sizeof dest",
+                    "is_reference": false
+                },
+                {
+                    "name": "format",
+                    "tag": "_",
+                    "is_const": true,
+                    "is_array": true,
+                    "default_value": null,
+                    "is_reference": false
+                }
+            ]
+        },
+        {
+            "name": "uudecode",
+            "tag": "_",
+            "is_callback": false,
+            "is_variadic": false,
+            "arguments": [
+                {
+                    "name": "dest",
+                    "tag": "_",
+                    "is_const": false,
+                    "is_array": true,
+                    "default_value": null,
+                    "is_reference": true
+                },
+                {
+                    "name": "source",
+                    "tag": "_",
+                    "is_const": true,
+                    "is_array": true,
+                    "default_value": null,
+                    "is_reference": false
+                },
+                {
+                    "name": "maxlength",
+                    "tag": "_",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": "sizeof dest",
+                    "is_reference": false
+                }
+            ]
+        },
+        {
+            "name": "uuencode",
+            "tag": "_",
+            "is_callback": false,
+            "is_variadic": false,
+            "arguments": [
+                {
+                    "name": "dest",
+                    "tag": "_",
+                    "is_const": false,
+                    "is_array": true,
+                    "default_value": null,
+                    "is_reference": true
+                },
+                {
+                    "name": "source",
+                    "tag": "_",
+                    "is_const": true,
+                    "is_array": true,
+                    "default_value": null,
+                    "is_reference": false
+                },
+                {
+                    "name": "numbytes",
+                    "tag": "_",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": null,
+                    "is_reference": false
+                },
+                {
+                    "name": "maxlength",
+                    "tag": "_",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": "sizeof dest",
+                    "is_reference": false
+                }
+            ]
+        },
+        {
+            "name": "memcpy",
+            "tag": "_",
+            "is_callback": false,
+            "is_variadic": false,
+            "arguments": [
+                {
+                    "name": "dest",
+                    "tag": "_",
+                    "is_const": false,
+                    "is_array": true,
+                    "default_value": null,
+                    "is_reference": true
+                },
+                {
+                    "name": "source",
+                    "tag": "_",
+                    "is_const": true,
+                    "is_array": true,
+                    "default_value": null,
+                    "is_reference": false
+                },
+                {
+                    "name": "index",
+                    "tag": "_",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": 0,
+                    "is_reference": false
+                },
+                {
+                    "name": "numbytes",
+                    "tag": "_",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": null,
+                    "is_reference": false
+                },
+                {
+                    "name": "maxlength",
+                    "tag": "_",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": "sizeof dest",
+                    "is_reference": false
+                }
+            ]
+        }
+    ]
+}

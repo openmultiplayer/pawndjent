@@ -1,0 +1,349 @@
+{
+    "constants": [],
+    "functions": [
+        {
+            "name": "float",
+            "tag": "Float",
+            "is_callback": false,
+            "is_variadic": false,
+            "arguments": [
+                {
+                    "name": "value",
+                    "tag": "_",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": null,
+                    "is_reference": false
+                }
+            ]
+        },
+        {
+            "name": "floatstr",
+            "tag": "Float",
+            "is_callback": false,
+            "is_variadic": false,
+            "arguments": [
+                {
+                    "name": "string",
+                    "tag": "_",
+                    "is_const": true,
+                    "is_array": true,
+                    "default_value": null,
+                    "is_reference": false
+                }
+            ]
+        },
+        {
+            "name": "floatmul",
+            "tag": "Float",
+            "is_callback": false,
+            "is_variadic": false,
+            "arguments": [
+                {
+                    "name": "oper1",
+                    "tag": "Floa",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": null,
+                    "is_reference": false
+                },
+                {
+                    "name": "oper2",
+                    "tag": "Floa",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": null,
+                    "is_reference": false
+                }
+            ]
+        },
+        {
+            "name": "floatdiv",
+            "tag": "Float",
+            "is_callback": false,
+            "is_variadic": false,
+            "arguments": [
+                {
+                    "name": "dividend",
+                    "tag": "Floa",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": null,
+                    "is_reference": false
+                },
+                {
+                    "name": "divisor",
+                    "tag": "Floa",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": null,
+                    "is_reference": false
+                }
+            ]
+        },
+        {
+            "name": "floatadd",
+            "tag": "Float",
+            "is_callback": false,
+            "is_variadic": false,
+            "arguments": [
+                {
+                    "name": "oper1",
+                    "tag": "Floa",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": null,
+                    "is_reference": false
+                },
+                {
+                    "name": "oper2",
+                    "tag": "Floa",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": null,
+                    "is_reference": false
+                }
+            ]
+        },
+        {
+            "name": "floatsub",
+            "tag": "Float",
+            "is_callback": false,
+            "is_variadic": false,
+            "arguments": [
+                {
+                    "name": "oper1",
+                    "tag": "Floa",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": null,
+                    "is_reference": false
+                },
+                {
+                    "name": "oper2",
+                    "tag": "Floa",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": null,
+                    "is_reference": false
+                }
+            ]
+        },
+        {
+            "name": "floatfract",
+            "tag": "Float",
+            "is_callback": false,
+            "is_variadic": false,
+            "arguments": [
+                {
+                    "name": "value",
+                    "tag": "Floa",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": null,
+                    "is_reference": false
+                }
+            ]
+        },
+        {
+            "name": "floatround",
+            "tag": "_",
+            "is_callback": false,
+            "is_variadic": false,
+            "arguments": [
+                {
+                    "name": "value",
+                    "tag": "Floa",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": null,
+                    "is_reference": false
+                },
+                {
+                    "name": "method",
+                    "tag": "floatround_metho",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": "floatround_round",
+                    "is_reference": false
+                }
+            ]
+        },
+        {
+            "name": "floatcmp",
+            "tag": "_",
+            "is_callback": false,
+            "is_variadic": false,
+            "arguments": [
+                {
+                    "name": "oper1",
+                    "tag": "Floa",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": null,
+                    "is_reference": false
+                },
+                {
+                    "name": "oper2",
+                    "tag": "Floa",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": null,
+                    "is_reference": false
+                }
+            ]
+        },
+        {
+            "name": "floatsqroot",
+            "tag": "Float",
+            "is_callback": false,
+            "is_variadic": false,
+            "arguments": [
+                {
+                    "name": "value",
+                    "tag": "Floa",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": null,
+                    "is_reference": false
+                }
+            ]
+        },
+        {
+            "name": "floatpower",
+            "tag": "Float",
+            "is_callback": false,
+            "is_variadic": false,
+            "arguments": [
+                {
+                    "name": "value",
+                    "tag": "Floa",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": null,
+                    "is_reference": false
+                },
+                {
+                    "name": "exponent",
+                    "tag": "Floa",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": null,
+                    "is_reference": false
+                }
+            ]
+        },
+        {
+            "name": "floatlog",
+            "tag": "Float",
+            "is_callback": false,
+            "is_variadic": false,
+            "arguments": [
+                {
+                    "name": "value",
+                    "tag": "Floa",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": null,
+                    "is_reference": false
+                },
+                {
+                    "name": "base",
+                    "tag": "Floa",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": "10.0",
+                    "is_reference": false
+                }
+            ]
+        },
+        {
+            "name": "floatsin",
+            "tag": "Float",
+            "is_callback": false,
+            "is_variadic": false,
+            "arguments": [
+                {
+                    "name": "value",
+                    "tag": "Floa",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": null,
+                    "is_reference": false
+                },
+                {
+                    "name": "mode",
+                    "tag": "anglemod",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": "radian",
+                    "is_reference": false
+                }
+            ]
+        },
+        {
+            "name": "floatcos",
+            "tag": "Float",
+            "is_callback": false,
+            "is_variadic": false,
+            "arguments": [
+                {
+                    "name": "value",
+                    "tag": "Floa",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": null,
+                    "is_reference": false
+                },
+                {
+                    "name": "mode",
+                    "tag": "anglemod",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": "radian",
+                    "is_reference": false
+                }
+            ]
+        },
+        {
+            "name": "floattan",
+            "tag": "Float",
+            "is_callback": false,
+            "is_variadic": false,
+            "arguments": [
+                {
+                    "name": "value",
+                    "tag": "Floa",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": null,
+                    "is_reference": false
+                },
+                {
+                    "name": "mode",
+                    "tag": "anglemod",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": "radian",
+                    "is_reference": false
+                }
+            ]
+        },
+        {
+            "name": "floatabs",
+            "tag": "Float",
+            "is_callback": false,
+            "is_variadic": false,
+            "arguments": [
+                {
+                    "name": "value",
+                    "tag": "Floa",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": null,
+                    "is_reference": false
+                }
+            ]
+        }
+    ]
+}

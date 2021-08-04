@@ -1,0 +1,37 @@
+{
+    "constants": [],
+    "functions": [
+        {
+            "name": "print",
+            "tag": "_",
+            "is_callback": false,
+            "is_variadic": false,
+            "arguments": [
+                {
+                    "name": "string",
+                    "tag": "_",
+                    "is_const": true,
+                    "is_array": true,
+                    "default_value": null,
+                    "is_reference": false
+                }
+            ]
+        },
+        {
+            "name": "printf",
+            "tag": "_",
+            "is_callback": false,
+            "is_variadic": true,
+            "arguments": [
+                {
+                    "name": "format",
+                    "tag": "_",
+                    "is_const": true,
+                    "is_array": true,
+                    "default_value": null,
+                    "is_reference": false
+                }
+            ]
+        }
+    ]
+}

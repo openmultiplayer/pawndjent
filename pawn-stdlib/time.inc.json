@@ -1,0 +1,85 @@
+{
+    "constants": [],
+    "functions": [
+        {
+            "name": "gettime",
+            "tag": "_",
+            "is_callback": false,
+            "is_variadic": false,
+            "arguments": [
+                {
+                    "name": "hour",
+                    "tag": "_",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": 0,
+                    "is_reference": true
+                },
+                {
+                    "name": "minute",
+                    "tag": "_",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": 0,
+                    "is_reference": true
+                },
+                {
+                    "name": "second",
+                    "tag": "_",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": 0,
+                    "is_reference": true
+                }
+            ]
+        },
+        {
+            "name": "getdate",
+            "tag": "_",
+            "is_callback": false,
+            "is_variadic": false,
+            "arguments": [
+                {
+                    "name": "year",
+                    "tag": "_",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": 0,
+                    "is_reference": true
+                },
+                {
+                    "name": "month",
+                    "tag": "_",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": 0,
+                    "is_reference": true
+                },
+                {
+                    "name": "day",
+                    "tag": "_",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": 0,
+                    "is_reference": true
+                }
+            ]
+        },
+        {
+            "name": "tickcount",
+            "tag": "_",
+            "is_callback": false,
+            "is_variadic": false,
+            "arguments": [
+                {
+                    "name": "granularity",
+                    "tag": "_",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": 0,
+                    "is_reference": true
+                }
+            ]
+        }
+    ]
+}

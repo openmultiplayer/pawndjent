@@ -1,0 +1,364 @@
+{
+    "constants": [],
+    "functions": [
+        {
+            "name": "fopen",
+            "tag": "File",
+            "is_callback": false,
+            "is_variadic": false,
+            "arguments": [
+                {
+                    "name": "name",
+                    "tag": "_",
+                    "is_const": true,
+                    "is_array": true,
+                    "default_value": null,
+                    "is_reference": false
+                },
+                {
+                    "name": "mode",
+                    "tag": "filemod",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": "io_readwrite",
+                    "is_reference": false
+                }
+            ]
+        },
+        {
+            "name": "fclose",
+            "tag": "bool",
+            "is_callback": false,
+            "is_variadic": false,
+            "arguments": [
+                {
+                    "name": "handle",
+                    "tag": "Fil",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": null,
+                    "is_reference": false
+                }
+            ]
+        },
+        {
+            "name": "ftemp",
+            "tag": "File",
+            "is_callback": false,
+            "is_variadic": false,
+            "arguments": []
+        },
+        {
+            "name": "fremove",
+            "tag": "bool",
+            "is_callback": false,
+            "is_variadic": false,
+            "arguments": [
+                {
+                    "name": "name",
+                    "tag": "_",
+                    "is_const": true,
+                    "is_array": true,
+                    "default_value": null,
+                    "is_reference": false
+                }
+            ]
+        },
+        {
+            "name": "fwrite",
+            "tag": "_",
+            "is_callback": false,
+            "is_variadic": false,
+            "arguments": [
+                {
+                    "name": "handle",
+                    "tag": "Fil",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": null,
+                    "is_reference": false
+                },
+                {
+                    "name": "string",
+                    "tag": "_",
+                    "is_const": true,
+                    "is_array": true,
+                    "default_value": null,
+                    "is_reference": false
+                }
+            ]
+        },
+        {
+            "name": "fread",
+            "tag": "_",
+            "is_callback": false,
+            "is_variadic": false,
+            "arguments": [
+                {
+                    "name": "handle",
+                    "tag": "Fil",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": null,
+                    "is_reference": false
+                },
+                {
+                    "name": "string",
+                    "tag": "_",
+                    "is_const": false,
+                    "is_array": true,
+                    "default_value": null,
+                    "is_reference": true
+                },
+                {
+                    "name": "size",
+                    "tag": "_",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": "sizeof string",
+                    "is_reference": false
+                },
+                {
+                    "name": "pack",
+                    "tag": "boo",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": "false",
+                    "is_reference": false
+                }
+            ]
+        },
+        {
+            "name": "fputchar",
+            "tag": "bool",
+            "is_callback": false,
+            "is_variadic": false,
+            "arguments": [
+                {
+                    "name": "handle",
+                    "tag": "Fil",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": null,
+                    "is_reference": false
+                },
+                {
+                    "name": "value",
+                    "tag": "_",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": null,
+                    "is_reference": false
+                },
+                {
+                    "name": "utf8",
+                    "tag": "boo",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": "true",
+                    "is_reference": false
+                }
+            ]
+        },
+        {
+            "name": "fgetchar",
+            "tag": "_",
+            "is_callback": false,
+            "is_variadic": false,
+            "arguments": [
+                {
+                    "name": "handle",
+                    "tag": "Fil",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": null,
+                    "is_reference": false
+                },
+                {
+                    "name": "value",
+                    "tag": "_",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": null,
+                    "is_reference": false
+                },
+                {
+                    "name": "utf8",
+                    "tag": "boo",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": "true",
+                    "is_reference": false
+                }
+            ]
+        },
+        {
+            "name": "fblockwrite",
+            "tag": "_",
+            "is_callback": false,
+            "is_variadic": false,
+            "arguments": [
+                {
+                    "name": "handle",
+                    "tag": "Fil",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": null,
+                    "is_reference": false
+                },
+                {
+                    "name": "buffer",
+                    "tag": "_",
+                    "is_const": true,
+                    "is_array": true,
+                    "default_value": null,
+                    "is_reference": false
+                },
+                {
+                    "name": "size",
+                    "tag": "_",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": "sizeof buffer",
+                    "is_reference": false
+                }
+            ]
+        },
+        {
+            "name": "fblockread",
+            "tag": "_",
+            "is_callback": false,
+            "is_variadic": false,
+            "arguments": [
+                {
+                    "name": "handle",
+                    "tag": "Fil",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": null,
+                    "is_reference": false
+                },
+                {
+                    "name": "buffer",
+                    "tag": "_",
+                    "is_const": false,
+                    "is_array": true,
+                    "default_value": null,
+                    "is_reference": true
+                },
+                {
+                    "name": "size",
+                    "tag": "_",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": "sizeof buffer",
+                    "is_reference": false
+                }
+            ]
+        },
+        {
+            "name": "fseek",
+            "tag": "_",
+            "is_callback": false,
+            "is_variadic": false,
+            "arguments": [
+                {
+                    "name": "handle",
+                    "tag": "Fil",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": null,
+                    "is_reference": false
+                },
+                {
+                    "name": "position",
+                    "tag": "_",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": 0,
+                    "is_reference": false
+                },
+                {
+                    "name": "whence",
+                    "tag": "seek_whenc",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": "seek_start",
+                    "is_reference": false
+                }
+            ]
+        },
+        {
+            "name": "flength",
+            "tag": "_",
+            "is_callback": false,
+            "is_variadic": false,
+            "arguments": [
+                {
+                    "name": "handle",
+                    "tag": "Fil",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": null,
+                    "is_reference": false
+                }
+            ]
+        },
+        {
+            "name": "fexist",
+            "tag": "_",
+            "is_callback": false,
+            "is_variadic": false,
+            "arguments": [
+                {
+                    "name": "name",
+                    "tag": "_",
+                    "is_const": true,
+                    "is_array": true,
+                    "default_value": null,
+                    "is_reference": false
+                }
+            ]
+        },
+        {
+            "name": "fmatch",
+            "tag": "bool",
+            "is_callback": false,
+            "is_variadic": false,
+            "arguments": [
+                {
+                    "name": "name",
+                    "tag": "_",
+                    "is_const": false,
+                    "is_array": true,
+                    "default_value": null,
+                    "is_reference": true
+                },
+                {
+                    "name": "pattern",
+                    "tag": "_",
+                    "is_const": true,
+                    "is_array": true,
+                    "default_value": null,
+                    "is_reference": false
+                },
+                {
+                    "name": "index",
+                    "tag": "_",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": 0,
+                    "is_reference": false
+                },
+                {
+                    "name": "size",
+                    "tag": "_",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": "sizeof name",
+                    "is_reference": false
+                }
+            ]
+        }
+    ]
+}

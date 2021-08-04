@@ -1,0 +1,379 @@
+{
+    "constants": [],
+    "functions": [
+        {
+            "name": "heapspace",
+            "tag": "_",
+            "is_callback": false,
+            "is_variadic": false,
+            "arguments": []
+        },
+        {
+            "name": "funcidx",
+            "tag": "_",
+            "is_callback": false,
+            "is_variadic": false,
+            "arguments": [
+                {
+                    "name": "name",
+                    "tag": "_",
+                    "is_const": true,
+                    "is_array": true,
+                    "default_value": null,
+                    "is_reference": false
+                }
+            ]
+        },
+        {
+            "name": "numargs",
+            "tag": "_",
+            "is_callback": false,
+            "is_variadic": false,
+            "arguments": []
+        },
+        {
+            "name": "getarg",
+            "tag": "_",
+            "is_callback": false,
+            "is_variadic": false,
+            "arguments": [
+                {
+                    "name": "arg",
+                    "tag": "_",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": null,
+                    "is_reference": false
+                },
+                {
+                    "name": "index",
+                    "tag": "_",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": 0,
+                    "is_reference": false
+                }
+            ]
+        },
+        {
+            "name": "setarg",
+            "tag": "_",
+            "is_callback": false,
+            "is_variadic": false,
+            "arguments": [
+                {
+                    "name": "arg",
+                    "tag": "_",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": null,
+                    "is_reference": false
+                },
+                {
+                    "name": "index",
+                    "tag": "_",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": 0,
+                    "is_reference": false
+                },
+                {
+                    "name": "value",
+                    "tag": "_",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": null,
+                    "is_reference": false
+                }
+            ]
+        },
+        {
+            "name": "tolower",
+            "tag": "_",
+            "is_callback": false,
+            "is_variadic": false,
+            "arguments": [
+                {
+                    "name": "c",
+                    "tag": "_",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": null,
+                    "is_reference": false
+                }
+            ]
+        },
+        {
+            "name": "toupper",
+            "tag": "_",
+            "is_callback": false,
+            "is_variadic": false,
+            "arguments": [
+                {
+                    "name": "c",
+                    "tag": "_",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": null,
+                    "is_reference": false
+                }
+            ]
+        },
+        {
+            "name": "swapchars",
+            "tag": "_",
+            "is_callback": false,
+            "is_variadic": false,
+            "arguments": [
+                {
+                    "name": "c",
+                    "tag": "_",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": null,
+                    "is_reference": false
+                }
+            ]
+        },
+        {
+            "name": "random",
+            "tag": "_",
+            "is_callback": false,
+            "is_variadic": false,
+            "arguments": [
+                {
+                    "name": "max",
+                    "tag": "_",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": null,
+                    "is_reference": false
+                }
+            ]
+        },
+        {
+            "name": "min",
+            "tag": "_",
+            "is_callback": false,
+            "is_variadic": false,
+            "arguments": [
+                {
+                    "name": "value1",
+                    "tag": "_",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": null,
+                    "is_reference": false
+                },
+                {
+                    "name": "value2",
+                    "tag": "_",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": null,
+                    "is_reference": false
+                }
+            ]
+        },
+        {
+            "name": "max",
+            "tag": "_",
+            "is_callback": false,
+            "is_variadic": false,
+            "arguments": [
+                {
+                    "name": "value1",
+                    "tag": "_",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": null,
+                    "is_reference": false
+                },
+                {
+                    "name": "value2",
+                    "tag": "_",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": null,
+                    "is_reference": false
+                }
+            ]
+        },
+        {
+            "name": "clamp",
+            "tag": "_",
+            "is_callback": false,
+            "is_variadic": false,
+            "arguments": [
+                {
+                    "name": "value",
+                    "tag": "_",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": null,
+                    "is_reference": false
+                },
+                {
+                    "name": "min",
+                    "tag": "_",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": "cellmin",
+                    "is_reference": false
+                },
+                {
+                    "name": "max",
+                    "tag": "_",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": "cellmax",
+                    "is_reference": false
+                }
+            ]
+        },
+        {
+            "name": "getproperty",
+            "tag": "_",
+            "is_callback": false,
+            "is_variadic": false,
+            "arguments": [
+                {
+                    "name": "id",
+                    "tag": "_",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": 0,
+                    "is_reference": false
+                },
+                {
+                    "name": "name",
+                    "tag": "_",
+                    "is_const": true,
+                    "is_array": true,
+                    "default_value": "\"\"",
+                    "is_reference": false
+                },
+                {
+                    "name": "value",
+                    "tag": "_",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": "cellmin",
+                    "is_reference": false
+                },
+                {
+                    "name": "string",
+                    "tag": "_",
+                    "is_const": false,
+                    "is_array": true,
+                    "default_value": "\"\"",
+                    "is_reference": true
+                }
+            ]
+        },
+        {
+            "name": "setproperty",
+            "tag": "_",
+            "is_callback": false,
+            "is_variadic": false,
+            "arguments": [
+                {
+                    "name": "id",
+                    "tag": "_",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": 0,
+                    "is_reference": false
+                },
+                {
+                    "name": "name",
+                    "tag": "_",
+                    "is_const": true,
+                    "is_array": true,
+                    "default_value": "\"\"",
+                    "is_reference": false
+                },
+                {
+                    "name": "value",
+                    "tag": "_",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": "cellmin",
+                    "is_reference": false
+                },
+                {
+                    "name": "string",
+                    "tag": "_",
+                    "is_const": true,
+                    "is_array": true,
+                    "default_value": "\"\"",
+                    "is_reference": false
+                }
+            ]
+        },
+        {
+            "name": "deleteproperty",
+            "tag": "_",
+            "is_callback": false,
+            "is_variadic": false,
+            "arguments": [
+                {
+                    "name": "id",
+                    "tag": "_",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": 0,
+                    "is_reference": false
+                },
+                {
+                    "name": "name",
+                    "tag": "_",
+                    "is_const": true,
+                    "is_array": true,
+                    "default_value": "\"\"",
+                    "is_reference": false
+                },
+                {
+                    "name": "value",
+                    "tag": "_",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": "cellmin",
+                    "is_reference": false
+                }
+            ]
+        },
+        {
+            "name": "existproperty",
+            "tag": "_",
+            "is_callback": false,
+            "is_variadic": false,
+            "arguments": [
+                {
+                    "name": "id",
+                    "tag": "_",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": 0,
+                    "is_reference": false
+                },
+                {
+                    "name": "name",
+                    "tag": "_",
+                    "is_const": true,
+                    "is_array": true,
+                    "default_value": "\"\"",
+                    "is_reference": false
+                },
+                {
+                    "name": "value",
+                    "tag": "_",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": "cellmin",
+                    "is_reference": false
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,133 @@
+{
+    "constants": [],
+    "functions": [
+        {
+            "name": "sendstring",
+            "tag": "_",
+            "is_callback": false,
+            "is_variadic": false,
+            "arguments": [
+                {
+                    "name": "message",
+                    "tag": "_",
+                    "is_const": true,
+                    "is_array": true,
+                    "default_value": null,
+                    "is_reference": false
+                },
+                {
+                    "name": "destination",
+                    "tag": "_",
+                    "is_const": true,
+                    "is_array": true,
+                    "default_value": "\"\"",
+                    "is_reference": false
+                }
+            ]
+        },
+        {
+            "name": "sendpacket",
+            "tag": "_",
+            "is_callback": false,
+            "is_variadic": false,
+            "arguments": [
+                {
+                    "name": "packet",
+                    "tag": "_",
+                    "is_const": true,
+                    "is_array": true,
+                    "default_value": null,
+                    "is_reference": false
+                },
+                {
+                    "name": "size",
+                    "tag": "_",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": null,
+                    "is_reference": false
+                },
+                {
+                    "name": "destination",
+                    "tag": "_",
+                    "is_const": true,
+                    "is_array": true,
+                    "default_value": "\"\"",
+                    "is_reference": false
+                }
+            ]
+        },
+        {
+            "name": "listenport",
+            "tag": "_",
+            "is_callback": false,
+            "is_variadic": false,
+            "arguments": [
+                {
+                    "name": "port",
+                    "tag": "_",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": null,
+                    "is_reference": false
+                }
+            ]
+        },
+        {
+            "name": "receivestring",
+            "tag": "_",
+            "is_callback": true,
+            "is_variadic": false,
+            "arguments": [
+                {
+                    "name": "message",
+                    "tag": "_",
+                    "is_const": true,
+                    "is_array": true,
+                    "default_value": null,
+                    "is_reference": false
+                },
+                {
+                    "name": "source",
+                    "tag": "_",
+                    "is_const": true,
+                    "is_array": true,
+                    "default_value": null,
+                    "is_reference": false
+                }
+            ]
+        },
+        {
+            "name": "receivepacket",
+            "tag": "_",
+            "is_callback": true,
+            "is_variadic": false,
+            "arguments": [
+                {
+                    "name": "packet",
+                    "tag": "_",
+                    "is_const": true,
+                    "is_array": true,
+                    "default_value": null,
+                    "is_reference": false
+                },
+                {
+                    "name": "size",
+                    "tag": "_",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": null,
+                    "is_reference": false
+                },
+                {
+                    "name": "source",
+                    "tag": "_",
+                    "is_const": true,
+                    "is_array": true,
+                    "default_value": null,
+                    "is_reference": false
+                }
+            ]
+        }
+    ]
+}
