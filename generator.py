@@ -1,7 +1,8 @@
-import sys
-import os
 import glob
+import json
+import os
 import string
+import sys
 
 
 # Regular expressions for defines, natives and publics.
@@ -28,37 +29,17 @@ def db(*args):
 
 def gen_func(funcname, params, tag, is_callback):
     """generates a sublime-completions line based on a function"""
-
-    out = '{"name": "%s", "tag": "%s", "is_callback": "%s", "args": [' % (
-        funcname,
-        tag,
-        str(is_callback).lower()
-    )
-
-    out += ', '.join([
-        f'"{param}"'
-        for param in params
-    ])
-
-    out += ']},\n'
-
-    return out
+    return json.dumps({
+        'name': funcname,
+        'tag': tag,
+        'is_callback': is_callback,
+        'args': params,
+    }, indent=4) + '\n'
 
 
 def gen_const(string):
     """generates a sublime-completions line based on a single string"""
-    args = string
-    if "%" in string:
-        i = 0
-        for x in range(-1, 9):
-            if string.find("%%%d" % (x)) != -1:
-                i += 1
-                args = args.replace("%%%d" % (x), "${%d:%d}" % (i, x))
-        out = '\t\t{"trigger": "%s", "contents": "%s' % (string, args)
-        out += '"},\n'
-    else:
-        out = '\t\t"%s",\n' % string
-    return out
+    return '"%s",\n' % string
 
 
 def is_char_valid_symbol_char(character):
