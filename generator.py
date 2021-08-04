@@ -26,18 +26,17 @@ def db(*args):
     print("")
 
 
-def gen_func(funcname, params):
+def gen_func(funcname, params, tag):
     """generates a sublime-completions line based on a function"""
 
-    out = '{"name": "%s(' % (funcname,)
+    out = '{"name": "%s", "tag": "%s", "args": [' % (funcname, tag)
 
-    for i, param in enumerate(params):
-        out += '${%d:%s}' % (i + 1, param.replace('\\', '\\\\').replace('"', '\\\"'))
+    out += ', '.join([
+        f'"{param}"'
+        for param in params
+    ])
 
-        if(i != len(params) - 1):
-            out += ', '
-
-    out += ')"},\n'
+    out += ']},\n'
 
     return out
 
@@ -87,6 +86,7 @@ def scan_contents(contents):
     in_function_params = False
     pos_function_name = -1
     pos_function_param = -1
+    data_function_tag = "_"
     data_function_name = ""
     data_function_params = []
     # count_function_params = 0
@@ -244,9 +244,10 @@ def scan_contents(contents):
 
                 else:
                     if c == ':' or c == ' ':
-                        db("extracted string is tag, starting again")
+                        data_function_tag = contents[pos_function_name:i]
                         pos_function_name = -1
                         skip_until_valid_symbol_char = True
+                        db("function tag '%s'" % data_function_tag)
                         continue
 
                     if c == '(':
@@ -324,7 +325,11 @@ def scan_contents(contents):
                     in_function_param = False
 
             if c == ')':
-                output_contents += gen_func(data_function_name, data_function_params)
+                output_contents += gen_func(
+                    data_function_name,
+                    data_function_params,
+                    data_function_tag,
+                )
                 in_function = False
                 print("[EXTRACTED] FUNCTION '%s' PARAMS: %s" % (
                     data_function_name, data_function_params))
