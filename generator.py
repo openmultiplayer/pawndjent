@@ -1,8 +1,11 @@
 import glob
 import json
 import os
+import re
 import string
 import sys
+from dataclasses import InitVar, dataclass, fields
+from typing import Any, List
 
 
 # Regular expressions for defines, natives and publics.
@@ -27,19 +30,132 @@ def db(*args):
     print("")
 
 
+@dataclass
+class Argument:
+    name: str
+    tag: str
+    is_const: bool
+    is_array: bool
+    is_reference: InitVar[bool]
+    default_value: Any = None
+
+    regexp = re.compile(
+        r'''
+        (const\s+)?      # Const specifier
+        (&)?             # Reference
+        (\w+:)?          # Tag
+        (\w+)            # Name
+        (\[\])?          # Array
+        (?:\s*=\s*(.*))? # Default value
+        \s*              # Ignore trailing whitespace
+        ''',
+        re.VERBOSE
+    )
+
+    def __post_init__(self, is_reference):
+        self._is_reference = is_reference
+
+    @property
+    def is_reference(self):
+        return self._is_reference or (self.is_array and not self.is_const)
+
+    @classmethod
+    def from_string_list(cls, string_list):
+        return [
+            Argument.from_str(string)
+            for string in string_list
+            if string != '...'
+        ]
+
+    @classmethod
+    def from_str(cls, data):
+        match = cls.regexp.fullmatch(data)
+
+        if not match:
+            raise ValueError(f'Invalid argument: {data!r}')
+
+        is_const, is_reference, tag, name, is_array, default_value = (
+            match.groups()
+        )
+        is_const = bool(is_const)
+        is_reference = bool(is_reference)
+        tag = tag[:-1] if tag else '_'  # Trailing ':'
+        is_array = bool(is_array)
+
+        if default_value:
+            if tag == 'Float':
+                default_value = float(default_value)
+
+            else:
+                try:
+                    default_value = int(default_value)
+                except ValueError:
+                    pass
+
+        return cls(
+            name=name,
+            tag=tag,
+            is_const=is_const,
+            is_array=is_array,
+            is_reference=is_reference,
+            default_value=default_value,
+        )
+
+    def to_dict(self):
+        return {
+            field.name: getattr(self, field.name)
+            for field in fields(self)
+        }
+
+
+@dataclass
+class Function:
+    name: str
+    tag: str
+    is_callback: bool
+    arguments: List[Argument]
+    is_variadic: bool
+
+    @staticmethod
+    def is_string_list_variadic(string_list):
+        is_variadic = '...' in string_list
+
+        if is_variadic:
+            if(
+                string_list.count('...') != 1
+                or string_list[-1] != '...'
+            ):
+                raise ValueError('Invalid variadic specification')
+
+        return is_variadic
+
+    def to_dict(self):
+        return {
+            **{
+                field.name: getattr(self, field.name)
+                for field in fields(self)
+                if field.name != 'arguments'
+            },
+            'arguments': [
+                argument.to_dict()
+                for argument in self.arguments
+            ],
+        }
+
+
 def gen_func(funcname, params, tag, is_callback):
-    """generates a sublime-completions line based on a function"""
-    return json.dumps({
-        'name': funcname,
-        'tag': tag,
-        'is_callback': is_callback,
-        'args': params,
-    }, indent=4) + '\n'
+    return Function(
+        name=funcname,
+        tag=tag,
+        is_callback=is_callback,
+        arguments=Argument.from_string_list(params),
+        is_variadic=Function.is_string_list_variadic(params),
+    )
 
 
 def gen_const(string):
     """generates a sublime-completions line based on a single string"""
-    return '"%s",\n' % string
+    return string
 
 
 def is_char_valid_symbol_char(character):
@@ -55,7 +171,8 @@ def scan_contents(contents):
     functions
     """
 
-    output_contents = ""
+    output_constants = []
+    output_functions = []
 
     skip_until_newline = False
     skip_until_whitespace_start = False
@@ -178,8 +295,7 @@ def scan_contents(contents):
                 else:
                     final = contents[pos_directive_define:i]
 
-                    output_contents += gen_const(final)
-                    print("[EXTRACTED] DIRECTIVE 'define' DATA: '%s'" % final)
+                    output_constants.append(gen_const(final))
 
                     in_directive = False
                     in_directive_define = False
@@ -254,7 +370,7 @@ def scan_contents(contents):
             if not in_function_params and not no_function_params:
                 db("reached start of params")
 
-                if not is_char_valid_symbol_char(c):
+                if not is_char_valid_symbol_char(c) and c != '&':
 
                     if c == ')':
                         no_function_params = True
@@ -284,7 +400,7 @@ def scan_contents(contents):
                         in_function_param_subscript = True
                         continue
 
-                if not is_char_valid_symbol_char(c):
+                if not is_char_valid_symbol_char(c) and c != '&':
                     if not in_function_param_subscript:
                         if c == '{':
                             db("invalid char check: in parameter subscript block")
@@ -311,15 +427,13 @@ def scan_contents(contents):
                     in_function_param = False
 
             if c == ')':
-                output_contents += gen_func(
+                output_functions.append(gen_func(
                     data_function_name,
                     data_function_params,
                     data_function_tag,
                     is_function_callback,
-                )
+                ))
                 in_function = False
-                print("[EXTRACTED] FUNCTION '%s' PARAMS: %s" % (
-                    data_function_name, data_function_params))
                 continue
 
         else:
@@ -338,7 +452,10 @@ def scan_contents(contents):
                 no_function_params = False
                 continue
 
-    return output_contents.rstrip("\n,") + '\n'
+    return {
+        'constants': output_constants,
+        'functions': output_functions,
+    }
 
 
 def process_file(filename):
@@ -357,7 +474,17 @@ def process_file(filename):
     output_contents = scan_contents(contents)
 
     with open(filename + '.json', 'w') as output_file:
-        output_file.write(output_contents)
+        json.dump(
+            {
+                'constants': output_contents['constants'],
+                'functions': [
+                    function.to_dict()
+                    for function in output_contents['functions']
+                ],
+            },
+            output_file,
+            indent=4,
+        )
 
 
 def main():
