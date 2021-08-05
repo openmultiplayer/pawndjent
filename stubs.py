@@ -1,33 +1,7 @@
-import glob
 import json
 import os
-import re
-import string
+import textwrap
 import sys
-from dataclasses import InitVar, dataclass, fields
-from typing import Any, List
-
-
-# Regular expressions for defines, natives and publics.
-# I decided against using regex eventually for a few reasons.
-# re_define = r"\#define\s*(.*)[ 	]"
-# re_native = r"native\s*([A-Za-z0-9:]*)([A-Za-z0-9_]*)\((.*)\);"
-# re_public = r"forward\s*([A-Za-z0-9:]*)([A-Za-z0-9_]*)\((.*)\);"
-
-
-# quick and dirty debug prints that can be toggled
-
-debug = False
-
-
-def db(*args):
-    if not debug:
-        return
-
-    for i in args:
-        print(i, end=" ")
-
-    print("")
 
 
 def get_return_type_from_tag(tag):
@@ -78,10 +52,13 @@ def generate_stubs(ir):
         return_type = get_return_type_from_tag(fn["tag"])
         args = [gen_arg(a) for a in fn["arguments"]]
 
-        functions.append(
-            f"SCRIPT_API({name}, {return_type}({', '.join(args)}) {{ return; }}")
+        functions.append(textwrap.dedent(f'''
+            SCRIPT_API({name}, {return_type}({', '.join(args)})) {{
+                throw NotImplemented();
+            }}
+        '''))
 
-    return '\n'.join(functions)
+    return ''.join(functions)
 
 
 def process_file(filename, module):
