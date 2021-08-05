@@ -1,14 +1,8 @@
 import json
 import os
+import pathlib
 import textwrap
 import sys
-
-
-def get_return_type_from_tag(tag):
-    if tag == "_":
-        return "bool"
-    else:
-        return tag
 
 
 TAG_TYPE_TABLE = {
@@ -17,27 +11,24 @@ TAG_TYPE_TABLE = {
 }
 
 
+def get_return_type_from_tag(tag):
+    if tag == "_":
+        return "bool"
+    else:
+        return TAG_TYPE_TABLE.get(tag, '_')
+
+
 def get_type_from_tag(tag):
     return TAG_TYPE_TABLE[tag]
-
-# IActor& actor
-# const std::string& animLib
-# const std::string& animName
-# float delta
-# int loop
-# int lockX
-# int lockY
-# int freeze
-# int time
 
 
 def gen_arg(arg):
     name = arg["name"]
     tag = arg["tag"]
-    is_const = arg["is_const"]
-    is_array = arg["is_array"]
-    default_value = arg["default_value"]
-    is_reference = arg["is_reference"]
+    # is_const = arg["is_const"]
+    # is_array = arg["is_array"]
+    # default_value = arg["default_value"]
+    # is_reference = arg["is_reference"]
 
     type = get_type_from_tag(tag)
 
@@ -45,6 +36,7 @@ def gen_arg(arg):
 
 
 def generate_stubs(ir):
+    """Generates and returns C++ stubs as strings from IR data."""
     functions = []
 
     for fn in ir["functions"]:
@@ -56,27 +48,20 @@ def generate_stubs(ir):
             SCRIPT_API({name}, {return_type}({', '.join(args)})) {{
                 throw NotImplemented();
             }}
-        '''))
+        ''').strip())
 
-    return ''.join(functions)
+    return functions
 
 
-def process_file(filename, module):
-    """
-    generates C++ stubs from JSON IR data
-    """
-
-    output_filename = os.path.join("Pawn/Scripting/", module, "Natives.cpp")
-    print(filename, "->", output_filename)
-
-    ir = None
-    with open(filename, 'r') as input_file:
-        ir = json.loads(input_file.read())
-
+def process_file(input_path, module_name):
+    """Writes C++ stubs from JSON IR input_path to specified module."""
+    output_path = (
+        pathlib.Path('Pawn') / 'Scripting' / module_name / 'Natives.cpp'
+    )
+    print(f'{input_path} -> {output_path}')
+    ir = json.loads(input_path.read_text())
     output_contents = generate_stubs(ir)
-
-    with open(output_filename, 'w') as output_file:
-        output_file.write(output_contents)
+    output_path.write_text('\n\n'.join(output_contents))
 
 
 def main():
@@ -84,17 +69,19 @@ def main():
         print(f'Usage: {sys.argv[0]} path_to_json_ir module_name')
         return
 
-    path = sys.argv[1]
-    module = sys.argv[2]
+    path = pathlib.Path(sys.argv[1])
+    module_name = sys.argv[2]
 
     if not os.path.exists(path):
-        print("File not found.")
-        return
+        print('File not found.')
+        return 1
 
-    if os.path.isfile(path):
-        process_file(path, module)
-        return
+    if not path.is_file():
+        print("Can't operate on a folder (yet).")
+        return 1
+
+    process_file(path, module_name)
 
 
 if __name__ == '__main__':
-    main()
+    sys.exit(main())

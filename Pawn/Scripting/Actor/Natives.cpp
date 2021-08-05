@@ -1,4 +1,3 @@
-
 SCRIPT_API(CreateActor, bool(int modelid, float X, float Y, float Z, float Rotation)) {
     throw NotImplemented();
 }
