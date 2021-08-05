@@ -1,6 +1,17 @@
 import re
+import textwrap
 from dataclasses import InitVar, dataclass, fields
 from typing import Any, List
+
+
+TAG_TYPE_TABLE = {
+    '_': 'int',
+    'Float': 'float',
+}
+
+
+def get_type_from_tag(tag):
+    return TAG_TYPE_TABLE.get(tag, '_')
 
 
 @dataclass
@@ -87,6 +98,17 @@ class Argument:
             'is_reference': self.is_reference,
         }
 
+    def generate_stub(self):
+        name = self.name
+        tag = self.tag
+        # is_const = self.is_const
+        # is_array = self.is_array
+        # default_value = self.default_value
+        # is_reference = self.is_reference
+
+        type = get_type_from_tag(tag)
+        return f'{type} {name}'
+
 
 @dataclass
 class Function:
@@ -129,3 +151,26 @@ class Function:
                 for argument in self.arguments
             ],
         }
+
+    def get_return_type_from_tag(self, tag):
+        if tag == '_':
+            # TODO: Apply "default" heuristics
+            return 'bool'
+
+        return get_type_from_tag(tag)
+
+    def generate_stub(self):
+        name = self.name
+        # TODO: Apply multi-argument heuristics first
+        # XXX: Handling order preservation in a multi-pass process
+        return_type = self.get_return_type_from_tag(self.tag)
+        argument_stubs = [
+            argument.generate_stub()
+            for argument in self.arguments
+        ]
+
+        return textwrap.dedent(f'''
+            SCRIPT_API({name}, {return_type}({', '.join(argument_stubs)})) {{
+                throw NotImplemented();
+            }}
+        ''').strip()

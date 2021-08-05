@@ -1,40 +1,9 @@
 import json
 import os
 import pathlib
-import textwrap
 import sys
 
 from model import Function
-
-
-TAG_TYPE_TABLE = {
-    "_": "int",
-    "Float": "float"
-}
-
-
-def get_type_from_tag(tag):
-    return TAG_TYPE_TABLE.get(tag, '_')
-
-
-def get_return_type_from_tag(tag):
-    if tag == "_":
-        return "bool"
-    else:
-        return get_type_from_tag(tag)
-
-
-def generate_argument_stub(argument):
-    name = argument.name
-    tag = argument.tag
-    # is_const = argument.is_const
-    # is_array = argument.is_array
-    # default_value = argument.default_value
-    # is_reference = argument.is_reference
-
-    type = get_type_from_tag(tag)
-
-    return f"{type} {name}"
 
 
 def generate_stubs(functions):
@@ -42,15 +11,7 @@ def generate_stubs(functions):
     stubs = []
 
     for function in functions:
-        name = function.name
-        return_type = get_return_type_from_tag(function.tag)
-        argument_stubs = [generate_argument_stub(a) for a in function.arguments]
-
-        stubs.append(textwrap.dedent(f'''
-            SCRIPT_API({name}, {return_type}({', '.join(argument_stubs)})) {{
-                throw NotImplemented();
-            }}
-        ''').strip())
+        stubs.append(function.generate_stub())
 
     return stubs
 
