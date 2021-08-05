@@ -4,6 +4,8 @@ import pathlib
 import textwrap
 import sys
 
+from model import Function
+
 
 TAG_TYPE_TABLE = {
     "_": "int",
@@ -11,46 +13,46 @@ TAG_TYPE_TABLE = {
 }
 
 
+def get_type_from_tag(tag):
+    return TAG_TYPE_TABLE.get(tag, '_')
+
+
 def get_return_type_from_tag(tag):
     if tag == "_":
         return "bool"
     else:
-        return TAG_TYPE_TABLE.get(tag, '_')
+        return get_type_from_tag(tag)
 
 
-def get_type_from_tag(tag):
-    return TAG_TYPE_TABLE[tag]
-
-
-def gen_arg(arg):
-    name = arg["name"]
-    tag = arg["tag"]
-    # is_const = arg["is_const"]
-    # is_array = arg["is_array"]
-    # default_value = arg["default_value"]
-    # is_reference = arg["is_reference"]
+def generate_argument_stub(argument):
+    name = argument.name
+    tag = argument.tag
+    # is_const = argument.is_const
+    # is_array = argument.is_array
+    # default_value = argument.default_value
+    # is_reference = argument.is_reference
 
     type = get_type_from_tag(tag)
 
     return f"{type} {name}"
 
 
-def generate_stubs(ir):
+def generate_stubs(functions):
     """Generates and returns C++ stubs as strings from IR data."""
-    functions = []
+    stubs = []
 
-    for fn in ir["functions"]:
-        name = fn["name"]
-        return_type = get_return_type_from_tag(fn["tag"])
-        args = [gen_arg(a) for a in fn["arguments"]]
+    for function in functions:
+        name = function.name
+        return_type = get_return_type_from_tag(function.tag)
+        argument_stubs = [generate_argument_stub(a) for a in function.arguments]
 
-        functions.append(textwrap.dedent(f'''
-            SCRIPT_API({name}, {return_type}({', '.join(args)})) {{
+        stubs.append(textwrap.dedent(f'''
+            SCRIPT_API({name}, {return_type}({', '.join(argument_stubs)})) {{
                 throw NotImplemented();
             }}
         ''').strip())
 
-    return functions
+    return stubs
 
 
 def process_file(input_path, module_name):
@@ -60,7 +62,8 @@ def process_file(input_path, module_name):
     )
     print(f'{input_path} -> {output_path}')
     ir = json.loads(input_path.read_text())
-    output_contents = generate_stubs(ir)
+    functions = [Function.from_dict(function) for function in ir['functions']]
+    output_contents = generate_stubs(functions)
     output_path.write_text('\n\n'.join(output_contents))
 
 

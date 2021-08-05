@@ -74,6 +74,10 @@ class Argument:
             default_value=default_value,
         )
 
+    @classmethod
+    def from_dict(cls, data):
+        return cls(**data)
+
     def to_dict(self):
         return {
             **{
@@ -104,6 +108,14 @@ class Function:
                 raise ValueError('Invalid variadic specification')
 
         return is_variadic
+
+    @classmethod
+    def from_dict(cls, data):
+        data['arguments'] = [
+            Argument.from_dict(argument)
+            for argument in data['arguments']
+        ]
+        return cls(**data)
 
     def to_dict(self):
         return {
