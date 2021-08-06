@@ -259,7 +259,7 @@
                 },
                 {
                     "name": "ignorecase",
-                    "tag": "boo",
+                    "tag": "bool",
                     "is_const": false,
                     "is_array": false,
                     "default_value": "false",
@@ -299,7 +299,7 @@
                 },
                 {
                     "name": "ignorecase",
-                    "tag": "boo",
+                    "tag": "bool",
                     "is_const": false,
                     "is_array": false,
                     "default_value": "false",
@@ -355,7 +355,7 @@
                 },
                 {
                     "name": "pack",
-                    "tag": "boo",
+                    "tag": "bool",
                     "is_const": false,
                     "is_array": false,
                     "default_value": "false",

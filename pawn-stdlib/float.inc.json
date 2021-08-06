@@ -41,7 +41,7 @@
             "arguments": [
                 {
                     "name": "oper1",
-                    "tag": "Floa",
+                    "tag": "Float",
                     "is_const": false,
                     "is_array": false,
                     "default_value": null,
@@ -49,7 +49,7 @@
                 },
                 {
                     "name": "oper2",
-                    "tag": "Floa",
+                    "tag": "Float",
                     "is_const": false,
                     "is_array": false,
                     "default_value": null,
@@ -65,7 +65,7 @@
             "arguments": [
                 {
                     "name": "dividend",
-                    "tag": "Floa",
+                    "tag": "Float",
                     "is_const": false,
                     "is_array": false,
                     "default_value": null,
@@ -73,7 +73,7 @@
                 },
                 {
                     "name": "divisor",
-                    "tag": "Floa",
+                    "tag": "Float",
                     "is_const": false,
                     "is_array": false,
                     "default_value": null,
@@ -89,7 +89,7 @@
             "arguments": [
                 {
                     "name": "oper1",
-                    "tag": "Floa",
+                    "tag": "Float",
                     "is_const": false,
                     "is_array": false,
                     "default_value": null,
@@ -97,7 +97,7 @@
                 },
                 {
                     "name": "oper2",
-                    "tag": "Floa",
+                    "tag": "Float",
                     "is_const": false,
                     "is_array": false,
                     "default_value": null,
@@ -113,7 +113,7 @@
             "arguments": [
                 {
                     "name": "oper1",
-                    "tag": "Floa",
+                    "tag": "Float",
                     "is_const": false,
                     "is_array": false,
                     "default_value": null,
@@ -121,7 +121,7 @@
                 },
                 {
                     "name": "oper2",
-                    "tag": "Floa",
+                    "tag": "Float",
                     "is_const": false,
                     "is_array": false,
                     "default_value": null,
@@ -137,7 +137,7 @@
             "arguments": [
                 {
                     "name": "value",
-                    "tag": "Floa",
+                    "tag": "Float",
                     "is_const": false,
                     "is_array": false,
                     "default_value": null,
@@ -153,7 +153,7 @@
             "arguments": [
                 {
                     "name": "value",
-                    "tag": "Floa",
+                    "tag": "Float",
                     "is_const": false,
                     "is_array": false,
                     "default_value": null,
@@ -161,7 +161,7 @@
                 },
                 {
                     "name": "method",
-                    "tag": "floatround_metho",
+                    "tag": "floatround_method",
                     "is_const": false,
                     "is_array": false,
                     "default_value": "floatround_round",
@@ -177,7 +177,7 @@
             "arguments": [
                 {
                     "name": "oper1",
-                    "tag": "Floa",
+                    "tag": "Float",
                     "is_const": false,
                     "is_array": false,
                     "default_value": null,
@@ -185,7 +185,7 @@
                 },
                 {
                     "name": "oper2",
-                    "tag": "Floa",
+                    "tag": "Float",
                     "is_const": false,
                     "is_array": false,
                     "default_value": null,
@@ -201,7 +201,7 @@
             "arguments": [
                 {
                     "name": "value",
-                    "tag": "Floa",
+                    "tag": "Float",
                     "is_const": false,
                     "is_array": false,
                     "default_value": null,
@@ -217,7 +217,7 @@
             "arguments": [
                 {
                     "name": "value",
-                    "tag": "Floa",
+                    "tag": "Float",
                     "is_const": false,
                     "is_array": false,
                     "default_value": null,
@@ -225,7 +225,7 @@
                 },
                 {
                     "name": "exponent",
-                    "tag": "Floa",
+                    "tag": "Float",
                     "is_const": false,
                     "is_array": false,
                     "default_value": null,
@@ -241,7 +241,7 @@
             "arguments": [
                 {
                     "name": "value",
-                    "tag": "Floa",
+                    "tag": "Float",
                     "is_const": false,
                     "is_array": false,
                     "default_value": null,
@@ -249,10 +249,10 @@
                 },
                 {
                     "name": "base",
-                    "tag": "Floa",
+                    "tag": "Float",
                     "is_const": false,
                     "is_array": false,
-                    "default_value": "10.0",
+                    "default_value": 10.0,
                     "is_reference": false
                 }
             ]
@@ -265,7 +265,7 @@
             "arguments": [
                 {
                     "name": "value",
-                    "tag": "Floa",
+                    "tag": "Float",
                     "is_const": false,
                     "is_array": false,
                     "default_value": null,
@@ -273,7 +273,7 @@
                 },
                 {
                     "name": "mode",
-                    "tag": "anglemod",
+                    "tag": "anglemode",
                     "is_const": false,
                     "is_array": false,
                     "default_value": "radian",
@@ -289,7 +289,7 @@
             "arguments": [
                 {
                     "name": "value",
-                    "tag": "Floa",
+                    "tag": "Float",
                     "is_const": false,
                     "is_array": false,
                     "default_value": null,
@@ -297,7 +297,7 @@
                 },
                 {
                     "name": "mode",
-                    "tag": "anglemod",
+                    "tag": "anglemode",
                     "is_const": false,
                     "is_array": false,
                     "default_value": "radian",
@@ -313,7 +313,7 @@
             "arguments": [
                 {
                     "name": "value",
-                    "tag": "Floa",
+                    "tag": "Float",
                     "is_const": false,
                     "is_array": false,
                     "default_value": null,
@@ -321,7 +321,7 @@
                 },
                 {
                     "name": "mode",
-                    "tag": "anglemod",
+                    "tag": "anglemode",
                     "is_const": false,
                     "is_array": false,
                     "default_value": "radian",
@@ -337,7 +337,7 @@
             "arguments": [
                 {
                     "name": "value",
-                    "tag": "Floa",
+                    "tag": "Float",
                     "is_const": false,
                     "is_array": false,
                     "default_value": null,

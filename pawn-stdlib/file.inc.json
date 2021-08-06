@@ -17,7 +17,7 @@
                 },
                 {
                     "name": "mode",
-                    "tag": "filemod",
+                    "tag": "filemode",
                     "is_const": false,
                     "is_array": false,
                     "default_value": "io_readwrite",
@@ -33,7 +33,7 @@
             "arguments": [
                 {
                     "name": "handle",
-                    "tag": "Fil",
+                    "tag": "File",
                     "is_const": false,
                     "is_array": false,
                     "default_value": null,
@@ -72,7 +72,7 @@
             "arguments": [
                 {
                     "name": "handle",
-                    "tag": "Fil",
+                    "tag": "File",
                     "is_const": false,
                     "is_array": false,
                     "default_value": null,
@@ -96,7 +96,7 @@
             "arguments": [
                 {
                     "name": "handle",
-                    "tag": "Fil",
+                    "tag": "File",
                     "is_const": false,
                     "is_array": false,
                     "default_value": null,
@@ -120,7 +120,7 @@
                 },
                 {
                     "name": "pack",
-                    "tag": "boo",
+                    "tag": "bool",
                     "is_const": false,
                     "is_array": false,
                     "default_value": "false",
@@ -136,7 +136,7 @@
             "arguments": [
                 {
                     "name": "handle",
-                    "tag": "Fil",
+                    "tag": "File",
                     "is_const": false,
                     "is_array": false,
                     "default_value": null,
@@ -152,7 +152,7 @@
                 },
                 {
                     "name": "utf8",
-                    "tag": "boo",
+                    "tag": "bool",
                     "is_const": false,
                     "is_array": false,
                     "default_value": "true",
@@ -168,7 +168,7 @@
             "arguments": [
                 {
                     "name": "handle",
-                    "tag": "Fil",
+                    "tag": "File",
                     "is_const": false,
                     "is_array": false,
                     "default_value": null,
@@ -184,7 +184,7 @@
                 },
                 {
                     "name": "utf8",
-                    "tag": "boo",
+                    "tag": "bool",
                     "is_const": false,
                     "is_array": false,
                     "default_value": "true",
@@ -200,7 +200,7 @@
             "arguments": [
                 {
                     "name": "handle",
-                    "tag": "Fil",
+                    "tag": "File",
                     "is_const": false,
                     "is_array": false,
                     "default_value": null,
@@ -232,7 +232,7 @@
             "arguments": [
                 {
                     "name": "handle",
-                    "tag": "Fil",
+                    "tag": "File",
                     "is_const": false,
                     "is_array": false,
                     "default_value": null,
@@ -264,7 +264,7 @@
             "arguments": [
                 {
                     "name": "handle",
-                    "tag": "Fil",
+                    "tag": "File",
                     "is_const": false,
                     "is_array": false,
                     "default_value": null,
@@ -280,7 +280,7 @@
                 },
                 {
                     "name": "whence",
-                    "tag": "seek_whenc",
+                    "tag": "seek_whence",
                     "is_const": false,
                     "is_array": false,
                     "default_value": "seek_start",
@@ -296,7 +296,7 @@
             "arguments": [
                 {
                     "name": "handle",
-                    "tag": "Fil",
+                    "tag": "File",
                     "is_const": false,
                     "is_array": false,
                     "default_value": null,
