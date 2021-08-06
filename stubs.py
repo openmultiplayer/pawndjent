@@ -25,6 +25,7 @@ def process_file(input_path, module_name):
     ir = json.loads(input_path.read_text())
     functions = [Function.from_dict(function) for function in ir['functions']]
     output_contents = generate_stubs(functions)
+    os.makedirs(output_path.parent, exist_ok=True)
     output_path.write_text('\n\n'.join(output_contents))
 
 

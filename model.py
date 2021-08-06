@@ -4,14 +4,81 @@ from dataclasses import InitVar, dataclass, fields
 from typing import Any, List
 
 
-TAG_TYPE_TABLE = {
-    '_': 'int',
-    'Float': 'float',
-}
+@dataclass
+class CPPArgument:
+    name: str
+    type: str
+    is_pointer: bool = False
+    is_reference: bool = False
+
+    tag_types = {
+        '_': 'int',
+        'Float': 'float',
+        'PlayerText': 'ITextDraw&',
+    }
+
+    @classmethod
+    def from_argument(cls, argument):
+        if type(argument) is cls:
+            return argument
+
+        cpp_type = cls.tag_types[argument.tag]
+
+        return cls(
+            name=argument.name,
+            type=cpp_type.rstrip('&'),
+            is_reference=(
+                argument.is_reference
+                or cpp_type.endswith('&')
+            ),
+        )
+
+    def generate_stub(self):
+        return f'{self.type}{{}} {self.name}'.format(
+            '*' if self.is_pointer
+            else '&' if self.is_reference
+            else ''
+        )
 
 
-def get_type_from_tag(tag):
-    return TAG_TYPE_TABLE.get(tag, '_')
+@dataclass
+class CPPFunction:
+    name: str
+    type: str
+    arguments: List[CPPArgument]
+
+    tag_types = {
+        '_': 'bool',
+        'PlayerText': 'int',
+    }
+
+    @classmethod
+    def type_from_tag(cls, tag):
+        return cls.tag_types.get(tag, CPPArgument.tag_types[tag])
+
+    @classmethod
+    def from_function_and_arguments(cls, function, arguments):
+        return cls(
+            name=function.name,
+            type=cls.type_from_tag(function.tag),
+            arguments=[
+                CPPArgument.from_argument(argument)
+                for argument in arguments
+            ],
+        )
+
+    def generate_stub(self):
+        name = self.name
+        type = self.type
+        argument_stubs = [
+            argument.generate_stub()
+            for argument in self.arguments
+        ]
+        return textwrap.dedent(f'''
+            SCRIPT_API({name}, {type}({', '.join(argument_stubs)})) {{
+                throw NotImplemented();
+            }}
+        ''').strip()
 
 
 @dataclass
@@ -99,15 +166,7 @@ class Argument:
         }
 
     def generate_stub(self):
-        name = self.name
-        tag = self.tag
-        # is_const = self.is_const
-        # is_array = self.is_array
-        # default_value = self.default_value
-        # is_reference = self.is_reference
-
-        type = get_type_from_tag(tag)
-        return f'{type} {name}'
+        return CPPArgument.from_argument(self).generate_stub()
 
 
 @dataclass
@@ -152,25 +211,16 @@ class Function:
             ],
         }
 
-    def get_return_type_from_tag(self, tag):
-        if tag == '_':
-            # TODO: Apply "default" heuristics
-            return 'bool'
-
-        return get_type_from_tag(tag)
-
     def generate_stub(self):
-        name = self.name
-        # TODO: Apply multi-argument heuristics first
-        # XXX: Handling order preservation in a multi-pass process
-        return_type = self.get_return_type_from_tag(self.tag)
-        argument_stubs = [
-            argument.generate_stub()
-            for argument in self.arguments
-        ]
+        arguments = self.arguments.copy()
 
-        return textwrap.dedent(f'''
-            SCRIPT_API({name}, {return_type}({', '.join(argument_stubs)})) {{
-                throw NotImplemented();
-            }}
-        ''').strip()
+        for heuristic in all_heuristics:
+            arguments = heuristic.apply(arguments)
+
+        return CPPFunction.from_function_and_arguments(
+            self,
+            arguments,
+        ).generate_stub()
+
+
+from heuristics import all_heuristics  # noqa: Circular import
