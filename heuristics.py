@@ -43,6 +43,26 @@ class ActorHeuristic(SingleArgumentHeuristic):
 
 
 class Vector3Heuristic(Heuristic):
+    def autogenerate_name(self, x, y, z):
+        names = [x.name, y.name, z.name]
+
+        if all(name.startswith('f') for name in names):
+            names = [name[1:] for name in names]
+
+        for index, letter in enumerate(('x', 'y', 'z')):
+            if names[index].endswith((letter, letter.upper())):
+                names[index] = names[index][:-1]
+
+        if not any(names):
+            return 'pos'  # Default
+
+        if all(name == names[0] for name in names):
+            return names[0].lower()
+
+        raise ValueError(
+            f'Unable to determine name for {x}, {y}, {z}: found {names}'
+        )
+
     def apply(self, arguments):
         return_value = arguments.copy()
 
@@ -63,13 +83,13 @@ class Vector3Heuristic(Heuristic):
                     x.tag == 'Float'
                     and y.tag == 'Float'
                     and z.tag == 'Float'
-                    and 'x' in x.name
-                    and 'y' in y.name
-                    and 'z' in z.name
+                    and 'x' in x.name.lower()
+                    and 'y' in y.name.lower()
+                    and 'z' in z.name.lower()
                 ):
-                    # TODO: Auto-determine suitable name from arguments
+                    name = self.autogenerate_name(x, y, z)
                     return_value[index:index + 3] = [CPPArgument(
-                        'pos',
+                        name,
                         'Vector3',
                         is_reference=any(
                             argument.is_reference

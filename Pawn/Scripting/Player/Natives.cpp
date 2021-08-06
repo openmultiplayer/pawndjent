@@ -30,7 +30,7 @@ SCRIPT_API(IsPlayerInRangeOfPoint, bool(IPlayer& player, float range, Vector3 po
     throw NotImplemented();
 }
 
-SCRIPT_API(GetPlayerDistanceFromPoint, float(IPlayer& player, float X, float Y, float Z)) {
+SCRIPT_API(GetPlayerDistanceFromPoint, float(IPlayer& player, Vector3 pos)) {
     throw NotImplemented();
 }
 
@@ -218,11 +218,11 @@ SCRIPT_API(GetPlayerFightingStyle, bool(IPlayer& player)) {
     throw NotImplemented();
 }
 
-SCRIPT_API(SetPlayerVelocity, bool(IPlayer& player, float X, float Y, float Z)) {
+SCRIPT_API(SetPlayerVelocity, bool(IPlayer& player, Vector3 pos)) {
     throw NotImplemented();
 }
 
-SCRIPT_API(GetPlayerVelocity, bool(IPlayer& player, float& X, float& Y, float& Z)) {
+SCRIPT_API(GetPlayerVelocity, bool(IPlayer& player, Vector3& pos)) {
     throw NotImplemented();
 }
 
@@ -230,7 +230,7 @@ SCRIPT_API(PlayCrimeReportForPlayer, bool(IPlayer& player, int suspectid, int cr
     throw NotImplemented();
 }
 
-SCRIPT_API(PlayAudioStreamForPlayer, bool(IPlayer& player, int url, float posX, float posY, float posZ, float distance, int usepos)) {
+SCRIPT_API(PlayAudioStreamForPlayer, bool(IPlayer& player, int url, Vector3 pos, float distance, int usepos)) {
     throw NotImplemented();
 }
 
@@ -254,15 +254,15 @@ SCRIPT_API(GetPlayerSurfingObjectID, bool(IPlayer& player)) {
     throw NotImplemented();
 }
 
-SCRIPT_API(RemoveBuildingForPlayer, bool(IPlayer& player, int modelid, float fX, float fY, float fZ, float fRadius)) {
+SCRIPT_API(RemoveBuildingForPlayer, bool(IPlayer& player, int modelid, Vector3 pos, float fRadius)) {
     throw NotImplemented();
 }
 
-SCRIPT_API(GetPlayerLastShotVectors, bool(IPlayer& player, float& fOriginX, float& fOriginY, float& fOriginZ, float& fHitPosX, float& fHitPosY, float& fHitPosZ)) {
+SCRIPT_API(GetPlayerLastShotVectors, bool(IPlayer& player, Vector3& origin, Vector3& hitpos)) {
     throw NotImplemented();
 }
 
-SCRIPT_API(SetPlayerAttachedObject, bool(IPlayer& player, int index, int modelid, int bone, float fOffsetX, float fOffsetY, float fOffsetZ, float fRotX, float fRotY, float fRotZ, float fScaleX, float fScaleY, float fScaleZ, int materialcolor1, int materialcolor2)) {
+SCRIPT_API(SetPlayerAttachedObject, bool(IPlayer& player, int index, int modelid, int bone, Vector3 offset, Vector3 rot, Vector3 scale, int materialcolor1, int materialcolor2)) {
     throw NotImplemented();
 }
 
@@ -350,7 +350,7 @@ SCRIPT_API(PlayerTextDrawSetPreviewModel, bool(IPlayer& player, ITextDraw& text,
     throw NotImplemented();
 }
 
-SCRIPT_API(PlayerTextDrawSetPreviewRot, bool(IPlayer& player, ITextDraw& text, float fRotX, float fRotY, float fRotZ, float fZoom)) {
+SCRIPT_API(PlayerTextDrawSetPreviewRot, bool(IPlayer& player, ITextDraw& text, Vector3 rot, float fZoom)) {
     throw NotImplemented();
 }
 
@@ -462,7 +462,7 @@ SCRIPT_API(DisablePlayerCheckpoint, bool(IPlayer& player)) {
     throw NotImplemented();
 }
 
-SCRIPT_API(SetPlayerRaceCheckpoint, bool(IPlayer& player, int type, Vector3 pos, Vector3 pos, float size)) {
+SCRIPT_API(SetPlayerRaceCheckpoint, bool(IPlayer& player, int type, Vector3 pos, Vector3 next, float size)) {
     throw NotImplemented();
 }
 
@@ -554,11 +554,11 @@ SCRIPT_API(AttachCameraToPlayerObject, bool(IPlayer& player, int playerobjectid)
     throw NotImplemented();
 }
 
-SCRIPT_API(InterpolateCameraPos, bool(IPlayer& player, float FromX, float FromY, float FromZ, float ToX, float ToY, float ToZ, int time, int cut)) {
+SCRIPT_API(InterpolateCameraPos, bool(IPlayer& player, Vector3 from, Vector3 to, int time, int cut)) {
     throw NotImplemented();
 }
 
-SCRIPT_API(InterpolateCameraLookAt, bool(IPlayer& player, float FromX, float FromY, float FromZ, float ToX, float ToY, float ToZ, int time, int cut)) {
+SCRIPT_API(InterpolateCameraLookAt, bool(IPlayer& player, Vector3 from, Vector3 to, int time, int cut)) {
     throw NotImplemented();
 }
 
@@ -626,7 +626,7 @@ SCRIPT_API(CancelSelectTextDraw, bool(IPlayer& player)) {
     throw NotImplemented();
 }
 
-SCRIPT_API(CreateExplosionForPlayer, bool(IPlayer& player, float X, float Y, float Z, int type, float Radius)) {
+SCRIPT_API(CreateExplosionForPlayer, bool(IPlayer& player, Vector3 pos, int type, float Radius)) {
     throw NotImplemented();
 }
 
