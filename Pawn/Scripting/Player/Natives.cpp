@@ -1,4 +1,4 @@
-SCRIPT_API(SetSpawnInfo, bool(IPlayer& player, int team, int skin, float x, float y, float z, float rotation, int weapon1, int weapon1_ammo, int weapon2, int weapon2_ammo, int weapon3, int weapon3_ammo)) {
+SCRIPT_API(SetSpawnInfo, bool(IPlayer& player, int team, int skin, Vector3 pos, float rotation, int weapon1, int weapon1_ammo, int weapon2, int weapon2_ammo, int weapon3, int weapon3_ammo)) {
     throw NotImplemented();
 }
 
@@ -6,15 +6,15 @@ SCRIPT_API(SpawnPlayer, bool(IPlayer& player)) {
     throw NotImplemented();
 }
 
-SCRIPT_API(SetPlayerPos, bool(IPlayer& player, float x, float y, float z)) {
+SCRIPT_API(SetPlayerPos, bool(IPlayer& player, Vector3 pos)) {
     throw NotImplemented();
 }
 
-SCRIPT_API(SetPlayerPosFindZ, bool(IPlayer& player, float x, float y, float z)) {
+SCRIPT_API(SetPlayerPosFindZ, bool(IPlayer& player, Vector3 pos)) {
     throw NotImplemented();
 }
 
-SCRIPT_API(GetPlayerPos, bool(IPlayer& player, float& x, float& y, float& z)) {
+SCRIPT_API(GetPlayerPos, bool(IPlayer& player, Vector3& pos)) {
     throw NotImplemented();
 }
 
@@ -26,7 +26,7 @@ SCRIPT_API(GetPlayerFacingAngle, bool(IPlayer& player, float& ang)) {
     throw NotImplemented();
 }
 
-SCRIPT_API(IsPlayerInRangeOfPoint, bool(IPlayer& player, float range, float x, float y, float z)) {
+SCRIPT_API(IsPlayerInRangeOfPoint, bool(IPlayer& player, float range, Vector3 pos)) {
     throw NotImplemented();
 }
 
@@ -422,7 +422,7 @@ SCRIPT_API(TogglePlayerControllable, bool(IPlayer& player, int toggle)) {
     throw NotImplemented();
 }
 
-SCRIPT_API(PlayerPlaySound, bool(IPlayer& player, int soundid, float x, float y, float z)) {
+SCRIPT_API(PlayerPlaySound, bool(IPlayer& player, int soundid, Vector3 pos)) {
     throw NotImplemented();
 }
 
@@ -454,7 +454,7 @@ SCRIPT_API(DisableRemoteVehicleCollisions, bool(IPlayer& player, int disable)) {
     throw NotImplemented();
 }
 
-SCRIPT_API(SetPlayerCheckpoint, bool(IPlayer& player, float x, float y, float z, float size)) {
+SCRIPT_API(SetPlayerCheckpoint, bool(IPlayer& player, Vector3 pos, float size)) {
     throw NotImplemented();
 }
 
@@ -462,7 +462,7 @@ SCRIPT_API(DisablePlayerCheckpoint, bool(IPlayer& player)) {
     throw NotImplemented();
 }
 
-SCRIPT_API(SetPlayerRaceCheckpoint, bool(IPlayer& player, int type, float x, float y, float z, float nextx, float nexty, float nextz, float size)) {
+SCRIPT_API(SetPlayerRaceCheckpoint, bool(IPlayer& player, int type, Vector3 pos, Vector3 pos, float size)) {
     throw NotImplemented();
 }
 
@@ -482,7 +482,7 @@ SCRIPT_API(ShowPlayerNameTagForPlayer, bool(IPlayer& player, int showplayerid, i
     throw NotImplemented();
 }
 
-SCRIPT_API(SetPlayerMapIcon, bool(IPlayer& player, int iconid, float x, float y, float z, int markertype, int color, int style)) {
+SCRIPT_API(SetPlayerMapIcon, bool(IPlayer& player, int iconid, Vector3 pos, int markertype, int color, int style)) {
     throw NotImplemented();
 }
 
@@ -494,11 +494,11 @@ SCRIPT_API(AllowPlayerTeleport, bool(IPlayer& player, int allow)) {
     throw NotImplemented();
 }
 
-SCRIPT_API(SetPlayerCameraPos, bool(IPlayer& player, float x, float y, float z)) {
+SCRIPT_API(SetPlayerCameraPos, bool(IPlayer& player, Vector3 pos)) {
     throw NotImplemented();
 }
 
-SCRIPT_API(SetPlayerCameraLookAt, bool(IPlayer& player, float x, float y, float z, int cut)) {
+SCRIPT_API(SetPlayerCameraLookAt, bool(IPlayer& player, Vector3 pos, int cut)) {
     throw NotImplemented();
 }
 
@@ -506,11 +506,11 @@ SCRIPT_API(SetCameraBehindPlayer, bool(IPlayer& player)) {
     throw NotImplemented();
 }
 
-SCRIPT_API(GetPlayerCameraPos, bool(IPlayer& player, float& x, float& y, float& z)) {
+SCRIPT_API(GetPlayerCameraPos, bool(IPlayer& player, Vector3& pos)) {
     throw NotImplemented();
 }
 
-SCRIPT_API(GetPlayerCameraFrontVector, bool(IPlayer& player, float& x, float& y, float& z)) {
+SCRIPT_API(GetPlayerCameraFrontVector, bool(IPlayer& player, Vector3& pos)) {
     throw NotImplemented();
 }
 

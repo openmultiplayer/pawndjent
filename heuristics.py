@@ -42,7 +42,47 @@ class ActorHeuristic(SingleArgumentHeuristic):
     }
 
 
+class Vector3Heuristic(Heuristic):
+    def apply(self, arguments):
+        return_value = arguments.copy()
+
+        while True:
+            for index, (x, y, z) in enumerate(zip(
+                return_value,
+                return_value[1:],
+                return_value[2:],
+            )):
+                if any(
+                    hasattr(argument, 'type')
+                    for argument in (x, y, z)
+                ):
+                    # CPPArguments - already processed
+                    continue
+
+                if(
+                    x.tag == 'Float'
+                    and y.tag == 'Float'
+                    and z.tag == 'Float'
+                    and 'x' in x.name
+                    and 'y' in y.name
+                    and 'z' in z.name
+                ):
+                    # TODO: Auto-determine suitable name from arguments
+                    return_value[index:index + 3] = [CPPArgument(
+                        'pos',
+                        'Vector3',
+                        is_reference=any(
+                            argument.is_reference
+                            for argument in (x, y, z)
+                        ),
+                    )]
+                    break
+            else:
+                return return_value
+
+
 all_heuristics = [
     PlayerHeuristic(),
     ActorHeuristic(),
+    Vector3Heuristic(),
 ]
