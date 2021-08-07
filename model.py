@@ -22,10 +22,28 @@ class CPPArgument:
         if type(argument) is cls:
             return argument
 
+        name = argument.name
         cpp_type = cls.tag_types[argument.tag]
 
+        if(
+            cpp_type == 'float'
+            and name.startswith('f')
+            and not name.startswith('float')
+        ):
+            name = name[1:]
+
+        if(
+            argument.is_array
+            and argument.tag == '_'
+        ):
+            cpp_type = 'std::string{}&'.format(
+                ' const'
+                if not argument.is_reference
+                else ''
+            )
+
         return cls(
-            name=argument.name,
+            name=name.lower(),
             type=cpp_type.rstrip('&'),
             is_reference=(
                 argument.is_reference
