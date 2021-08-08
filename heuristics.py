@@ -17,7 +17,6 @@ class Heuristic:
 class SingleArgumentHeuristic(Heuristic):
     def apply_single(self, argument):
         if hasattr(argument, 'type'):
-            # CPPArgument - already processed
             return super().apply_single(argument)
 
         if(
@@ -47,6 +46,70 @@ class BoolHeuristic(SingleArgumentHeuristic):
     argument_names_to_types = {
         'usepos': CPPArgument('usePos', 'bool'),
     }
+
+
+class FloatHeuristic(Heuristic):
+    def apply_single(self, argument):
+        if hasattr(argument, 'type'):
+            return super().apply_single(argument)
+
+        if argument.tag == 'Float':
+            name = argument.name
+
+            if(
+                name.startswith('f')
+                and not name.startswith('float')
+            ):
+                name = name[1:]
+
+            return CPPArgument(
+                name,
+                'float',
+                is_reference=argument.is_reference,
+            )
+
+        return super().apply_single(argument)
+
+
+class StringHeuristic(Heuristic):
+    def apply_single(self, argument):
+        if hasattr(argument, 'type'):
+            return super().apply_single(argument)
+
+        if(
+            argument.is_array
+            and argument.tag == '_'
+        ):
+            return CPPArgument(
+                argument.name,
+                'std::string',
+                is_reference=True,
+                is_const=not argument.is_reference,
+            )
+
+        return super().apply_single(argument)
+
+
+class StrLenHeuristic(Heuristic):
+    def apply(self, arguments):
+        return_value = arguments.copy()
+
+        while True:
+            for index, (string, length) in enumerate(zip(
+                return_value,
+                return_value[1:],
+            )):
+                if(
+                    hasattr(string, 'type')
+                    and not string.is_const
+                    and hasattr(length, 'tag')
+                    and length.tag == '_'
+                    and length.default_value == f'sizeof {string.name}'
+                ):
+                    del return_value[index + 1]
+                    break
+            else:
+                return return_value
 
 
 class Vector3Heuristic(Heuristic):
@@ -83,7 +146,6 @@ class Vector3Heuristic(Heuristic):
                     hasattr(argument, 'type')
                     for argument in (x, y, z)
                 ):
-                    # CPPArguments - already processed
                     continue
 
                 if(
@@ -112,5 +174,8 @@ all_heuristics = [
     PlayerHeuristic(),
     ActorHeuristic(),
     BoolHeuristic(),
+    StringHeuristic(),
+    StrLenHeuristic(),
     Vector3Heuristic(),
+    FloatHeuristic(),
 ]

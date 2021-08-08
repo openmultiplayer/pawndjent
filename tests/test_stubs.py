@@ -231,6 +231,48 @@ cases = [
                 }
             ''',
         ),
+        (
+            '''
+                {
+                    "name": "GetPlayerName",
+                    "tag": "_",
+                    "is_callback": false,
+                    "is_variadic": false,
+                    "arguments": [
+                        {
+                            "name": "playerid",
+                            "tag": "_",
+                            "is_const": false,
+                            "is_array": false,
+                            "default_value": null,
+                            "is_reference": false
+                        },
+                        {
+                            "name": "name",
+                            "tag": "_",
+                            "is_const": false,
+                            "is_array": true,
+                            "default_value": null,
+                            "is_reference": true
+                        },
+                        {
+                            "name": "len",
+                            "tag": "_",
+                            "is_const": false,
+                            "is_array": false,
+                            "default_value": "sizeof name",
+                            "is_reference": false
+                        }
+                    ]
+                },
+            ''',
+            '''
+                SCRIPT_API(GetPlayerName, bool(IPlayer& player, std::string& name))
+                {
+                    throw NotImplemented();
+                }
+            ''',
+        )
     )
 ]
 

@@ -10,10 +10,10 @@ class CPPArgument:
     type: str
     is_pointer: bool = False
     is_reference: bool = False
+    is_const: bool = False
 
     tag_types = {
         '_': 'int',
-        'Float': 'float',
         'PlayerText': 'ITextDraw&',
     }
 
@@ -25,23 +25,6 @@ class CPPArgument:
         name = argument.name
         cpp_type = cls.tag_types[argument.tag]
 
-        if(
-            cpp_type == 'float'
-            and name.startswith('f')
-            and not name.startswith('float')
-        ):
-            name = name[1:]
-
-        if(
-            argument.is_array
-            and argument.tag == '_'
-        ):
-            cpp_type = 'std::string{}&'.format(
-                ' const'
-                if not argument.is_reference
-                else ''
-            )
-
         return cls(
             name=name.lower(),
             type=cpp_type.rstrip('&'),
@@ -52,11 +35,17 @@ class CPPArgument:
         )
 
     def generate_stub(self):
-        return f'{self.type}{{}} {self.name}'.format(
+        const = (
+            ' const'
+            if self.is_const
+            else ''
+        )
+        ref_or_pointer = (
             '*' if self.is_pointer
             else '&' if self.is_reference
             else ''
         )
+        return f'{self.type}{const}{ref_or_pointer} {self.name}'
 
 
 @dataclass
