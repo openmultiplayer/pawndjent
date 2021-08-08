@@ -93,7 +93,8 @@ class CPPFunction:
             for argument in self.arguments
         ]
         return textwrap.dedent(f'''
-            SCRIPT_API({name}, {type}({', '.join(argument_stubs)})) {{
+            SCRIPT_API({name}, {type}({', '.join(argument_stubs)}))
+            {{
                 throw NotImplemented();
             }}
         ''').strip()
@@ -210,6 +211,7 @@ class Function:
 
     @classmethod
     def from_dict(cls, data):
+        data = data.copy()
         data['arguments'] = [
             Argument.from_dict(argument)
             for argument in data['arguments']
