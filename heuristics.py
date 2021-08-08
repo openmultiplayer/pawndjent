@@ -32,13 +32,20 @@ class SingleArgumentHeuristic(Heuristic):
 class PlayerHeuristic(SingleArgumentHeuristic):
     argument_names_to_types = {
         'playerid': CPPArgument('player', 'IPlayer', is_reference=True),
-        'killerid': CPPArgument('killer', 'IPlayer', is_pointer=True),
+        'killer': CPPArgument('killer', 'IPlayer', is_pointer=True),
+        'killee': CPPArgument('killee', 'IPlayer', is_reference=True),
     }
 
 
 class ActorHeuristic(SingleArgumentHeuristic):
     argument_names_to_types = {
         'actorid': CPPArgument('actor', 'IActor', is_reference=True),
+    }
+
+
+class BoolHeuristic(SingleArgumentHeuristic):
+    argument_names_to_types = {
+        'usepos': CPPArgument('usePos', 'bool'),
     }
 
 
@@ -104,5 +111,6 @@ class Vector3Heuristic(Heuristic):
 all_heuristics = [
     PlayerHeuristic(),
     ActorHeuristic(),
+    BoolHeuristic(),
     Vector3Heuristic(),
 ]
