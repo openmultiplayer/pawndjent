@@ -223,7 +223,7 @@ class Function:
     def generate_stub(self):
         arguments = self.arguments.copy()
 
-        for heuristic in all_heuristics:
+        for heuristic in argument_heuristics:
             arguments = heuristic.apply(arguments)
 
         return CPPFunction.from_function_and_arguments(
@@ -232,4 +232,4 @@ class Function:
         ).generate_stub()
 
 
-from heuristics import all_heuristics  # noqa: Circular import
+from heuristics import argument_heuristics  # noqa: Circular import

@@ -168,14 +168,3 @@ class Vector3Heuristic(Heuristic):
                     break
             else:
                 return return_value
-
-
-all_heuristics = [
-    PlayerHeuristic(),
-    ActorHeuristic(),
-    BoolHeuristic(),
-    StringHeuristic(),
-    StrLenHeuristic(),
-    Vector3Heuristic(),
-    FloatHeuristic(),
-]
