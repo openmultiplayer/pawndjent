@@ -112,6 +112,61 @@ class StrLenHeuristic(Heuristic):
                 return return_value
 
 
+class Vector2Heuristic(Heuristic):
+    def autogenerate_name(self, x, y):
+        names = [x.name, y.name]
+
+        if all(name.startswith('f') for name in names):
+            names = [name[1:] for name in names]
+
+        for index, letter in enumerate(('x', 'y')):
+            if names[index].endswith((letter, letter.upper())):
+                names[index] = names[index][:-1]
+
+        if not any(names):
+            return 'pos'  # Default
+
+        if all(name == names[0] for name in names):
+            return names[0].lower()
+
+        raise ValueError(
+            f'Unable to determine name for {x}, {y}: found {names}'
+        )
+
+    def apply(self, arguments):
+        return_value = arguments.copy()
+
+        while True:
+            for index, (x, y) in enumerate(zip(
+                return_value,
+                return_value[1:],
+            )):
+                if any(
+                    hasattr(argument, 'type')
+                    for argument in (x, y)
+                ):
+                    continue
+
+                if(
+                    x.tag == 'Float'
+                    and y.tag == 'Float'
+                    and 'x' in x.name.lower()
+                    and 'y' in y.name.lower()
+                ):
+                    name = self.autogenerate_name(x, y)
+                    return_value[index:index + 2] = [CPPArgument(
+                        name,
+                        'Vector2',
+                        is_reference=any(
+                            argument.is_reference
+                            for argument in (x, y)
+                        ),
+                    )]
+                    break
+            else:
+                return return_value
+
+
 class Vector3Heuristic(Heuristic):
     def autogenerate_name(self, x, y, z):
         names = [x.name, y.name, z.name]

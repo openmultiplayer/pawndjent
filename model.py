@@ -14,7 +14,8 @@ class CPPArgument:
 
     tag_types = {
         '_': 'int',
-        'PlayerText': 'ITextDraw&',
+        'Text': 'ITextDraw&',
+        'PlayerText': 'IPlayerTextDraw&',
     }
 
     @classmethod
@@ -23,7 +24,7 @@ class CPPArgument:
             return argument
 
         name = argument.name
-        cpp_type = cls.tag_types[argument.tag]
+        cpp_type = cls.tag_types.get(argument.tag, '_')
 
         return cls(
             name=name.lower(),
@@ -61,7 +62,7 @@ class CPPFunction:
 
     @classmethod
     def type_from_tag(cls, tag):
-        return cls.tag_types.get(tag, CPPArgument.tag_types[tag])
+        return cls.tag_types.get(tag, CPPArgument.tag_types.get(tag, '_'))
 
     @classmethod
     def from_function_and_arguments(cls, function, arguments):

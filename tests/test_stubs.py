@@ -272,7 +272,117 @@ cases = [
                     throw NotImplemented();
                 }
             ''',
-        )
+        ),
+        (
+            '''
+                {
+                    "name": "CreatePlayerTextDraw",
+                    "tag": "PlayerText",
+                    "is_callback": false,
+                    "is_variadic": false,
+                    "arguments": [
+                        {
+                            "name": "playerid",
+                            "tag": "_",
+                            "is_const": false,
+                            "is_array": false,
+                            "default_value": null,
+                            "is_reference": false
+                        },
+                        {
+                            "name": "x",
+                            "tag": "Float",
+                            "is_const": false,
+                            "is_array": false,
+                            "default_value": null,
+                            "is_reference": false
+                        },
+                        {
+                            "name": "y",
+                            "tag": "Float",
+                            "is_const": false,
+                            "is_array": false,
+                            "default_value": null,
+                            "is_reference": false
+                        },
+                        {
+                            "name": "text",
+                            "tag": "_",
+                            "is_const": true,
+                            "is_array": true,
+                            "default_value": null,
+                            "is_reference": false
+                        }
+                    ]
+                },
+            ''',
+            '''
+                SCRIPT_API(CreatePlayerTextDraw, int(IPlayer& player, Vector2 pos, std::string const& text))
+                {
+                    throw NotImplemented();
+                }
+            ''',
+        ),
+        (
+            '''
+                {
+                    "name": "PlayerTextDrawDestroy",
+                    "tag": "_",
+                    "is_callback": false,
+                    "is_variadic": false,
+                    "arguments": [
+                        {
+                            "name": "playerid",
+                            "tag": "_",
+                            "is_const": false,
+                            "is_array": false,
+                            "default_value": null,
+                            "is_reference": false
+                        },
+                        {
+                            "name": "text",
+                            "tag": "PlayerText",
+                            "is_const": false,
+                            "is_array": false,
+                            "default_value": null,
+                            "is_reference": false
+                        }
+                    ]
+                },
+            ''',
+            '''
+                SCRIPT_API(PlayerTextDrawDestroy, bool(IPlayer& player, IPlayerTextDraw& text))
+                {
+                    throw NotImplemented();
+                }
+            ''',
+        ),
+        (
+            '''
+                {
+                    "name": "TextDrawDestroy",
+                    "tag": "_",
+                    "is_callback": false,
+                    "is_variadic": false,
+                    "arguments": [
+                        {
+                            "name": "text",
+                            "tag": "Text",
+                            "is_const": false,
+                            "is_array": false,
+                            "default_value": null,
+                            "is_reference": false
+                        }
+                    ]
+                },
+            ''',
+            '''
+                SCRIPT_API(TextDrawDestroy, bool(ITextDraw& text))
+                {
+                    throw NotImplemented();
+                }
+            ''',
+        ),
     )
 ]
 
