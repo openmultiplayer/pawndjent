@@ -383,6 +383,164 @@ cases = [
                 }
             ''',
         ),
+        (
+            '''
+                {
+                    "name": "GetPlayerTeam",
+                    "tag": "_",
+                    "is_callback": false,
+                    "is_variadic": false,
+                    "arguments": [
+                        {
+                            "name": "playerid",
+                            "tag": "_",
+                            "is_const": false,
+                            "is_array": false,
+                            "default_value": null,
+                            "is_reference": false
+                        }
+                    ]
+                },
+            ''',
+            '''
+                SCRIPT_API(GetPlayerTeam, int(IPlayer& player))
+                {
+                    throw NotImplemented();
+                }
+            ''',
+        ),
+        (
+            '''
+                {
+                    "name": "GetPlayerKeys",
+                    "tag": "_",
+                    "is_callback": false,
+                    "is_variadic": false,
+                    "arguments": [
+                        {
+                            "name": "playerid",
+                            "tag": "_",
+                            "is_const": false,
+                            "is_array": false,
+                            "default_value": null,
+                            "is_reference": false
+                        },
+                        {
+                            "name": "keys",
+                            "tag": "_",
+                            "is_const": false,
+                            "is_array": false,
+                            "default_value": null,
+                            "is_reference": true
+                        },
+                        {
+                            "name": "updown",
+                            "tag": "_",
+                            "is_const": false,
+                            "is_array": false,
+                            "default_value": null,
+                            "is_reference": true
+                        },
+                        {
+                            "name": "leftright",
+                            "tag": "_",
+                            "is_const": false,
+                            "is_array": false,
+                            "default_value": null,
+                            "is_reference": true
+                        }
+                    ]
+                },
+            ''',
+            '''
+                SCRIPT_API(GetPlayerKeys, bool(IPlayer& player, int& keys, int& updown, int& leftright))
+                {
+                    throw NotImplemented();
+                }
+            ''',
+        ),
+        (
+            '''
+                {
+                    "name": "GetVehicleParamsEx",
+                    "tag": "_",
+                    "is_callback": false,
+                    "is_variadic": false,
+                    "arguments": [
+                        {
+                            "name": "vehicleid",
+                            "tag": "_",
+                            "is_const": false,
+                            "is_array": false,
+                            "default_value": null,
+                            "is_reference": false
+                        },
+                        {
+                            "name": "engine",
+                            "tag": "_",
+                            "is_const": false,
+                            "is_array": false,
+                            "default_value": null,
+                            "is_reference": true
+                        },
+                        {
+                            "name": "lights",
+                            "tag": "_",
+                            "is_const": false,
+                            "is_array": false,
+                            "default_value": null,
+                            "is_reference": true
+                        },
+                        {
+                            "name": "alarm",
+                            "tag": "_",
+                            "is_const": false,
+                            "is_array": false,
+                            "default_value": null,
+                            "is_reference": true
+                        },
+                        {
+                            "name": "doors",
+                            "tag": "_",
+                            "is_const": false,
+                            "is_array": false,
+                            "default_value": null,
+                            "is_reference": true
+                        },
+                        {
+                            "name": "bonnet",
+                            "tag": "_",
+                            "is_const": false,
+                            "is_array": false,
+                            "default_value": null,
+                            "is_reference": true
+                        },
+                        {
+                            "name": "boot",
+                            "tag": "_",
+                            "is_const": false,
+                            "is_array": false,
+                            "default_value": null,
+                            "is_reference": true
+                        },
+                        {
+                            "name": "objective",
+                            "tag": "_",
+                            "is_const": false,
+                            "is_array": false,
+                            "default_value": null,
+                            "is_reference": true
+                        }
+                    ]
+                },
+            ''',
+            '''
+                SCRIPT_API(GetVehicleParamsEx, bool(IVehicle& vehicle, VehicleParams& params))
+                {
+                    throw NotImplemented();
+                }
+            ''',
+        ),
     )
 ]
 

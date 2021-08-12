@@ -65,15 +65,28 @@ class CPPFunction:
         return cls.tag_types.get(tag, CPPArgument.tag_types.get(tag, '_'))
 
     @classmethod
-    def from_function_and_arguments(cls, function, arguments):
-        return cls(
-            name=function.name,
-            type=cls.type_from_tag(function.tag),
-            arguments=[
-                CPPArgument.from_argument(argument)
-                for argument in arguments
-            ],
-        )
+    def from_function(cls, function):
+        arguments = function.arguments.copy()
+
+        for heuristic in argument_heuristics:
+            arguments = heuristic.apply(arguments)
+
+        cpp_function = None
+
+        for heuristic in function_heuristics:
+            cpp_function = heuristic.apply(function, arguments)
+
+        if not cpp_function:
+            cpp_function = cls(
+                name=function.name,
+                type=cls.type_from_tag(function.tag),
+                arguments=[
+                    CPPArgument.from_argument(argument)
+                    for argument in arguments
+                ],
+            )
+
+        return cpp_function
 
     def generate_stub(self):
         name = self.name
@@ -222,15 +235,10 @@ class Function:
         }
 
     def generate_stub(self):
-        arguments = self.arguments.copy()
-
-        for heuristic in argument_heuristics:
-            arguments = heuristic.apply(arguments)
-
-        return CPPFunction.from_function_and_arguments(
-            self,
-            arguments,
-        ).generate_stub()
+        return CPPFunction.from_function(self).generate_stub()
 
 
-from heuristics import argument_heuristics  # noqa: Circular import
+from heuristics import (  # noqa: Circular import
+    argument_heuristics,
+    function_heuristics,
+)

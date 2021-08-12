@@ -1,7 +1,7 @@
 from model import CPPArgument
 
 
-class Heuristic:
+class ArgumentHeuristic:
     def apply(self, arguments):
         return_value = arguments.copy()
 
@@ -14,7 +14,7 @@ class Heuristic:
         return argument
 
 
-class SingleArgumentHeuristic(Heuristic):
+class SingleArgumentHeuristic(ArgumentHeuristic):
     def apply_single(self, argument):
         if hasattr(argument, 'type'):
             return super().apply_single(argument)
@@ -42,13 +42,19 @@ class ActorHeuristic(SingleArgumentHeuristic):
     }
 
 
+class VehicleHeuristic(SingleArgumentHeuristic):
+    argument_names_to_types = {
+        'vehicleid': CPPArgument('vehicle', 'IVehicle', is_reference=True),
+    }
+
+
 class BoolHeuristic(SingleArgumentHeuristic):
     argument_names_to_types = {
         'usepos': CPPArgument('usePos', 'bool'),
     }
 
 
-class FloatHeuristic(Heuristic):
+class FloatHeuristic(ArgumentHeuristic):
     def apply_single(self, argument):
         if hasattr(argument, 'type'):
             return super().apply_single(argument)
@@ -71,7 +77,7 @@ class FloatHeuristic(Heuristic):
         return super().apply_single(argument)
 
 
-class StringHeuristic(Heuristic):
+class StringHeuristic(ArgumentHeuristic):
     def apply_single(self, argument):
         if hasattr(argument, 'type'):
             return super().apply_single(argument)
@@ -90,7 +96,7 @@ class StringHeuristic(Heuristic):
         return super().apply_single(argument)
 
 
-class StrLenHeuristic(Heuristic):
+class StrLenHeuristic(ArgumentHeuristic):
     def apply(self, arguments):
         return_value = arguments.copy()
 
@@ -112,7 +118,7 @@ class StrLenHeuristic(Heuristic):
                 return return_value
 
 
-class Vector2Heuristic(Heuristic):
+class Vector2Heuristic(ArgumentHeuristic):
     def autogenerate_name(self, x, y):
         names = [x.name, y.name]
 
@@ -134,6 +140,9 @@ class Vector2Heuristic(Heuristic):
         )
 
     def apply(self, arguments):
+        if len(arguments) < 2:
+            return arguments
+
         return_value = arguments.copy()
 
         while True:
@@ -167,7 +176,7 @@ class Vector2Heuristic(Heuristic):
                 return return_value
 
 
-class Vector3Heuristic(Heuristic):
+class Vector3Heuristic(ArgumentHeuristic):
     def autogenerate_name(self, x, y, z):
         names = [x.name, y.name, z.name]
 
@@ -189,6 +198,9 @@ class Vector3Heuristic(Heuristic):
         )
 
     def apply(self, arguments):
+        if len(arguments) < 3:
+            return arguments
+
         return_value = arguments.copy()
 
         while True:
@@ -218,6 +230,56 @@ class Vector3Heuristic(Heuristic):
                         is_reference=any(
                             argument.is_reference
                             for argument in (x, y, z)
+                        ),
+                    )]
+                    break
+            else:
+                return return_value
+
+
+class VehicleParamsHeuristic(ArgumentHeuristic):
+    param_names = (
+        'engine',
+        'lights',
+        'alarm',
+        'doors',
+        'bonnet',
+        'boot',
+        'objective',
+    )
+
+    def apply(self, arguments):
+        if len(arguments) < 7:
+            return arguments
+
+        return_value = arguments.copy()
+
+        while True:
+            for index, params in enumerate(zip(*[
+                return_value[index:]
+                for index in range(7)
+            ])):
+                if any(
+                    hasattr(argument, 'type')
+                    for argument in params
+                ):
+                    continue
+
+                if all(
+                    argument.tag == '_'
+                    and argument.is_reference
+                    and argument.name == name
+                    for argument, name in zip(
+                        params,
+                        self.param_names,
+                    )
+                ):
+                    return_value[index:index + 7] = [CPPArgument(
+                        'params',
+                        'VehicleParams',
+                        is_reference=any(
+                            argument.is_reference
+                            for argument in params
                         ),
                     )]
                     break
