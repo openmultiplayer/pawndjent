@@ -15,12 +15,14 @@ class ArgumentHeuristic:
 
 
 class SingleArgumentHeuristic(ArgumentHeuristic):
+    applicable_tags = ('_',)
+
     def apply_single(self, argument):
         if hasattr(argument, 'type'):
             return super().apply_single(argument)
 
         if(
-            argument.tag == '_'
+            argument.tag in self.applicable_tags
             and argument.name in self.argument_names_to_types
         ):
             return self.argument_names_to_types[argument.name]
@@ -52,35 +54,6 @@ class VehicleHeuristic(SingleArgumentHeuristic):
     argument_names_to_types = {
         'vehicleid': CPPArgument('vehicle', 'IVehicle', is_reference=True),
     }
-
-
-class BoolHeuristic(ArgumentHeuristic):
-    argument_names_to_types = {
-        'usepos': ('usePos', 'bool'),
-        'engine': ('engine', 'bool'),
-        'lights': ('lights', 'bool'),
-        'alarm': ('alarm', 'bool'),
-        'doors': ('doors', 'bool'),
-        'bonnet': ('bonnet', 'bool'),
-        'boot': ('boot', 'bool'),
-        'objective': ('objective', 'bool'),
-    }
-
-    def apply_single(self, argument):
-        if hasattr(argument, 'type'):
-            return super().apply_single(argument)
-
-        if(
-            argument.tag in ('bool', 'VEHICLE_PARAMS')
-            and argument.name in self.argument_names_to_types
-        ):
-            return_value = CPPArgument(
-                *self.argument_names_to_types[argument.name]
-            )
-            return_value.is_reference = argument.is_reference
-            return return_value
-
-        return super().apply_single(argument)
 
 
 class FloatHeuristic(ArgumentHeuristic):

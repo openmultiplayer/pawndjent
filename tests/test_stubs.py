@@ -157,7 +157,7 @@ cases = [
                 },
             ''',
             '''
-                SCRIPT_API(PlayAudioStreamForPlayer, bool(IPlayer& player, std::string const& url, Vector3 pos, float distance, bool usePos))
+                SCRIPT_API(PlayAudioStreamForPlayer, bool(IPlayer& player, std::string const& url, Vector3 pos, float distance, bool usepos))
                 {
                     throw NotImplemented();
                 }
@@ -462,122 +462,6 @@ cases = [
         (
             '''
                 {
-                    "name": "GetVehicleParamsEx",
-                    "tag": "_",
-                    "is_callback": false,
-                    "is_variadic": false,
-                    "arguments": [
-                        {
-                            "name": "vehicleid",
-                            "tag": "_",
-                            "is_const": false,
-                            "is_array": false,
-                            "default_value": null,
-                            "is_reference": false
-                        },
-                        {
-                            "name": "engine",
-                            "tag": "VEHICLE_PARAMS",
-                            "is_const": false,
-                            "is_array": false,
-                            "default_value": null,
-                            "is_reference": true
-                        },
-                        {
-                            "name": "lights",
-                            "tag": "VEHICLE_PARAMS",
-                            "is_const": false,
-                            "is_array": false,
-                            "default_value": null,
-                            "is_reference": true
-                        },
-                        {
-                            "name": "alarm",
-                            "tag": "VEHICLE_PARAMS",
-                            "is_const": false,
-                            "is_array": false,
-                            "default_value": null,
-                            "is_reference": true
-                        },
-                        {
-                            "name": "doors",
-                            "tag": "VEHICLE_PARAMS",
-                            "is_const": false,
-                            "is_array": false,
-                            "default_value": null,
-                            "is_reference": true
-                        },
-                        {
-                            "name": "bonnet",
-                            "tag": "VEHICLE_PARAMS",
-                            "is_const": false,
-                            "is_array": false,
-                            "default_value": null,
-                            "is_reference": true
-                        },
-                        {
-                            "name": "boot",
-                            "tag": "VEHICLE_PARAMS",
-                            "is_const": false,
-                            "is_array": false,
-                            "default_value": null,
-                            "is_reference": true
-                        },
-                        {
-                            "name": "objective",
-                            "tag": "VEHICLE_PARAMS",
-                            "is_const": false,
-                            "is_array": false,
-                            "default_value": null,
-                            "is_reference": true
-                        }
-                    ]
-                },
-            ''',
-            '''
-                SCRIPT_API(GetVehicleParamsEx, bool(IVehicle& vehicle, bool& engine, bool& lights, bool& alarm, bool& doors, bool& bonnet, bool& boot, bool& objective))
-                {
-                    throw NotImplemented();
-                }
-            ''',
-        ),
-        (
-            '''
-                {
-                    "name": "IsVehicleStreamedIn",
-                    "tag": "_",
-                    "is_callback": false,
-                    "is_variadic": false,
-                    "arguments": [
-                        {
-                            "name": "vehicleid",
-                            "tag": "_",
-                            "is_const": false,
-                            "is_array": false,
-                            "default_value": null,
-                            "is_reference": false
-                        },
-                        {
-                            "name": "forplayerid",
-                            "tag": "_",
-                            "is_const": false,
-                            "is_array": false,
-                            "default_value": null,
-                            "is_reference": false
-                        }
-                    ]
-                },
-            ''',
-            '''
-                SCRIPT_API(IsVehicleStreamedIn, bool(IVehicle& vehicle, IPlayer const& forplayer))
-                {
-                    throw NotImplemented();
-                }
-            ''',
-        ),
-        (
-            '''
-                {
                     "name": "SetVehicleParamsEx",
                     "tag": "_",
                     "is_callback": false,
@@ -651,7 +535,123 @@ cases = [
                 },
             ''',
             '''
-                SCRIPT_API(SetVehicleParamsEx, bool(IVehicle& vehicle, bool engine, bool lights, bool alarm, bool doors, bool bonnet, bool boot, bool objective))
+                SCRIPT_API(SetVehicleParamsEx, bool(IVehicle& vehicle, int engine, int lights, int alarm, int doors, int bonnet, int boot, int objective))
+                {
+                    throw NotImplemented();
+                }
+            ''',
+        ),
+        (
+            '''
+                {
+                    "name": "GetVehicleParamsEx",
+                    "tag": "_",
+                    "is_callback": false,
+                    "is_variadic": false,
+                    "arguments": [
+                        {
+                            "name": "vehicleid",
+                            "tag": "_",
+                            "is_const": false,
+                            "is_array": false,
+                            "default_value": null,
+                            "is_reference": false
+                        },
+                        {
+                            "name": "engine",
+                            "tag": "VEHICLE_PARAMS",
+                            "is_const": false,
+                            "is_array": false,
+                            "default_value": null,
+                            "is_reference": true
+                        },
+                        {
+                            "name": "lights",
+                            "tag": "VEHICLE_PARAMS",
+                            "is_const": false,
+                            "is_array": false,
+                            "default_value": null,
+                            "is_reference": true
+                        },
+                        {
+                            "name": "alarm",
+                            "tag": "VEHICLE_PARAMS",
+                            "is_const": false,
+                            "is_array": false,
+                            "default_value": null,
+                            "is_reference": true
+                        },
+                        {
+                            "name": "doors",
+                            "tag": "VEHICLE_PARAMS",
+                            "is_const": false,
+                            "is_array": false,
+                            "default_value": null,
+                            "is_reference": true
+                        },
+                        {
+                            "name": "bonnet",
+                            "tag": "VEHICLE_PARAMS",
+                            "is_const": false,
+                            "is_array": false,
+                            "default_value": null,
+                            "is_reference": true
+                        },
+                        {
+                            "name": "boot",
+                            "tag": "VEHICLE_PARAMS",
+                            "is_const": false,
+                            "is_array": false,
+                            "default_value": null,
+                            "is_reference": true
+                        },
+                        {
+                            "name": "objective",
+                            "tag": "VEHICLE_PARAMS",
+                            "is_const": false,
+                            "is_array": false,
+                            "default_value": null,
+                            "is_reference": true
+                        }
+                    ]
+                },
+            ''',
+            '''
+                SCRIPT_API(GetVehicleParamsEx, bool(IVehicle& vehicle, int& engine, int& lights, int& alarm, int& doors, int& bonnet, int& boot, int& objective))
+                {
+                    throw NotImplemented();
+                }
+            ''',
+        ),
+        (
+            '''
+                {
+                    "name": "IsVehicleStreamedIn",
+                    "tag": "_",
+                    "is_callback": false,
+                    "is_variadic": false,
+                    "arguments": [
+                        {
+                            "name": "vehicleid",
+                            "tag": "_",
+                            "is_const": false,
+                            "is_array": false,
+                            "default_value": null,
+                            "is_reference": false
+                        },
+                        {
+                            "name": "forplayerid",
+                            "tag": "_",
+                            "is_const": false,
+                            "is_array": false,
+                            "default_value": null,
+                            "is_reference": false
+                        }
+                    ]
+                },
+            ''',
+            '''
+                SCRIPT_API(IsVehicleStreamedIn, bool(IVehicle& vehicle, IPlayer const& forplayer))
                 {
                     throw NotImplemented();
                 }
@@ -736,6 +736,56 @@ cases = [
             ''',
             '''
                 SCRIPT_API(IsActorStreamedIn, bool(IActor& actor, IPlayer& player))
+                {
+                    throw NotImplemented();
+                }
+            ''',
+        ),
+        (
+            '''
+                {
+                    "name": "SetVehicleParamsForPlayer",
+                    "tag": "_",
+                    "is_callback": false,
+                    "is_variadic": false,
+                    "arguments": [
+                        {
+                            "name": "vehicleid",
+                            "tag": "_",
+                            "is_const": false,
+                            "is_array": false,
+                            "default_value": null,
+                            "is_reference": false
+                        },
+                        {
+                            "name": "playerid",
+                            "tag": "_",
+                            "is_const": false,
+                            "is_array": false,
+                            "default_value": null,
+                            "is_reference": false
+                        },
+                        {
+                            "name": "objective",
+                            "tag": "_",
+                            "is_const": false,
+                            "is_array": false,
+                            "default_value": null,
+                            "is_reference": false
+                        },
+                        {
+                            "name": "doors",
+                            "tag": "_",
+                            "is_const": false,
+                            "is_array": false,
+                            "default_value": null,
+                            "is_reference": false
+                        }
+                    ]
+                },
+            ''',
+            '''
+                SCRIPT_API(SetVehicleParamsForPlayer, bool(IVehicle& vehicle, IPlayer& player, int objective, int doors))
                 {
                     throw NotImplemented();
                 }

@@ -28,7 +28,7 @@ class CPPArgument:
         cpp_type = cls.tag_types.get(argument.tag, 'int')
 
         return cls(
-            name=name.lower(),
+            name=name,
             type=cpp_type.rstrip('&'),
             is_reference=(
                 argument.is_reference

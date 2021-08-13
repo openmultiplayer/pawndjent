@@ -15,6 +15,7 @@ class IntHeuristic(FunctionHeuristic):
         },
         'reference': {
             'type': (
+                'int',
                 'bool',
                 'float',
                 'Vector2',
@@ -22,6 +23,7 @@ class IntHeuristic(FunctionHeuristic):
             ),
             'tag': (
                 '_',
+                'VEHICLE_PARAMS',
             ),
         },
     }
