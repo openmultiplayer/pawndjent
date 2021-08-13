@@ -931,6 +931,310 @@ cases = [
                 }
             ''',
         ),
+        (
+            '''
+                {
+                    "name": "CreateExplosion",
+                    "tag": "_",
+                    "is_callback": false,
+                    "is_variadic": false,
+                    "arguments": [
+                        {
+                            "name": "x",
+                            "tag": "Float",
+                            "is_const": false,
+                            "is_array": false,
+                            "default_value": null,
+                            "is_reference": false
+                        },
+                        {
+                            "name": "y",
+                            "tag": "Float",
+                            "is_const": false,
+                            "is_array": false,
+                            "default_value": null,
+                            "is_reference": false
+                        },
+                        {
+                            "name": "z",
+                            "tag": "Float",
+                            "is_const": false,
+                            "is_array": false,
+                            "default_value": null,
+                            "is_reference": false
+                        },
+                        {
+                            "name": "type",
+                            "tag": "_",
+                            "is_const": false,
+                            "is_array": false,
+                            "default_value": null,
+                            "is_reference": false
+                        },
+                        {
+                            "name": "radius",
+                            "tag": "Float",
+                            "is_const": false,
+                            "is_array": false,
+                            "default_value": null,
+                            "is_reference": false
+                        }
+                    ]
+                },
+            ''',
+            '''
+                SCRIPT_API(CreateExplosion, bool(Vector3 pos, int type, float radius))
+                {
+                    throw pawn_natives::NotImplemented();
+                }
+            ''',
+        ),
+        (
+            '''
+                {
+                    "name": "CreateExplosionForPlayer",
+                    "tag": "_",
+                    "is_callback": false,
+                    "is_variadic": false,
+                    "arguments": [
+                        {
+                            "name": "playerid",
+                            "tag": "_",
+                            "is_const": false,
+                            "is_array": false,
+                            "default_value": null,
+                            "is_reference": false
+                        },
+                        {
+                            "name": "x",
+                            "tag": "Float",
+                            "is_const": false,
+                            "is_array": false,
+                            "default_value": null,
+                            "is_reference": false
+                        },
+                        {
+                            "name": "y",
+                            "tag": "Float",
+                            "is_const": false,
+                            "is_array": false,
+                            "default_value": null,
+                            "is_reference": false
+                        },
+                        {
+                            "name": "z",
+                            "tag": "Float",
+                            "is_const": false,
+                            "is_array": false,
+                            "default_value": null,
+                            "is_reference": false
+                        },
+                        {
+                            "name": "type",
+                            "tag": "_",
+                            "is_const": false,
+                            "is_array": false,
+                            "default_value": null,
+                            "is_reference": false
+                        },
+                        {
+                            "name": "radius",
+                            "tag": "Float",
+                            "is_const": false,
+                            "is_array": false,
+                            "default_value": null,
+                            "is_reference": false
+                        }
+                    ]
+                },
+            ''',
+            '''
+                SCRIPT_API(CreateExplosionForPlayer, bool(IPlayer& player, Vector3 pos, int type, float radius))
+                {
+                    throw pawn_natives::NotImplemented();
+                }
+            ''',
+        ),
+        (
+            '''
+                {
+                    "name": "Create3DTextLabel",
+                    "tag": "Text3D",
+                    "is_callback": false,
+                    "is_variadic": false,
+                    "arguments": [
+                        {
+                            "name": "text",
+                            "tag": "_",
+                            "is_const": true,
+                            "is_array": true,
+                            "default_value": null,
+                            "is_reference": false
+                        },
+                        {
+                            "name": "colour",
+                            "tag": "_",
+                            "is_const": false,
+                            "is_array": false,
+                            "default_value": null,
+                            "is_reference": false
+                        },
+                        {
+                            "name": "x",
+                            "tag": "Float",
+                            "is_const": false,
+                            "is_array": false,
+                            "default_value": null,
+                            "is_reference": false
+                        },
+                        {
+                            "name": "y",
+                            "tag": "Float",
+                            "is_const": false,
+                            "is_array": false,
+                            "default_value": null,
+                            "is_reference": false
+                        },
+                        {
+                            "name": "z",
+                            "tag": "Float",
+                            "is_const": false,
+                            "is_array": false,
+                            "default_value": null,
+                            "is_reference": false
+                        },
+                        {
+                            "name": "drawDistance",
+                            "tag": "Float",
+                            "is_const": false,
+                            "is_array": false,
+                            "default_value": null,
+                            "is_reference": false
+                        },
+                        {
+                            "name": "virtualWorld",
+                            "tag": "_",
+                            "is_const": false,
+                            "is_array": false,
+                            "default_value": null,
+                            "is_reference": false
+                        },
+                        {
+                            "name": "testLOS",
+                            "tag": "bool",
+                            "is_const": false,
+                            "is_array": false,
+                            "default_value": "false",
+                            "is_reference": false
+                        }
+                    ]
+                },
+            ''',
+            '''
+                SCRIPT_API(Create3DTextLabel, ITextLabel&(std::string const& text, int colour, Vector3 pos, float drawDistance, int virtualWorld, bool testLOS))
+                {
+                    throw pawn_natives::NotImplemented();
+                }
+            ''',
+        ),
+        (
+            '''
+                {
+                    "name": "CreatePlayer3DTextLabel",
+                    "tag": "PlayerText3D",
+                    "is_callback": false,
+                    "is_variadic": false,
+                    "arguments": [
+                        {
+                            "name": "playerid",
+                            "tag": "_",
+                            "is_const": false,
+                            "is_array": false,
+                            "default_value": null,
+                            "is_reference": false
+                        },
+                        {
+                            "name": "text",
+                            "tag": "_",
+                            "is_const": true,
+                            "is_array": true,
+                            "default_value": null,
+                            "is_reference": false
+                        },
+                        {
+                            "name": "colour",
+                            "tag": "_",
+                            "is_const": false,
+                            "is_array": false,
+                            "default_value": null,
+                            "is_reference": false
+                        },
+                        {
+                            "name": "x",
+                            "tag": "Float",
+                            "is_const": false,
+                            "is_array": false,
+                            "default_value": null,
+                            "is_reference": false
+                        },
+                        {
+                            "name": "y",
+                            "tag": "Float",
+                            "is_const": false,
+                            "is_array": false,
+                            "default_value": null,
+                            "is_reference": false
+                        },
+                        {
+                            "name": "z",
+                            "tag": "Float",
+                            "is_const": false,
+                            "is_array": false,
+                            "default_value": null,
+                            "is_reference": false
+                        },
+                        {
+                            "name": "drawDistance",
+                            "tag": "Float",
+                            "is_const": false,
+                            "is_array": false,
+                            "default_value": null,
+                            "is_reference": false
+                        },
+                        {
+                            "name": "parentPlayerid",
+                            "tag": "_",
+                            "is_const": false,
+                            "is_array": false,
+                            "default_value": "INVALID_PLAYER_ID",
+                            "is_reference": false
+                        },
+                        {
+                            "name": "parentVehicleid",
+                            "tag": "_",
+                            "is_const": false,
+                            "is_array": false,
+                            "default_value": "INVALID_VEHICLE_ID",
+                            "is_reference": false
+                        },
+                        {
+                            "name": "testLOS",
+                            "tag": "bool",
+                            "is_const": false,
+                            "is_array": false,
+                            "default_value": "false",
+                            "is_reference": false
+                        }
+                    ]
+                },
+            ''',
+            '''
+                SCRIPT_API(CreatePlayer3DTextLabel, IPlayerTextLabel&(IPlayer& player, std::string const& text, int colour, Vector3 pos, float drawDistance, int parentPlayerid, int parentVehicleid, bool testLOS))
+                {
+                    throw pawn_natives::NotImplemented();
+                }
+            ''',
+        ),
     )
 ]
 
