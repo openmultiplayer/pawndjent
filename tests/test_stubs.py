@@ -541,6 +541,40 @@ cases = [
                 }
             ''',
         ),
+        (
+            '''
+                {
+                    "name": "IsVehicleStreamedIn",
+                    "tag": "_",
+                    "is_callback": false,
+                    "is_variadic": false,
+                    "arguments": [
+                        {
+                            "name": "vehicleid",
+                            "tag": "_",
+                            "is_const": false,
+                            "is_array": false,
+                            "default_value": null,
+                            "is_reference": false
+                        },
+                        {
+                            "name": "forplayerid",
+                            "tag": "_",
+                            "is_const": false,
+                            "is_array": false,
+                            "default_value": null,
+                            "is_reference": false
+                        }
+                    ]
+                },
+            ''',
+            '''
+                SCRIPT_API(IsVehicleStreamedIn, bool(IVehicle& vehicle, IPlayer const& forplayer))
+                {
+                    throw NotImplemented();
+                }
+            ''',
+        ),
     )
 ]
 
