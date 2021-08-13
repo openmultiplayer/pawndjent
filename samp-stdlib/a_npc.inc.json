@@ -1,94 +1,12 @@
 {
     "constants": [
         "SAMP_CONST_CORRECT",
-        "MAX_PLAYER_NAME",
-        "MAX_PLAYERS",
-        "MAX_VEHICLES",
-        "MAX_OBJECTS",
-        "MAX_GANG_ZONES",
-        "MAX_TEXT_DRAWS",
-        "MAX_MENUS",
-        "NO_TEAM",
-        "INVALID_PLAYER_ID",
-        "INVALID_VEHICLE_ID",
-        "INVALID_OBJECT_ID",
-        "INVALID_MENU",
-        "INVALID_TEXT_DRAW",
-        "INVALID_GANG_ZONE",
-        "PLAYER_STATE_NONE",
-        "PLAYER_STATE_ONFOOT",
-        "PLAYER_STATE_DRIVER",
-        "PLAYER_STATE_PASSENGER",
-        "PLAYER_STATE_WASTED",
-        "PLAYER_STATE_SPAWNED",
-        "PLAYER_STATE_SPECTATING",
-        "WEAPON_BRASSKNUCKLE",
-        "WEAPON_GOLFCLUB",
-        "WEAPON_NITESTICK",
-        "WEAPON_KNIFE",
-        "WEAPON_BAT",
-        "WEAPON_SHOVEL",
-        "WEAPON_POOLSTICK",
-        "WEAPON_KATANA",
-        "WEAPON_CHAINSAW",
-        "WEAPON_DILDO",
-        "WEAPON_DILDO2",
-        "WEAPON_VIBRATOR",
-        "WEAPON_VIBRATOR2",
-        "WEAPON_FLOWER",
-        "WEAPON_CANE",
-        "WEAPON_GRENADE",
-        "WEAPON_TEARGAS",
-        "WEAPON_MOLTOV",
-        "WEAPON_COLT45",
-        "WEAPON_SILENCED",
-        "WEAPON_DEAGLE",
-        "WEAPON_SHOTGUN",
-        "WEAPON_SAWEDOFF",
-        "WEAPON_SHOTGSPA",
-        "WEAPON_UZI",
-        "WEAPON_MP5",
-        "WEAPON_AK47",
-        "WEAPON_M4",
-        "WEAPON_TEC9",
-        "WEAPON_RIFLE",
-        "WEAPON_SNIPER",
-        "WEAPON_ROCKETLAUNCHER",
-        "WEAPON_HEATSEEKER",
-        "WEAPON_FLAMETHROWER",
-        "WEAPON_MINIGUN",
-        "WEAPON_SATCHEL",
-        "WEAPON_BOMB",
-        "WEAPON_SPRAYCAN",
-        "WEAPON_FIREEXTINGUISHER",
-        "WEAPON_CAMERA",
-        "WEAPON_PARACHUTE",
-        "WEAPON_VEHICLE",
-        "WEAPON_DROWN",
-        "WEAPON_COLLISION",
-        "KEY_ACTION",
-        "KEY_CROUCH",
-        "KEY_FIRE",
-        "KEY_SPRINT",
-        "KEY_SECONDARY_ATTACK",
-        "KEY_JUMP",
-        "KEY_LOOK_RIGHT",
-        "KEY_HANDBRAKE",
-        "KEY_LOOK_LEFT",
-        "KEY_SUBMISSION",
-        "KEY_LOOK_BEHIND",
-        "KEY_WALK",
-        "KEY_ANALOG_UP",
-        "KEY_ANALOG_DOWN",
-        "KEY_ANALOG_RIGHT",
-        "KEY_ANALOG_LEFT",
-        "KEY_UP",
-        "KEY_DOWN",
-        "KEY_LEFT",
-        "KEY_RIGHT",
-        "PLAYER_RECORDING_TYPE_NONE",
-        "PLAYER_RECORDING_TYPE_DRIVER",
-        "PLAYER_RECORDING_TYPE_ONFOOT"
+        "WEAK_TAGS",
+        "LESS_TAGS",
+        "PLAYER_STATE:",
+        "WEAPON:",
+        "KEY:",
+        "PLAYER_RECORDING_TYPE:"
     ],
     "functions": [
         {
@@ -162,7 +80,7 @@
             "is_variadic": false,
             "arguments": [
                 {
-                    "name": "funcname",
+                    "name": "functionName",
                     "tag": "_",
                     "is_const": true,
                     "is_array": true,
@@ -179,7 +97,7 @@
                 },
                 {
                     "name": "repeating",
-                    "tag": "_",
+                    "tag": "bool",
                     "is_const": false,
                     "is_array": false,
                     "default_value": null,
@@ -289,7 +207,7 @@
             "is_variadic": false,
             "arguments": [
                 {
-                    "name": "msg",
+                    "name": "message",
                     "tag": "_",
                     "is_const": true,
                     "is_array": true,
@@ -305,7 +223,7 @@
             "is_variadic": false,
             "arguments": [
                 {
-                    "name": "commandtext",
+                    "name": "command",
                     "tag": "_",
                     "is_const": true,
                     "is_array": true,
@@ -371,7 +289,7 @@
             ]
         },
         {
-            "name": "GetPlayerVehicleID",
+            "name": "GetPlayerVehicleid",
             "tag": "_",
             "is_callback": false,
             "is_variadic": false,
@@ -452,7 +370,7 @@
         },
         {
             "name": "IsPlayerStreamedIn",
-            "tag": "_",
+            "tag": "bool",
             "is_callback": false,
             "is_variadic": false,
             "arguments": [
@@ -468,7 +386,7 @@
         },
         {
             "name": "IsVehicleStreamedIn",
-            "tag": "_",
+            "tag": "bool",
             "is_callback": false,
             "is_variadic": false,
             "arguments": [
@@ -498,7 +416,7 @@
                 },
                 {
                     "name": "keys",
-                    "tag": "_",
+                    "tag": "KEY",
                     "is_const": false,
                     "is_array": false,
                     "default_value": null,
@@ -506,7 +424,7 @@
                 },
                 {
                     "name": "updown",
-                    "tag": "_",
+                    "tag": "KEY",
                     "is_const": false,
                     "is_array": false,
                     "default_value": null,
@@ -514,7 +432,7 @@
                 },
                 {
                     "name": "leftright",
-                    "tag": "_",
+                    "tag": "KEY",
                     "is_const": false,
                     "is_array": false,
                     "default_value": null,
@@ -649,7 +567,7 @@
             "is_variadic": false,
             "arguments": [
                 {
-                    "name": "X",
+                    "name": "x",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -657,7 +575,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "Y",
+                    "name": "y",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -665,7 +583,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "Z",
+                    "name": "z",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -673,7 +591,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "Distance",
+                    "name": "distance",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -684,7 +602,7 @@
         },
         {
             "name": "IsPlayerInRangeOfPoint",
-            "tag": "_",
+            "tag": "bool",
             "is_callback": false,
             "is_variadic": false,
             "arguments": [
@@ -705,7 +623,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "X",
+                    "name": "x",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -713,7 +631,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "Y",
+                    "name": "y",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -721,7 +639,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "Z",
+                    "name": "z",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -764,7 +682,7 @@
         },
         {
             "name": "IsPlayerConnected",
-            "tag": "_",
+            "tag": "bool",
             "is_callback": false,
             "is_variadic": false,
             "arguments": [
@@ -786,14 +704,14 @@
             "arguments": [
                 {
                     "name": "playbacktype",
-                    "tag": "_",
+                    "tag": "PLAYER_RECORDING_TYPE",
                     "is_const": false,
                     "is_array": false,
                     "default_value": null,
                     "is_reference": false
                 },
                 {
-                    "name": "recordname",
+                    "name": "recordFile",
                     "tag": "_",
                     "is_const": true,
                     "is_array": true,
@@ -914,7 +832,7 @@
             "is_variadic": false,
             "arguments": [
                 {
-                    "name": "color",
+                    "name": "colour",
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,

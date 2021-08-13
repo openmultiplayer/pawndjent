@@ -1,30 +1,9 @@
 {
     "constants": [
         "SAMP_CONST_CORRECT",
-        "CARMODTYPE_SPOILER",
-        "CARMODTYPE_HOOD",
-        "CARMODTYPE_ROOF",
-        "CARMODTYPE_SIDESKIRT",
-        "CARMODTYPE_LAMPS",
-        "CARMODTYPE_NITRO",
-        "CARMODTYPE_EXHAUST",
-        "CARMODTYPE_WHEELS",
-        "CARMODTYPE_STEREO",
-        "CARMODTYPE_HYDRAULICS",
-        "CARMODTYPE_FRONT_BUMPER",
-        "CARMODTYPE_REAR_BUMPER",
-        "CARMODTYPE_VENT_RIGHT",
-        "CARMODTYPE_VENT_LEFT",
-        "VEHICLE_PARAMS_UNSET",
-        "VEHICLE_PARAMS_OFF",
-        "VEHICLE_PARAMS_ON",
-        "VEHICLE_MODEL_INFO_SIZE",
-        "VEHICLE_MODEL_INFO_FRONTSEAT",
-        "VEHICLE_MODEL_INFO_REARSEAT",
-        "VEHICLE_MODEL_INFO_PETROLCAP",
-        "VEHICLE_MODEL_INFO_WHEELSFRONT",
-        "VEHICLE_MODEL_INFO_WHEELSREAR",
-        "VEHICLE_MODEL_INFO_WHEELSMID",
+        "CARMODTYPE:",
+        "VEHICLE_PARAMS:",
+        "VEHICLE_MODEL_INFO:",
         "VEHICLE_MODEL_INFO_FRONT_BUMPER_Z",
         "VEHICLE_MODEL_INFO_REAR_BUMPER_Z"
     ],
@@ -36,7 +15,7 @@
             "is_variadic": false,
             "arguments": [
                 {
-                    "name": "vehicletype",
+                    "name": "modelid",
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
@@ -76,7 +55,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "color1",
+                    "name": "colour1",
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
@@ -84,7 +63,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "color2",
+                    "name": "colour2",
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
@@ -92,7 +71,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "respawn_delay",
+                    "name": "respawnDelay",
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
@@ -100,11 +79,11 @@
                     "is_reference": false
                 },
                 {
-                    "name": "addsiren",
-                    "tag": "_",
+                    "name": "addSiren",
+                    "tag": "bool",
                     "is_const": false,
                     "is_array": false,
-                    "default_value": 0,
+                    "default_value": "false",
                     "is_reference": false
                 }
             ]
@@ -127,7 +106,7 @@
         },
         {
             "name": "IsVehicleStreamedIn",
-            "tag": "_",
+            "tag": "bool",
             "is_callback": false,
             "is_variadic": false,
             "arguments": [
@@ -140,7 +119,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "forplayerid",
+                    "name": "playerid",
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
@@ -244,7 +223,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "z_angle",
+                    "name": "angle",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -316,7 +295,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "X",
+                    "name": "x",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -324,7 +303,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "Y",
+                    "name": "y",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -332,7 +311,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "Z",
+                    "name": "z",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -356,7 +335,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "z_angle",
+                    "name": "angle",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -396,7 +375,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "doorslocked",
+                    "name": "doors",
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
@@ -428,7 +407,7 @@
                 },
                 {
                     "name": "engine",
-                    "tag": "_",
+                    "tag": "VEHICLE_PARAMS",
                     "is_const": false,
                     "is_array": false,
                     "default_value": null,
@@ -436,7 +415,7 @@
                 },
                 {
                     "name": "lights",
-                    "tag": "_",
+                    "tag": "VEHICLE_PARAMS",
                     "is_const": false,
                     "is_array": false,
                     "default_value": null,
@@ -444,7 +423,7 @@
                 },
                 {
                     "name": "alarm",
-                    "tag": "_",
+                    "tag": "VEHICLE_PARAMS",
                     "is_const": false,
                     "is_array": false,
                     "default_value": null,
@@ -452,7 +431,7 @@
                 },
                 {
                     "name": "doors",
-                    "tag": "_",
+                    "tag": "VEHICLE_PARAMS",
                     "is_const": false,
                     "is_array": false,
                     "default_value": null,
@@ -460,7 +439,7 @@
                 },
                 {
                     "name": "bonnet",
-                    "tag": "_",
+                    "tag": "VEHICLE_PARAMS",
                     "is_const": false,
                     "is_array": false,
                     "default_value": null,
@@ -468,7 +447,7 @@
                 },
                 {
                     "name": "boot",
-                    "tag": "_",
+                    "tag": "VEHICLE_PARAMS",
                     "is_const": false,
                     "is_array": false,
                     "default_value": null,
@@ -476,7 +455,7 @@
                 },
                 {
                     "name": "objective",
-                    "tag": "_",
+                    "tag": "VEHICLE_PARAMS",
                     "is_const": false,
                     "is_array": false,
                     "default_value": null,
@@ -500,7 +479,7 @@
                 },
                 {
                     "name": "engine",
-                    "tag": "_",
+                    "tag": "VEHICLE_PARAMS",
                     "is_const": false,
                     "is_array": false,
                     "default_value": null,
@@ -508,7 +487,7 @@
                 },
                 {
                     "name": "lights",
-                    "tag": "_",
+                    "tag": "VEHICLE_PARAMS",
                     "is_const": false,
                     "is_array": false,
                     "default_value": null,
@@ -516,7 +495,7 @@
                 },
                 {
                     "name": "alarm",
-                    "tag": "_",
+                    "tag": "VEHICLE_PARAMS",
                     "is_const": false,
                     "is_array": false,
                     "default_value": null,
@@ -524,7 +503,7 @@
                 },
                 {
                     "name": "doors",
-                    "tag": "_",
+                    "tag": "VEHICLE_PARAMS",
                     "is_const": false,
                     "is_array": false,
                     "default_value": null,
@@ -532,7 +511,7 @@
                 },
                 {
                     "name": "bonnet",
-                    "tag": "_",
+                    "tag": "VEHICLE_PARAMS",
                     "is_const": false,
                     "is_array": false,
                     "default_value": null,
@@ -540,7 +519,7 @@
                 },
                 {
                     "name": "boot",
-                    "tag": "_",
+                    "tag": "VEHICLE_PARAMS",
                     "is_const": false,
                     "is_array": false,
                     "default_value": null,
@@ -548,7 +527,7 @@
                 },
                 {
                     "name": "objective",
-                    "tag": "_",
+                    "tag": "VEHICLE_PARAMS",
                     "is_const": false,
                     "is_array": false,
                     "default_value": null,
@@ -587,7 +566,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "driver",
+                    "name": "frontLeft",
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
@@ -595,7 +574,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "passenger",
+                    "name": "frontRight",
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
@@ -603,7 +582,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "backleft",
+                    "name": "rearLeft",
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
@@ -611,7 +590,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "backright",
+                    "name": "rearRight",
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
@@ -635,7 +614,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "driver",
+                    "name": "frontLeft",
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
@@ -643,7 +622,7 @@
                     "is_reference": true
                 },
                 {
-                    "name": "passenger",
+                    "name": "frontRight",
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
@@ -651,7 +630,7 @@
                     "is_reference": true
                 },
                 {
-                    "name": "backleft",
+                    "name": "rearLeft",
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
@@ -659,7 +638,7 @@
                     "is_reference": true
                 },
                 {
-                    "name": "backright",
+                    "name": "rearRight",
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
@@ -683,7 +662,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "driver",
+                    "name": "frontLeft",
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
@@ -691,7 +670,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "passenger",
+                    "name": "frontRight",
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
@@ -699,7 +678,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "backleft",
+                    "name": "rearLeft",
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
@@ -707,7 +686,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "backright",
+                    "name": "rearRight",
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
@@ -731,7 +710,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "driver",
+                    "name": "frontLeft",
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
@@ -739,7 +718,7 @@
                     "is_reference": true
                 },
                 {
-                    "name": "passenger",
+                    "name": "frontRight",
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
@@ -747,7 +726,7 @@
                     "is_reference": true
                 },
                 {
-                    "name": "backleft",
+                    "name": "rearLeft",
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
@@ -755,7 +734,7 @@
                     "is_reference": true
                 },
                 {
-                    "name": "backright",
+                    "name": "rearRight",
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
@@ -867,7 +846,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "color1",
+                    "name": "colour1",
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
@@ -875,7 +854,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "color2",
+                    "name": "colour2",
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
@@ -998,7 +977,7 @@
         },
         {
             "name": "IsTrailerAttachedToVehicle",
-            "tag": "_",
+            "tag": "bool",
             "is_callback": false,
             "is_variadic": false,
             "arguments": [
@@ -1043,7 +1022,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "numberplate",
+                    "name": "numberPlate",
                     "tag": "_",
                     "is_const": true,
                     "is_array": true,
@@ -1084,7 +1063,7 @@
                 },
                 {
                     "name": "slot",
-                    "tag": "_",
+                    "tag": "CARMODTYPE",
                     "is_const": false,
                     "is_array": false,
                     "default_value": null,
@@ -1094,7 +1073,7 @@
         },
         {
             "name": "GetVehicleComponentType",
-            "tag": "_",
+            "tag": "CARMODTYPE",
             "is_callback": false,
             "is_variadic": false,
             "arguments": [
@@ -1139,7 +1118,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "X",
+                    "name": "x",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -1147,7 +1126,7 @@
                     "is_reference": true
                 },
                 {
-                    "name": "Y",
+                    "name": "y",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -1155,7 +1134,7 @@
                     "is_reference": true
                 },
                 {
-                    "name": "Z",
+                    "name": "z",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -1179,7 +1158,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "X",
+                    "name": "x",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -1187,7 +1166,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "Y",
+                    "name": "y",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -1195,7 +1174,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "Z",
+                    "name": "z",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -1219,7 +1198,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "X",
+                    "name": "x",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -1227,7 +1206,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "Y",
+                    "name": "y",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -1235,7 +1214,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "Z",
+                    "name": "z",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -1356,14 +1335,14 @@
                 },
                 {
                     "name": "infotype",
-                    "tag": "_",
+                    "tag": "VEHICLE_MODEL_INFO",
                     "is_const": false,
                     "is_array": false,
                     "default_value": null,
                     "is_reference": false
                 },
                 {
-                    "name": "X",
+                    "name": "x",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -1371,7 +1350,7 @@
                     "is_reference": true
                 },
                 {
-                    "name": "Y",
+                    "name": "y",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -1379,7 +1358,7 @@
                     "is_reference": true
                 },
                 {
-                    "name": "Z",
+                    "name": "z",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -1403,7 +1382,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "worldid",
+                    "name": "virtualWorld",
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,

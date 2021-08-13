@@ -477,7 +477,7 @@ cases = [
                         },
                         {
                             "name": "engine",
-                            "tag": "_",
+                            "tag": "VEHICLE_PARAMS",
                             "is_const": false,
                             "is_array": false,
                             "default_value": null,
@@ -485,7 +485,7 @@ cases = [
                         },
                         {
                             "name": "lights",
-                            "tag": "_",
+                            "tag": "VEHICLE_PARAMS",
                             "is_const": false,
                             "is_array": false,
                             "default_value": null,
@@ -493,7 +493,7 @@ cases = [
                         },
                         {
                             "name": "alarm",
-                            "tag": "_",
+                            "tag": "VEHICLE_PARAMS",
                             "is_const": false,
                             "is_array": false,
                             "default_value": null,
@@ -501,7 +501,7 @@ cases = [
                         },
                         {
                             "name": "doors",
-                            "tag": "_",
+                            "tag": "VEHICLE_PARAMS",
                             "is_const": false,
                             "is_array": false,
                             "default_value": null,
@@ -509,7 +509,7 @@ cases = [
                         },
                         {
                             "name": "bonnet",
-                            "tag": "_",
+                            "tag": "VEHICLE_PARAMS",
                             "is_const": false,
                             "is_array": false,
                             "default_value": null,
@@ -517,7 +517,7 @@ cases = [
                         },
                         {
                             "name": "boot",
-                            "tag": "_",
+                            "tag": "VEHICLE_PARAMS",
                             "is_const": false,
                             "is_array": false,
                             "default_value": null,
@@ -525,7 +525,7 @@ cases = [
                         },
                         {
                             "name": "objective",
-                            "tag": "_",
+                            "tag": "VEHICLE_PARAMS",
                             "is_const": false,
                             "is_array": false,
                             "default_value": null,
@@ -593,7 +593,7 @@ cases = [
                         },
                         {
                             "name": "engine",
-                            "tag": "_",
+                            "tag": "VEHICLE_PARAMS",
                             "is_const": false,
                             "is_array": false,
                             "default_value": null,
@@ -601,7 +601,7 @@ cases = [
                         },
                         {
                             "name": "lights",
-                            "tag": "_",
+                            "tag": "VEHICLE_PARAMS",
                             "is_const": false,
                             "is_array": false,
                             "default_value": null,
@@ -609,7 +609,7 @@ cases = [
                         },
                         {
                             "name": "alarm",
-                            "tag": "_",
+                            "tag": "VEHICLE_PARAMS",
                             "is_const": false,
                             "is_array": false,
                             "default_value": null,
@@ -617,7 +617,7 @@ cases = [
                         },
                         {
                             "name": "doors",
-                            "tag": "_",
+                            "tag": "VEHICLE_PARAMS",
                             "is_const": false,
                             "is_array": false,
                             "default_value": null,
@@ -625,7 +625,7 @@ cases = [
                         },
                         {
                             "name": "bonnet",
-                            "tag": "_",
+                            "tag": "VEHICLE_PARAMS",
                             "is_const": false,
                             "is_array": false,
                             "default_value": null,
@@ -633,7 +633,7 @@ cases = [
                         },
                         {
                             "name": "boot",
-                            "tag": "_",
+                            "tag": "VEHICLE_PARAMS",
                             "is_const": false,
                             "is_array": false,
                             "default_value": null,
@@ -641,7 +641,7 @@ cases = [
                         },
                         {
                             "name": "objective",
-                            "tag": "_",
+                            "tag": "VEHICLE_PARAMS",
                             "is_const": false,
                             "is_array": false,
                             "default_value": null,
@@ -652,6 +652,90 @@ cases = [
             ''',
             '''
                 SCRIPT_API(SetVehicleParamsEx, bool(IVehicle& vehicle, VehicleParams params))
+                {
+                    throw NotImplemented();
+                }
+            ''',
+        ),
+        (
+            '''
+                {
+                    "name": "GetPlayerPos",
+                    "tag": "_",
+                    "is_callback": false,
+                    "is_variadic": false,
+                    "arguments": [
+                        {
+                            "name": "playerid",
+                            "tag": "_",
+                            "is_const": false,
+                            "is_array": false,
+                            "default_value": null,
+                            "is_reference": false
+                        },
+                        {
+                            "name": "x",
+                            "tag": "Float",
+                            "is_const": false,
+                            "is_array": false,
+                            "default_value": null,
+                            "is_reference": true
+                        },
+                        {
+                            "name": "y",
+                            "tag": "Float",
+                            "is_const": false,
+                            "is_array": false,
+                            "default_value": null,
+                            "is_reference": true
+                        },
+                        {
+                            "name": "z",
+                            "tag": "Float",
+                            "is_const": false,
+                            "is_array": false,
+                            "default_value": null,
+                            "is_reference": true
+                        }
+                    ]
+                },
+            ''',
+            '''
+                SCRIPT_API(GetPlayerPos, bool(IPlayer& player, Vector3& pos))
+                {
+                    throw NotImplemented();
+                }
+            ''',
+        ),
+        (
+            '''
+                {
+                    "name": "IsActorStreamedIn",
+                    "tag": "bool",
+                    "is_callback": false,
+                    "is_variadic": false,
+                    "arguments": [
+                        {
+                            "name": "actorid",
+                            "tag": "_",
+                            "is_const": false,
+                            "is_array": false,
+                            "default_value": null,
+                            "is_reference": false
+                        },
+                        {
+                            "name": "playerid",
+                            "tag": "_",
+                            "is_const": false,
+                            "is_array": false,
+                            "default_value": null,
+                            "is_reference": false
+                        }
+                    ]
+                },
+            ''',
+            '''
+                SCRIPT_API(IsActorStreamedIn, bool(IActor& actor, IPlayer& player))
                 {
                     throw NotImplemented();
                 }

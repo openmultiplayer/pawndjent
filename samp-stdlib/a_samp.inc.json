@@ -1,135 +1,30 @@
 {
     "constants": [
         "SAMP_CONST_CORRECT",
-        "MAX_PLAYER_NAME",
-        "MAX_PLAYERS",
-        "MAX_VEHICLES",
-        "MAX_ACTORS",
-        "MAX_OBJECTS",
-        "MAX_GANG_ZONES",
-        "MAX_TEXT_DRAWS",
-        "MAX_PLAYER_TEXT_DRAWS",
-        "MAX_MENUS",
-        "MAX_3DTEXT_GLOBAL",
-        "MAX_3DTEXT_PLAYER",
-        "MAX_PICKUPS",
-        "NO_TEAM",
-        "INVALID_PLAYER_ID",
-        "INVALID_VEHICLE_ID",
-        "INVALID_ACTOR_ID",
-        "INVALID_OBJECT_ID",
-        "INVALID_MENU",
-        "INVALID_TEXT_DRAW",
-        "INVALID_PLAYER_TEXT_DRAW",
-        "INVALID_GANG_ZONE",
-        "INVALID_3DTEXT_ID",
-        "INVALID_PLAYER_3DTEXT_ID",
-        "PLAYER_STATE_NONE",
-        "PLAYER_STATE_ONFOOT",
-        "PLAYER_STATE_DRIVER",
-        "PLAYER_STATE_PASSENGER",
+        "WEAK_TAGS",
+        "LESS_TAGS",
+        "PLAYER_STATE:",
         "PLAYER_STATE_EXIT_VEHICLE",
         "PLAYER_STATE_ENTER_VEHICLE_DRIVER",
         "PLAYER_STATE_ENTER_VEHICLE_PASSENGER",
-        "PLAYER_STATE_WASTED",
-        "PLAYER_STATE_SPAWNED",
-        "PLAYER_STATE_SPECTATING",
-        "PLAYER_MARKERS_MODE_OFF",
-        "PLAYER_MARKERS_MODE_GLOBAL",
-        "PLAYER_MARKERS_MODE_STREAMED",
-        "WEAPON_BRASSKNUCKLE",
-        "WEAPON_GOLFCLUB",
-        "WEAPON_NITESTICK",
-        "WEAPON_KNIFE",
-        "WEAPON_BAT",
-        "WEAPON_SHOVEL",
-        "WEAPON_POOLSTICK",
-        "WEAPON_KATANA",
-        "WEAPON_CHAINSAW",
-        "WEAPON_DILDO",
-        "WEAPON_DILDO2",
-        "WEAPON_VIBRATOR",
-        "WEAPON_VIBRATOR2",
-        "WEAPON_FLOWER",
-        "WEAPON_CANE",
-        "WEAPON_GRENADE",
-        "WEAPON_TEARGAS",
-        "WEAPON_MOLTOV",
-        "WEAPON_COLT45",
-        "WEAPON_SILENCED",
-        "WEAPON_DEAGLE",
-        "WEAPON_SHOTGUN",
-        "WEAPON_SAWEDOFF",
-        "WEAPON_SHOTGSPA",
-        "WEAPON_UZI",
-        "WEAPON_MP5",
-        "WEAPON_AK47",
-        "WEAPON_M4",
-        "WEAPON_TEC9",
-        "WEAPON_RIFLE",
-        "WEAPON_SNIPER",
-        "WEAPON_ROCKETLAUNCHER",
-        "WEAPON_HEATSEEKER",
-        "WEAPON_FLAMETHROWER",
-        "WEAPON_MINIGUN",
-        "WEAPON_SATCHEL",
-        "WEAPON_BOMB",
-        "WEAPON_SPRAYCAN",
-        "WEAPON_FIREEXTINGUISHER",
-        "WEAPON_CAMERA",
-        "WEAPON_PARACHUTE",
-        "WEAPON_VEHICLE",
-        "WEAPON_DROWN",
-        "WEAPON_COLLISION",
-        "KEY_ACTION",
-        "KEY_CROUCH",
-        "KEY_FIRE",
-        "KEY_SPRINT",
-        "KEY_SECONDARY_ATTACK",
-        "KEY_JUMP",
-        "KEY_LOOK_RIGHT",
-        "KEY_HANDBRAKE",
-        "KEY_LOOK_LEFT",
-        "KEY_SUBMISSION",
-        "KEY_LOOK_BEHIND",
-        "KEY_WALK",
-        "KEY_ANALOG_UP",
-        "KEY_ANALOG_DOWN",
-        "KEY_ANALOG_LEFT",
-        "KEY_ANALOG_RIGHT",
-        "KEY_YES",
-        "KEY_NO",
-        "KEY_CTRL_BACK",
-        "KEY_UP",
-        "KEY_DOWN",
-        "KEY_LEFT",
-        "KEY_RIGHT",
-        "DIALOG_STYLE_MSGBOX",
-        "DIALOG_STYLE_INPUT",
-        "DIALOG_STYLE_LIST",
-        "DIALOG_STYLE_PASSWORD",
-        "DIALOG_STYLE_TABLIST",
-        "DIALOG_STYLE_TABLIST_HEADERS",
-        "TEXT_DRAW_FONT_SPRITE_DRAW",
-        "TEXT_DRAW_FONT_MODEL_PREVIEW",
-        "SERVER_VARTYPE_NONE",
-        "SERVER_VARTYPE_INT",
-        "SERVER_VARTYPE_STRING",
-        "SERVER_VARTYPE_FLOAT",
-        "DOWNLOAD_REQUEST_EMPTY",
-        "DOWNLOAD_REQUEST_MODEL_FILE",
-        "DOWNLOAD_REQUEST_TEXTURE_FILE",
-        "CLICK_SOURCE_SCOREBOARD",
-        "EDIT_RESPONSE_CANCEL",
-        "EDIT_RESPONSE_FINAL",
-        "EDIT_RESPONSE_UPDATE",
-        "SELECT_OBJECT_GLOBAL_OBJECT",
-        "SELECT_OBJECT_PLAYER_OBJECT",
-        "BULLET_HIT_TYPE_NONE",
-        "BULLET_HIT_TYPE_PLAYER",
-        "BULLET_HIT_TYPE_VEHICLE",
-        "BULLET_HIT_TYPE_OBJECT",
-        "BULLET_HIT_TYPE_PLAYER_OBJECT"
+        "PLAYER_MARKERS_MODE:",
+        "WEAPON:",
+        "KEY:",
+        "DIALOG_STYLE:",
+        "TEXT_DRAW_FONT:",
+        "TEXT_DRAW_ALIGN:",
+        "SERVER_VARTYPE:",
+        "DOWNLOAD_REQUEST:",
+        "CLICK_SOURCE:",
+        "EDIT_RESPONSE:",
+        "SELECT_OBJECT:",
+        "BULLET_HIT_TYPE:",
+        "PLAYER_STATE:",
+        "CLICK_SOURCE:",
+        "EDIT_RESPONSE:",
+        "EDIT_RESPONSE:",
+        "SELECT_OBJECT:",
+        "BULLET_HIT_TYPE:"
     ],
     "functions": [
         {
@@ -211,7 +106,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "color",
+                    "name": "colour",
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
@@ -235,7 +130,7 @@
             "is_variadic": false,
             "arguments": [
                 {
-                    "name": "color",
+                    "name": "colour",
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
@@ -459,7 +354,7 @@
             "is_variadic": false,
             "arguments": [
                 {
-                    "name": "funcname",
+                    "name": "functionName",
                     "tag": "_",
                     "is_const": true,
                     "is_array": true,
@@ -476,7 +371,7 @@
                 },
                 {
                     "name": "repeating",
-                    "tag": "_",
+                    "tag": "bool",
                     "is_const": false,
                     "is_array": false,
                     "default_value": null,
@@ -491,7 +386,7 @@
             "is_variadic": true,
             "arguments": [
                 {
-                    "name": "funcname",
+                    "name": "functionName",
                     "tag": "_",
                     "is_const": true,
                     "is_array": true,
@@ -508,7 +403,7 @@
                 },
                 {
                     "name": "repeating",
-                    "tag": "_",
+                    "tag": "bool",
                     "is_const": false,
                     "is_array": false,
                     "default_value": null,
@@ -519,7 +414,7 @@
                     "tag": "_",
                     "is_const": true,
                     "is_array": true,
-                    "default_value": null,
+                    "default_value": "\"\"",
                     "is_reference": false
                 }
             ]
@@ -573,7 +468,7 @@
                     "tag": "_",
                     "is_const": true,
                     "is_array": true,
-                    "default_value": null,
+                    "default_value": "\"\"",
                     "is_reference": false
                 }
             ]
@@ -597,7 +492,7 @@
                     "tag": "_",
                     "is_const": true,
                     "is_array": true,
-                    "default_value": null,
+                    "default_value": "\"\"",
                     "is_reference": false
                 }
             ]
@@ -750,7 +645,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "ret_hash",
+                    "name": "output",
                     "tag": "_",
                     "is_const": false,
                     "is_array": true,
@@ -758,11 +653,11 @@
                     "is_reference": true
                 },
                 {
-                    "name": "ret_hash_len",
+                    "name": "size",
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
-                    "default_value": "sizeof ret_hash",
+                    "default_value": "sizeof output",
                     "is_reference": false
                 }
             ]
@@ -774,7 +669,7 @@
             "is_variadic": false,
             "arguments": [
                 {
-                    "name": "varname",
+                    "name": "svar",
                     "tag": "_",
                     "is_const": true,
                     "is_array": true,
@@ -782,7 +677,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "int_value",
+                    "name": "value",
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
@@ -798,7 +693,7 @@
             "is_variadic": false,
             "arguments": [
                 {
-                    "name": "varname",
+                    "name": "svar",
                     "tag": "_",
                     "is_const": true,
                     "is_array": true,
@@ -814,7 +709,7 @@
             "is_variadic": false,
             "arguments": [
                 {
-                    "name": "varname",
+                    "name": "svar",
                     "tag": "_",
                     "is_const": true,
                     "is_array": true,
@@ -822,7 +717,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "string_value",
+                    "name": "value",
                     "tag": "_",
                     "is_const": true,
                     "is_array": true,
@@ -838,7 +733,7 @@
             "is_variadic": false,
             "arguments": [
                 {
-                    "name": "varname",
+                    "name": "svar",
                     "tag": "_",
                     "is_const": true,
                     "is_array": true,
@@ -846,7 +741,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "string_return",
+                    "name": "output",
                     "tag": "_",
                     "is_const": false,
                     "is_array": true,
@@ -858,7 +753,7 @@
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
-                    "default_value": "sizeof string_return",
+                    "default_value": "sizeof output",
                     "is_reference": false
                 }
             ]
@@ -870,7 +765,7 @@
             "is_variadic": false,
             "arguments": [
                 {
-                    "name": "varname",
+                    "name": "svar",
                     "tag": "_",
                     "is_const": true,
                     "is_array": true,
@@ -878,7 +773,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "float_value",
+                    "name": "value",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -894,7 +789,7 @@
             "is_variadic": false,
             "arguments": [
                 {
-                    "name": "varname",
+                    "name": "svar",
                     "tag": "_",
                     "is_const": true,
                     "is_array": true,
@@ -910,7 +805,7 @@
             "is_variadic": false,
             "arguments": [
                 {
-                    "name": "varname",
+                    "name": "svar",
                     "tag": "_",
                     "is_const": true,
                     "is_array": true,
@@ -941,7 +836,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "ret_varname",
+                    "name": "output",
                     "tag": "_",
                     "is_const": false,
                     "is_array": true,
@@ -949,23 +844,23 @@
                     "is_reference": true
                 },
                 {
-                    "name": "ret_len",
+                    "name": "size",
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
-                    "default_value": "sizeof ret_varname",
+                    "default_value": "sizeof output",
                     "is_reference": false
                 }
             ]
         },
         {
             "name": "GetSVarType",
-            "tag": "_",
+            "tag": "SERVER_VARTYPE",
             "is_callback": false,
             "is_variadic": false,
             "arguments": [
                 {
-                    "name": "varname",
+                    "name": "svar",
                     "tag": "_",
                     "is_const": true,
                     "is_array": true,
@@ -1021,7 +916,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "spawn_x",
+                    "name": "spawnX",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -1029,7 +924,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "spawn_y",
+                    "name": "spawnY",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -1037,7 +932,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "spawn_z",
+                    "name": "spawnZ",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -1045,7 +940,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "z_angle",
+                    "name": "angle",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -1061,7 +956,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "weapon1_ammo",
+                    "name": "ammo1",
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
@@ -1077,7 +972,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "weapon2_ammo",
+                    "name": "ammo2",
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
@@ -1093,7 +988,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "weapon3_ammo",
+                    "name": "ammo3",
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
@@ -1125,7 +1020,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "spawn_x",
+                    "name": "spawnX",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -1133,7 +1028,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "spawn_y",
+                    "name": "spawnY",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -1141,7 +1036,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "spawn_z",
+                    "name": "spawnZ",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -1149,7 +1044,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "z_angle",
+                    "name": "angle",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -1165,7 +1060,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "weapon1_ammo",
+                    "name": "ammo1",
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
@@ -1181,7 +1076,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "weapon2_ammo",
+                    "name": "ammo2",
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
@@ -1197,7 +1092,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "weapon3_ammo",
+                    "name": "ammo3",
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
@@ -1221,7 +1116,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "spawn_x",
+                    "name": "spawnX",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -1229,7 +1124,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "spawn_y",
+                    "name": "spawnY",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -1237,7 +1132,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "spawn_z",
+                    "name": "spawnZ",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -1245,7 +1140,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "z_angle",
+                    "name": "angle",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -1253,7 +1148,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "color1",
+                    "name": "colour1",
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
@@ -1261,7 +1156,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "color2",
+                    "name": "colour2",
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
@@ -1285,7 +1180,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "spawn_x",
+                    "name": "spawnX",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -1293,7 +1188,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "spawn_y",
+                    "name": "spawnY",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -1301,7 +1196,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "spawn_z",
+                    "name": "spawnZ",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -1309,7 +1204,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "z_angle",
+                    "name": "angle",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -1317,7 +1212,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "color1",
+                    "name": "colour1",
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
@@ -1325,7 +1220,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "color2",
+                    "name": "colour2",
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
@@ -1333,7 +1228,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "respawn_delay",
+                    "name": "respawnDelay",
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
@@ -1341,11 +1236,11 @@
                     "is_reference": false
                 },
                 {
-                    "name": "addsiren",
-                    "tag": "_",
+                    "name": "addSiren",
+                    "tag": "bool",
                     "is_const": false,
                     "is_array": false,
-                    "default_value": 0,
+                    "default_value": "false",
                     "is_reference": false
                 }
             ]
@@ -1373,7 +1268,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "X",
+                    "name": "x",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -1381,7 +1276,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "Y",
+                    "name": "y",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -1389,7 +1284,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "Z",
+                    "name": "z",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -1397,7 +1292,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "virtualworld",
+                    "name": "virtualWorld",
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
@@ -1429,7 +1324,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "X",
+                    "name": "x",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -1437,7 +1332,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "Y",
+                    "name": "y",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -1445,7 +1340,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "Z",
+                    "name": "z",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -1453,7 +1348,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "virtualworld",
+                    "name": "virtualWorld",
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
@@ -1486,7 +1381,7 @@
             "arguments": [
                 {
                     "name": "show",
-                    "tag": "_",
+                    "tag": "bool",
                     "is_const": false,
                     "is_array": false,
                     "default_value": null,
@@ -1502,7 +1397,7 @@
             "arguments": [
                 {
                     "name": "mode",
-                    "tag": "_",
+                    "tag": "PLAYER_MARKERS_MODE",
                     "is_const": false,
                     "is_array": false,
                     "default_value": null,
@@ -1573,7 +1468,7 @@
             "arguments": [
                 {
                     "name": "enable",
-                    "tag": "_",
+                    "tag": "bool",
                     "is_const": false,
                     "is_array": false,
                     "default_value": null,
@@ -1596,7 +1491,7 @@
             "arguments": [
                 {
                     "name": "allow",
-                    "tag": "_",
+                    "tag": "bool",
                     "is_const": false,
                     "is_array": false,
                     "default_value": null,
@@ -1651,7 +1546,7 @@
             "arguments": [
                 {
                     "name": "allow",
-                    "tag": "_",
+                    "tag": "bool",
                     "is_const": false,
                     "is_array": false,
                     "default_value": null,
@@ -1682,7 +1577,7 @@
             "is_variadic": false,
             "arguments": [
                 {
-                    "name": "X",
+                    "name": "x",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -1690,7 +1585,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "Y",
+                    "name": "y",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -1698,7 +1593,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "Z",
+                    "name": "z",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -1714,7 +1609,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "Radius",
+                    "name": "radius",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -1731,7 +1626,7 @@
             "arguments": [
                 {
                     "name": "enable",
-                    "tag": "_",
+                    "tag": "bool",
                     "is_const": false,
                     "is_array": false,
                     "default_value": null,
@@ -1783,7 +1678,7 @@
             "is_variadic": false,
             "arguments": [
                 {
-                    "name": "chat_radius",
+                    "name": "chatRadius",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -1799,7 +1694,7 @@
             "is_variadic": false,
             "arguments": [
                 {
-                    "name": "marker_radius",
+                    "name": "markerRadius",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -1834,7 +1729,7 @@
         },
         {
             "name": "IsPlayerNPC",
-            "tag": "_",
+            "tag": "bool",
             "is_callback": false,
             "is_variadic": false,
             "arguments": [
@@ -1871,7 +1766,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "dffname",
+                    "name": "dff",
                     "tag": "_",
                     "is_const": true,
                     "is_array": true,
@@ -1879,7 +1774,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "txdname",
+                    "name": "textureLibrary",
                     "tag": "_",
                     "is_const": true,
                     "is_array": true,
@@ -1895,7 +1790,7 @@
             "is_variadic": false,
             "arguments": [
                 {
-                    "name": "virtualworld",
+                    "name": "virtualWorld",
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
@@ -1919,7 +1814,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "dffname",
+                    "name": "dff",
                     "tag": "_",
                     "is_const": true,
                     "is_array": true,
@@ -1927,7 +1822,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "txdname",
+                    "name": "textureLibrary",
                     "tag": "_",
                     "is_const": true,
                     "is_array": true,
@@ -1943,7 +1838,7 @@
             "is_variadic": false,
             "arguments": [
                 {
-                    "name": "virtualworld",
+                    "name": "virtualWorld",
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
@@ -1967,7 +1862,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "dffname",
+                    "name": "dff",
                     "tag": "_",
                     "is_const": true,
                     "is_array": true,
@@ -1975,7 +1870,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "txdname",
+                    "name": "textureLibrary",
                     "tag": "_",
                     "is_const": true,
                     "is_array": true,
@@ -1983,7 +1878,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "timeon",
+                    "name": "timeOn",
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
@@ -1991,7 +1886,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "timeoff",
+                    "name": "timeOff",
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
@@ -2015,7 +1910,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "retstr",
+                    "name": "output",
                     "tag": "_",
                     "is_const": false,
                     "is_array": true,
@@ -2027,7 +1922,7 @@
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
-                    "default_value": "sizeof retstr",
+                    "default_value": "sizeof output",
                     "is_reference": false
                 }
             ]
@@ -2047,7 +1942,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "retstr",
+                    "name": "output",
                     "tag": "_",
                     "is_const": false,
                     "is_array": true,
@@ -2059,7 +1954,7 @@
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
-                    "default_value": "sizeof retstr",
+                    "default_value": "sizeof output",
                     "is_reference": false
                 }
             ]
@@ -2090,7 +1985,7 @@
         },
         {
             "name": "IsPlayerAdmin",
-            "tag": "_",
+            "tag": "bool",
             "is_callback": false,
             "is_variadic": false,
             "arguments": [
@@ -2191,7 +2086,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "retstr",
+                    "name": "output",
                     "tag": "_",
                     "is_const": false,
                     "is_array": true,
@@ -2199,11 +2094,11 @@
                     "is_reference": true
                 },
                 {
-                    "name": "retstr_size",
+                    "name": "size",
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
-                    "default_value": "sizeof retstr",
+                    "default_value": "sizeof output",
                     "is_reference": false
                 }
             ]
@@ -2215,7 +2110,7 @@
             "is_variadic": false,
             "arguments": [
                 {
-                    "name": "retstr",
+                    "name": "output",
                     "tag": "_",
                     "is_const": false,
                     "is_array": true,
@@ -2223,11 +2118,11 @@
                     "is_reference": true
                 },
                 {
-                    "name": "retstr_size",
+                    "name": "size",
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
-                    "default_value": "sizeof retstr",
+                    "default_value": "sizeof output",
                     "is_reference": false
                 }
             ]
@@ -2271,7 +2166,7 @@
             "is_variadic": false,
             "arguments": [
                 {
-                    "name": "ip_address",
+                    "name": "ipAddress",
                     "tag": "_",
                     "is_const": true,
                     "is_array": true,
@@ -2279,7 +2174,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "timems",
+                    "name": "timeMS",
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
@@ -2295,7 +2190,7 @@
             "is_variadic": false,
             "arguments": [
                 {
-                    "name": "ip_address",
+                    "name": "ipAddress",
                     "tag": "_",
                     "is_const": true,
                     "is_array": true,
@@ -2311,7 +2206,7 @@
             "is_variadic": false,
             "arguments": [
                 {
-                    "name": "varname",
+                    "name": "cvar",
                     "tag": "_",
                     "is_const": true,
                     "is_array": true,
@@ -2343,7 +2238,7 @@
             "is_variadic": false,
             "arguments": [
                 {
-                    "name": "varname",
+                    "name": "cvar",
                     "tag": "_",
                     "is_const": true,
                     "is_array": true,
@@ -2354,12 +2249,12 @@
         },
         {
             "name": "GetServerVarAsBool",
-            "tag": "_",
+            "tag": "bool",
             "is_callback": false,
             "is_variadic": false,
             "arguments": [
                 {
-                    "name": "varname",
+                    "name": "cvar",
                     "tag": "_",
                     "is_const": true,
                     "is_array": true,
@@ -2375,7 +2270,7 @@
             "is_variadic": false,
             "arguments": [
                 {
-                    "name": "varname",
+                    "name": "cvar",
                     "tag": "_",
                     "is_const": true,
                     "is_array": true,
@@ -2407,7 +2302,7 @@
             "is_variadic": false,
             "arguments": [
                 {
-                    "name": "varname",
+                    "name": "cvar",
                     "tag": "_",
                     "is_const": true,
                     "is_array": true,
@@ -2418,12 +2313,12 @@
         },
         {
             "name": "GetConsoleVarAsBool",
-            "tag": "_",
+            "tag": "bool",
             "is_callback": false,
             "is_variadic": false,
             "arguments": [
                 {
-                    "name": "varname",
+                    "name": "cvar",
                     "tag": "_",
                     "is_const": true,
                     "is_array": true,
@@ -2582,7 +2477,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "ip_port",
+                    "name": "output",
                     "tag": "_",
                     "is_const": false,
                     "is_array": true,
@@ -2590,11 +2485,11 @@
                     "is_reference": true
                 },
                 {
-                    "name": "ip_port_len",
+                    "name": "size",
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
-                    "default_value": "sizeof ip_port",
+                    "default_value": "sizeof output",
                     "is_reference": false
                 }
             ]
@@ -2694,7 +2589,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "menutext",
+                    "name": "text",
                     "tag": "_",
                     "is_const": true,
                     "is_array": true,
@@ -2726,7 +2621,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "columnheader",
+                    "name": "heading",
                     "tag": "_",
                     "is_const": true,
                     "is_array": true,
@@ -2785,7 +2680,7 @@
         },
         {
             "name": "IsValidMenu",
-            "tag": "_",
+            "tag": "bool",
             "is_callback": false,
             "is_variadic": false,
             "arguments": [
@@ -2918,7 +2813,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "x",
+                    "name": "width",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -2926,7 +2821,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "y",
+                    "name": "height",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -2950,7 +2845,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "x",
+                    "name": "width",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -2958,7 +2853,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "y",
+                    "name": "height",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -2983,7 +2878,7 @@
                 },
                 {
                     "name": "alignment",
-                    "tag": "_",
+                    "tag": "TEXT_DRAW_ALIGN",
                     "is_const": false,
                     "is_array": false,
                     "default_value": null,
@@ -3006,7 +2901,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "color",
+                    "name": "colour",
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
@@ -3031,7 +2926,7 @@
                 },
                 {
                     "name": "use",
-                    "tag": "_",
+                    "tag": "bool",
                     "is_const": false,
                     "is_array": false,
                     "default_value": null,
@@ -3054,7 +2949,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "color",
+                    "name": "colour",
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
@@ -3126,7 +3021,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "color",
+                    "name": "colour",
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
@@ -3175,7 +3070,7 @@
                 },
                 {
                     "name": "set",
-                    "tag": "_",
+                    "tag": "bool",
                     "is_const": false,
                     "is_array": false,
                     "default_value": null,
@@ -3199,7 +3094,7 @@
                 },
                 {
                     "name": "set",
-                    "tag": "_",
+                    "tag": "bool",
                     "is_const": false,
                     "is_array": false,
                     "default_value": null,
@@ -3326,7 +3221,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "modelindex",
+                    "name": "modelIndex",
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
@@ -3350,7 +3245,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "fRotX",
+                    "name": "rotX",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -3358,7 +3253,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "fRotY",
+                    "name": "rotY",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -3366,7 +3261,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "fRotZ",
+                    "name": "rotZ",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -3374,7 +3269,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "fZoom",
+                    "name": "zoom",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -3398,7 +3293,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "color1",
+                    "name": "colour1",
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
@@ -3406,7 +3301,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "color2",
+                    "name": "colour2",
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
@@ -3422,7 +3317,7 @@
             "is_variadic": false,
             "arguments": [
                 {
-                    "name": "minx",
+                    "name": "minX",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -3430,7 +3325,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "miny",
+                    "name": "minY",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -3438,7 +3333,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "maxx",
+                    "name": "maxX",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -3446,7 +3341,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "maxy",
+                    "name": "maxY",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -3494,7 +3389,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "color",
+                    "name": "colour",
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
@@ -3518,7 +3413,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "color",
+                    "name": "colour",
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
@@ -3590,7 +3485,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "flashcolor",
+                    "name": "flashColour",
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
@@ -3614,7 +3509,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "flashcolor",
+                    "name": "flashColour",
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
@@ -3678,7 +3573,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "color",
+                    "name": "colour",
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
@@ -3686,7 +3581,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "X",
+                    "name": "x",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -3694,7 +3589,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "Y",
+                    "name": "y",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -3702,7 +3597,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "Z",
+                    "name": "z",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -3710,7 +3605,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "DrawDistance",
+                    "name": "drawDistance",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -3718,7 +3613,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "virtualworld",
+                    "name": "virtualWorld",
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
@@ -3727,10 +3622,10 @@
                 },
                 {
                     "name": "testLOS",
-                    "tag": "_",
+                    "tag": "bool",
                     "is_const": false,
                     "is_array": false,
-                    "default_value": 0,
+                    "default_value": "false",
                     "is_reference": false
                 }
             ]
@@ -3742,7 +3637,7 @@
             "is_variadic": false,
             "arguments": [
                 {
-                    "name": "id",
+                    "name": "textid",
                     "tag": "Text3D",
                     "is_const": false,
                     "is_array": false,
@@ -3758,7 +3653,7 @@
             "is_variadic": false,
             "arguments": [
                 {
-                    "name": "id",
+                    "name": "textid",
                     "tag": "Text3D",
                     "is_const": false,
                     "is_array": false,
@@ -3766,7 +3661,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "playerid",
+                    "name": "parentid",
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
@@ -3774,7 +3669,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "OffsetX",
+                    "name": "offsetX",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -3782,7 +3677,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "OffsetY",
+                    "name": "offsetY",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -3790,7 +3685,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "OffsetZ",
+                    "name": "offsetZ",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -3806,7 +3701,7 @@
             "is_variadic": false,
             "arguments": [
                 {
-                    "name": "id",
+                    "name": "textid",
                     "tag": "Text3D",
                     "is_const": false,
                     "is_array": false,
@@ -3814,7 +3709,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "vehicleid",
+                    "name": "parentid",
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
@@ -3822,7 +3717,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "OffsetX",
+                    "name": "offsetX",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -3830,7 +3725,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "OffsetY",
+                    "name": "offsetY",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -3838,7 +3733,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "OffsetZ",
+                    "name": "offsetZ",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -3854,7 +3749,7 @@
             "is_variadic": false,
             "arguments": [
                 {
-                    "name": "id",
+                    "name": "textid",
                     "tag": "Text3D",
                     "is_const": false,
                     "is_array": false,
@@ -3862,7 +3757,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "color",
+                    "name": "colour",
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
@@ -3902,7 +3797,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "color",
+                    "name": "colour",
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
@@ -3910,7 +3805,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "X",
+                    "name": "x",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -3918,7 +3813,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "Y",
+                    "name": "y",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -3926,7 +3821,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "Z",
+                    "name": "z",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -3934,7 +3829,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "DrawDistance",
+                    "name": "drawDistance",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -3942,7 +3837,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "attachedplayer",
+                    "name": "parentPlayerid",
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
@@ -3950,7 +3845,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "attachedvehicle",
+                    "name": "parentVehicleid",
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
@@ -3959,10 +3854,10 @@
                 },
                 {
                     "name": "testLOS",
-                    "tag": "_",
+                    "tag": "bool",
                     "is_const": false,
                     "is_array": false,
-                    "default_value": 0,
+                    "default_value": "false",
                     "is_reference": false
                 }
             ]
@@ -3982,7 +3877,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "id",
+                    "name": "textid",
                     "tag": "PlayerText3D",
                     "is_const": false,
                     "is_array": false,
@@ -4006,7 +3901,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "id",
+                    "name": "textid",
                     "tag": "PlayerText3D",
                     "is_const": false,
                     "is_array": false,
@@ -4014,7 +3909,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "color",
+                    "name": "colour",
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
@@ -4055,7 +3950,7 @@
                 },
                 {
                     "name": "style",
-                    "tag": "_",
+                    "tag": "DIALOG_STYLE",
                     "is_const": false,
                     "is_array": false,
                     "default_value": null,
@@ -4110,7 +4005,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "serial",
+                    "name": "output",
                     "tag": "_",
                     "is_const": false,
                     "is_array": true,
@@ -4118,11 +4013,11 @@
                     "is_reference": true
                 },
                 {
-                    "name": "maxlen",
+                    "name": "size",
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
-                    "default_value": null,
+                    "default_value": "sizeof output",
                     "is_reference": false
                 }
             ]
@@ -4427,7 +4322,7 @@
                 },
                 {
                     "name": "newstate",
-                    "tag": "_",
+                    "tag": "PLAYER_STATE",
                     "is_const": false,
                     "is_array": false,
                     "default_value": null,
@@ -4435,7 +4330,7 @@
                 },
                 {
                     "name": "oldstate",
-                    "tag": "_",
+                    "tag": "PLAYER_STATE",
                     "is_const": false,
                     "is_array": false,
                     "default_value": null,
@@ -4931,7 +4826,7 @@
                 },
                 {
                     "name": "newkeys",
-                    "tag": "_",
+                    "tag": "KEY",
                     "is_const": false,
                     "is_array": false,
                     "default_value": null,
@@ -4939,7 +4834,7 @@
                 },
                 {
                     "name": "oldkeys",
-                    "tag": "_",
+                    "tag": "KEY",
                     "is_const": false,
                     "is_array": false,
                     "default_value": null,
@@ -5587,7 +5482,7 @@
                 },
                 {
                     "name": "source",
-                    "tag": "_",
+                    "tag": "CLICK_SOURCE",
                     "is_const": false,
                     "is_array": false,
                     "default_value": null,
@@ -5627,7 +5522,7 @@
                 },
                 {
                     "name": "response",
-                    "tag": "_",
+                    "tag": "EDIT_RESPONSE",
                     "is_const": false,
                     "is_array": false,
                     "default_value": null,
@@ -5699,7 +5594,7 @@
                 },
                 {
                     "name": "response",
-                    "tag": "_",
+                    "tag": "EDIT_RESPONSE",
                     "is_const": false,
                     "is_array": false,
                     "default_value": null,
@@ -5819,7 +5714,7 @@
                 },
                 {
                     "name": "type",
-                    "tag": "_",
+                    "tag": "SELECT_OBJECT",
                     "is_const": false,
                     "is_array": false,
                     "default_value": null,
@@ -5891,7 +5786,7 @@
                 },
                 {
                     "name": "hittype",
-                    "tag": "_",
+                    "tag": "BULLET_HIT_TYPE",
                     "is_const": false,
                     "is_array": false,
                     "default_value": null,

@@ -4,6 +4,22 @@
     ],
     "functions": [
         {
+            "name": "DB_Open",
+            "tag": "DB",
+            "is_callback": false,
+            "is_variadic": false,
+            "arguments": [
+                {
+                    "name": "name",
+                    "tag": "_",
+                    "is_const": true,
+                    "is_array": true,
+                    "default_value": null,
+                    "is_reference": false
+                }
+            ]
+        },
+        {
             "name": "db_open",
             "tag": "DB",
             "is_callback": false,
@@ -20,8 +36,8 @@
             ]
         },
         {
-            "name": "db_close",
-            "tag": "_",
+            "name": "DB_Close",
+            "tag": "bool",
             "is_callback": false,
             "is_variadic": false,
             "arguments": [
@@ -30,6 +46,46 @@
                     "tag": "DB",
                     "is_const": false,
                     "is_array": false,
+                    "default_value": null,
+                    "is_reference": false
+                }
+            ]
+        },
+        {
+            "name": "db_close",
+            "tag": "bool",
+            "is_callback": false,
+            "is_variadic": false,
+            "arguments": [
+                {
+                    "name": "db",
+                    "tag": "DB",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": null,
+                    "is_reference": false
+                }
+            ]
+        },
+        {
+            "name": "DB_Query",
+            "tag": "DBResult",
+            "is_callback": false,
+            "is_variadic": false,
+            "arguments": [
+                {
+                    "name": "db",
+                    "tag": "DB",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": null,
+                    "is_reference": false
+                },
+                {
+                    "name": "query",
+                    "tag": "_",
+                    "is_const": true,
+                    "is_array": true,
                     "default_value": null,
                     "is_reference": false
                 }
@@ -60,13 +116,45 @@
             ]
         },
         {
+            "name": "DB_FreeResult",
+            "tag": "bool",
+            "is_callback": false,
+            "is_variadic": false,
+            "arguments": [
+                {
+                    "name": "result",
+                    "tag": "DBResult",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": null,
+                    "is_reference": false
+                }
+            ]
+        },
+        {
             "name": "db_free_result",
+            "tag": "bool",
+            "is_callback": false,
+            "is_variadic": false,
+            "arguments": [
+                {
+                    "name": "result",
+                    "tag": "DBResult",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": null,
+                    "is_reference": false
+                }
+            ]
+        },
+        {
+            "name": "DB_NumRows",
             "tag": "_",
             "is_callback": false,
             "is_variadic": false,
             "arguments": [
                 {
-                    "name": "dbresult",
+                    "name": "result",
                     "tag": "DBResult",
                     "is_const": false,
                     "is_array": false,
@@ -82,7 +170,23 @@
             "is_variadic": false,
             "arguments": [
                 {
-                    "name": "dbresult",
+                    "name": "result",
+                    "tag": "DBResult",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": null,
+                    "is_reference": false
+                }
+            ]
+        },
+        {
+            "name": "DB_NextRow",
+            "tag": "bool",
+            "is_callback": false,
+            "is_variadic": false,
+            "arguments": [
+                {
+                    "name": "result",
                     "tag": "DBResult",
                     "is_const": false,
                     "is_array": false,
@@ -93,12 +197,28 @@
         },
         {
             "name": "db_next_row",
+            "tag": "bool",
+            "is_callback": false,
+            "is_variadic": false,
+            "arguments": [
+                {
+                    "name": "result",
+                    "tag": "DBResult",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": null,
+                    "is_reference": false
+                }
+            ]
+        },
+        {
+            "name": "DB_NumFields",
             "tag": "_",
             "is_callback": false,
             "is_variadic": false,
             "arguments": [
                 {
-                    "name": "dbresult",
+                    "name": "result",
                     "tag": "DBResult",
                     "is_const": false,
                     "is_array": false,
@@ -114,23 +234,63 @@
             "is_variadic": false,
             "arguments": [
                 {
-                    "name": "dbresult",
+                    "name": "result",
                     "tag": "DBResult",
                     "is_const": false,
                     "is_array": false,
                     "default_value": null,
+                    "is_reference": false
+                }
+            ]
+        },
+        {
+            "name": "DB_FieldName",
+            "tag": "bool",
+            "is_callback": false,
+            "is_variadic": false,
+            "arguments": [
+                {
+                    "name": "result",
+                    "tag": "DBResult",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": null,
+                    "is_reference": false
+                },
+                {
+                    "name": "field",
+                    "tag": "_",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": null,
+                    "is_reference": false
+                },
+                {
+                    "name": "output",
+                    "tag": "_",
+                    "is_const": false,
+                    "is_array": true,
+                    "default_value": null,
+                    "is_reference": true
+                },
+                {
+                    "name": "size",
+                    "tag": "_",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": "sizeof output",
                     "is_reference": false
                 }
             ]
         },
         {
             "name": "db_field_name",
-            "tag": "_",
+            "tag": "bool",
             "is_callback": false,
             "is_variadic": false,
             "arguments": [
                 {
-                    "name": "dbresult",
+                    "name": "result",
                     "tag": "DBResult",
                     "is_const": false,
                     "is_array": false,
@@ -146,7 +306,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "result",
+                    "name": "output",
                     "tag": "_",
                     "is_const": false,
                     "is_array": true,
@@ -154,23 +314,63 @@
                     "is_reference": true
                 },
                 {
-                    "name": "maxlength",
+                    "name": "size",
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
-                    "default_value": "sizeof result",
+                    "default_value": "sizeof output",
+                    "is_reference": false
+                }
+            ]
+        },
+        {
+            "name": "DB_GetField",
+            "tag": "bool",
+            "is_callback": false,
+            "is_variadic": false,
+            "arguments": [
+                {
+                    "name": "result",
+                    "tag": "DBResult",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": null,
+                    "is_reference": false
+                },
+                {
+                    "name": "field",
+                    "tag": "_",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": null,
+                    "is_reference": false
+                },
+                {
+                    "name": "output",
+                    "tag": "_",
+                    "is_const": false,
+                    "is_array": true,
+                    "default_value": null,
+                    "is_reference": true
+                },
+                {
+                    "name": "size",
+                    "tag": "_",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": "sizeof output",
                     "is_reference": false
                 }
             ]
         },
         {
             "name": "db_get_field",
-            "tag": "_",
+            "tag": "bool",
             "is_callback": false,
             "is_variadic": false,
             "arguments": [
                 {
-                    "name": "dbresult",
+                    "name": "result",
                     "tag": "DBResult",
                     "is_const": false,
                     "is_array": false,
@@ -186,7 +386,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "result",
+                    "name": "output",
                     "tag": "_",
                     "is_const": false,
                     "is_array": true,
@@ -194,11 +394,35 @@
                     "is_reference": true
                 },
                 {
-                    "name": "maxlength",
+                    "name": "size",
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
-                    "default_value": "sizeof result",
+                    "default_value": "sizeof output",
+                    "is_reference": false
+                }
+            ]
+        },
+        {
+            "name": "DB_GetFieldInt",
+            "tag": "_",
+            "is_callback": false,
+            "is_variadic": false,
+            "arguments": [
+                {
+                    "name": "result",
+                    "tag": "DBResult",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": null,
+                    "is_reference": false
+                },
+                {
+                    "name": "field",
+                    "tag": "_",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": 0,
                     "is_reference": false
                 }
             ]
@@ -206,6 +430,30 @@
         {
             "name": "db_get_field_int",
             "tag": "_",
+            "is_callback": false,
+            "is_variadic": false,
+            "arguments": [
+                {
+                    "name": "result",
+                    "tag": "DBResult",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": null,
+                    "is_reference": false
+                },
+                {
+                    "name": "field",
+                    "tag": "_",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": 0,
+                    "is_reference": false
+                }
+            ]
+        },
+        {
+            "name": "DB_GetFieldFloat",
+            "tag": "Float",
             "is_callback": false,
             "is_variadic": false,
             "arguments": [
@@ -252,13 +500,13 @@
             ]
         },
         {
-            "name": "db_get_field_assoc",
-            "tag": "_",
+            "name": "DB_GetFieldAssoc",
+            "tag": "bool",
             "is_callback": false,
             "is_variadic": false,
             "arguments": [
                 {
-                    "name": "dbresult",
+                    "name": "result",
                     "tag": "DBResult",
                     "is_const": false,
                     "is_array": false,
@@ -274,7 +522,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "result",
+                    "name": "output",
                     "tag": "_",
                     "is_const": false,
                     "is_array": true,
@@ -282,11 +530,75 @@
                     "is_reference": true
                 },
                 {
-                    "name": "maxlength",
+                    "name": "size",
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
-                    "default_value": "sizeof result",
+                    "default_value": "sizeof output",
+                    "is_reference": false
+                }
+            ]
+        },
+        {
+            "name": "db_get_field_assoc",
+            "tag": "bool",
+            "is_callback": false,
+            "is_variadic": false,
+            "arguments": [
+                {
+                    "name": "result",
+                    "tag": "DBResult",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": null,
+                    "is_reference": false
+                },
+                {
+                    "name": "field",
+                    "tag": "_",
+                    "is_const": true,
+                    "is_array": true,
+                    "default_value": null,
+                    "is_reference": false
+                },
+                {
+                    "name": "output",
+                    "tag": "_",
+                    "is_const": false,
+                    "is_array": true,
+                    "default_value": null,
+                    "is_reference": true
+                },
+                {
+                    "name": "size",
+                    "tag": "_",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": "sizeof output",
+                    "is_reference": false
+                }
+            ]
+        },
+        {
+            "name": "DB_GetFieldAssocInt",
+            "tag": "_",
+            "is_callback": false,
+            "is_variadic": false,
+            "arguments": [
+                {
+                    "name": "result",
+                    "tag": "DBResult",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": null,
+                    "is_reference": false
+                },
+                {
+                    "name": "field",
+                    "tag": "_",
+                    "is_const": true,
+                    "is_array": true,
+                    "default_value": null,
                     "is_reference": false
                 }
             ]
@@ -294,6 +606,30 @@
         {
             "name": "db_get_field_assoc_int",
             "tag": "_",
+            "is_callback": false,
+            "is_variadic": false,
+            "arguments": [
+                {
+                    "name": "result",
+                    "tag": "DBResult",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": null,
+                    "is_reference": false
+                },
+                {
+                    "name": "field",
+                    "tag": "_",
+                    "is_const": true,
+                    "is_array": true,
+                    "default_value": null,
+                    "is_reference": false
+                }
+            ]
+        },
+        {
+            "name": "DB_GetFieldAssocFloat",
+            "tag": "Float",
             "is_callback": false,
             "is_variadic": false,
             "arguments": [
@@ -340,6 +676,22 @@
             ]
         },
         {
+            "name": "DB_GetMemHandle",
+            "tag": "_",
+            "is_callback": false,
+            "is_variadic": false,
+            "arguments": [
+                {
+                    "name": "db",
+                    "tag": "DB",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": null,
+                    "is_reference": false
+                }
+            ]
+        },
+        {
             "name": "db_get_mem_handle",
             "tag": "_",
             "is_callback": false,
@@ -348,6 +700,22 @@
                 {
                     "name": "db",
                     "tag": "DB",
+                    "is_const": false,
+                    "is_array": false,
+                    "default_value": null,
+                    "is_reference": false
+                }
+            ]
+        },
+        {
+            "name": "DB_GetResultMemHandle",
+            "tag": "_",
+            "is_callback": false,
+            "is_variadic": false,
+            "arguments": [
+                {
+                    "name": "result",
+                    "tag": "DBResult",
                     "is_const": false,
                     "is_array": false,
                     "default_value": null,
@@ -372,7 +740,21 @@
             ]
         },
         {
+            "name": "DB_DebugOpenFiles",
+            "tag": "_",
+            "is_callback": false,
+            "is_variadic": false,
+            "arguments": []
+        },
+        {
             "name": "db_debug_openfiles",
+            "tag": "_",
+            "is_callback": false,
+            "is_variadic": false,
+            "arguments": []
+        },
+        {
+            "name": "DB_DebugOpenResults",
             "tag": "_",
             "is_callback": false,
             "is_variadic": false,

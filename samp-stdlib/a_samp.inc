@@ -516,7 +516,7 @@ open.mp releases can use `A` as the first digit.
 /// </remarks>
 /// <remarks>The values for the placeholders follow in the exact same order as parameters in the call. For example, <b><c>"I am %i years old"</c></b> - the <b><c>%i</c></b> will be replaced with an Integer variable, which is the person's age.</remarks>
 /// <remarks>You may optionally put a number between the <b><c>%</c></b> and the letter of the placeholder code. This number indicates the field width; if the size of the parameter to print at the position of the placeholder is smaller than the field width, the field is expanded with spaces. To cut the number of decimal places beeing shown of a float, you can add <b><c>.&lt;max number&gt;</c></b> between the <b><c>%</c></b> and the <b><c>f</c></b>. (example: <b><c>%.2f</c></b>)</remarks>
-native format(output[], len = sizeof (output), const format[], {Float, _}:...);
+native format(output[], len = sizeof output, const format[], {Float, _}:...);
 
 /// <summary>This function sends a message to a specific player with a chosen colour in the chat. The whole line in the chatbox will be in the set colour unless colour embedding is used (since <b><c>0.3c</c></b>).</summary>
 /// <param name="playerid">The ID of the player to display the message to</param>
@@ -783,7 +783,7 @@ native GetActorPoolSize();
 /// <remarks>The salt is appended to the end of the password, meaning password 'foo' and salt 'bar' would form 'foobar'. </remarks>
 /// <remarks>The salt should be random, unique for each player and at least as long as the hashed password. It is to be stored alongside the actual hash in the player's account. </remarks>
 #pragma deprecated Use BCrypt for hashing passwords.
-native SHA256_PassHash(const password[], const salt[], output[], size = sizeof (output)); // SHA256 for password hashing
+native SHA256_PassHash(const password[], const salt[], output[], size = sizeof output); // SHA256 for password hashing
 
 // Server wide persistent variable system (SVars)
 
@@ -843,7 +843,7 @@ native SetSVarString(const svar[], const value[]);
 /// <seealso name="DeleteSVar" />
 /// <remarks>This function was added in <b>SA-MP 0.3.7 R2</b> and will not work in earlier versions!</remarks>
 /// <returns>The length of the string.</returns>
-native GetSVarString(const svar[], output[], len = sizeof (output));
+native GetSVarString(const svar[], output[], len = sizeof output);
 
 /// <summary>Set a float server variable.</summary>
 /// <param name="svar">The name of the server variable</param>
@@ -902,7 +902,7 @@ native GetSVarsUpperIndex();
 /// <seealso name="GetSVarInt" />
 /// <seealso name="GetSVarFloat" />
 /// <seealso name="GetSVarString" />
-native GetSVarNameAtIndex(index, output[], size = sizeof (output));
+native GetSVarNameAtIndex(index, output[], size = sizeof output);
 
 /// <summary>Gets the type (integer, float or string) of a server variable.</summary>
 /// <param name="svar">The name of the server variable to get the type of</param>
@@ -1149,7 +1149,7 @@ native SetWorldTime(hour);
 ///   <b><c>1</c></b>: The function executed successfully.<br />
 ///   <b><c>0</c></b>: The function failed to execute. The weapon specified does not exist.
 /// </returns>
-native GetWeaponName(weaponid, weapon[], len = sizeof (weapon));
+native GetWeaponName(weaponid, weapon[], len = sizeof weapon);
 
 /// <param name="enable"><b><c>1</c></b> to enable, <b><c>0</c></b> to disable tire popping</param>
 /// <remarks>This function was removed in <b>SA-MP 0.3</b>. Tire popping is enabled by default. If you want to disable tire popping, you'll have to manually script it using <a href="#OnVehicleDamageStatusUpdate">OnVehicleDamageStatusUpdate</a>.</remarks>
@@ -1290,8 +1290,8 @@ native bool:IsPlayerNPC(playerid);
 native AddCharModel(baseid, newid, const dff[], const textureLibrary[]);
 native AddSimpleModel(virtualWorld, baseid, newid, const dff[], const textureLibrary[]);
 native AddSimpleModelTimed(virtualWorld, baseid, newid, const dff[], const textureLibrary[], timeOn, timeOff);
-native FindModelFileNameFromCRC(crc, output[], retstr_size = sizeof (output));
-native FindTextureFileNameFromCRC(crc, output[], retstr_size = sizeof (output));
+native FindModelFileNameFromCRC(crc, output[], retstr_size = sizeof output);
+native FindTextureFileNameFromCRC(crc, output[], retstr_size = sizeof output);
 native RedirectDownload(playerid, const url[]);
 
 // Admin
@@ -1354,7 +1354,7 @@ native SendRconCommand(const command[]);
 /// <seealso name="NetStats_GetIpPort" />
 /// <remarks>This function was added in <b>SA-MP 0.3c R4</b> and will not work in earlier versions!</remarks>
 /// <remarks>This function may not return accurate data when used under <a href="#OnPlayerDisconnect">OnPlayerDisconnect</a> if the player has quit normally. It usually returns accurate data if the player has been kicked or has timed out.</remarks>
-native GetPlayerNetworkStats(playerid, output[], size = sizeof (output));
+native GetPlayerNetworkStats(playerid, output[], size = sizeof output);
 
 /// <summary>Gets the server's network stats and stores them in a string.</summary>
 /// <param name="output">The string to store the network stats in, passed by reference</param>
@@ -1393,7 +1393,7 @@ native GetPlayerNetworkStats(playerid, output[], size = sizeof (output));
 ///   </c>
 /// </remarks>
 /// <returns>This function always returns <b><c>1</c></b>.</returns>
-native GetNetworkStats(output[], size = sizeof (output));
+native GetNetworkStats(output[], size = sizeof output);
 
 /// <summary>Returns the SA-MP client version, as reported by the player.</summary>
 /// <param name="playerid">The ID of the player to get the client version of</param>
@@ -1405,7 +1405,7 @@ native GetNetworkStats(output[], size = sizeof (output));
 /// <remarks>This function was added in <b>SA-MP 0.3e</b> and will not work in earlier versions!</remarks>
 /// <remarks>The string the version gets stored in will be empty if playerid is an NPC.</remarks>
 /// <returns><b><c>1</c></b> on success and <b><c>0</c></b> on failure (if player specified doesn't exist).</returns>
-native GetPlayerVersion(playerid, version[], len = sizeof (version)); // Returns the SA-MP client revision as reported by the player
+native GetPlayerVersion(playerid, version[], len = sizeof version); // Returns the SA-MP client revision as reported by the player
 
 /// <summary>Blocks an IP address from further communication with the server for a set amount of time (with wildcards allowed). Players trying to connect to the server with a blocked IP address will receive the generic "You are banned from this server." message. Players that are online on the specified IP before the block will timeout after a few seconds and, upon reconnect, will receive the same message.</summary>
 /// <param name="ipAddress">The IP to block</param>
@@ -1437,7 +1437,7 @@ native UnBlockIpAddress(const ipAddress[]);
 /// <remarks>When filterscripts or plugins is specified as the cvar, this function only returns the name of the first specified filterscript or plugin. This is a bug.</remarks>
 /// <returns>The length of the returned string. <b><c>0</c></b> if the specified server variable is not a string or doesn't exist.</returns>
 #pragma deprecated Use `GetConsoleVarAsString`.
-native GetServerVarAsString(const cvar[], buffer[], len = sizeof (buffer));
+native GetServerVarAsString(const cvar[], buffer[], len = sizeof buffer);
 
 /// <summary>Get the integer value of a server variable.</summary>
 /// <param name="cvar">The name of the integer variable to get the value of</param>
@@ -1470,7 +1470,7 @@ native bool:GetServerVarAsBool(const cvar[]);
 /// <remarks>When filterscripts or plugins are specified as the cvar, this function only returns the name of the first specified filterscript or plugin.</remarks>
 /// <remarks>Using this function with anything other than a <b>string</b> (integer, boolean or float) will cause your server to crash. Using it with a nonexistent console variable will also cause your server to crash.</remarks>
 /// <returns>The length of the returned string. <b><c>0</c></b> if the specified console variable is not a string or doesn't exist.</returns>
-native GetConsoleVarAsString(const cvar[], buffer[], len = sizeof (buffer));
+native GetConsoleVarAsString(const cvar[], buffer[], len = sizeof buffer);
 
 /// <summary>Get the integer value of a console variable.</summary>
 /// <param name="cvar">The name of the integer variable to get the value of</param>
@@ -1661,7 +1661,7 @@ native NetStats_ConnectionStatus(playerid);
 /// <seealso name="NetStats_PacketLossPercent" />
 /// <seealso name="NetStats_ConnectionStatus" />
 /// <remarks>This function was added in <b>SA-MP 0.3z</b> and will not work in earlier versions!</remarks>
-native NetStats_GetIpPort(playerid, output[], size = sizeof (output));
+native NetStats_GetIpPort(playerid, output[], size = sizeof output);
 
 // Menu
 
@@ -2329,7 +2329,7 @@ native ShowPlayerDialog(playerid, dialogid, DIALOG_STYLE:style, const caption[],
 /// <param name="playerid">The player to get the unique ID of</param>
 /// <param name="output">Where to save the unique ID</param>
 /// <param name="size">The size of "output" (the serial)</param>
-native gpci(playerid, output[], size = sizeof (output));
+native gpci(playerid, output[], size = sizeof output);
 
 // --------------------------------------------------
 // Forwards (Callback declarations)

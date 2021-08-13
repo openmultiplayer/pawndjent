@@ -1,635 +1,794 @@
-SCRIPT_API(SetSpawnInfo, bool(IPlayer& player, int team, int skin, Vector3 pos, float rotation, int weapon1, int weapon1_ammo, int weapon2, int weapon2_ammo, int weapon3, int weapon3_ammo)) {
+SCRIPT_API(SetSpawnInfo, bool(IPlayer& player, int team, int skin, Vector3 pos, float rotation, int weapon1, int ammo1, int weapon2, int ammo2, int weapon3, int ammo3))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(SpawnPlayer, bool(IPlayer& player)) {
+SCRIPT_API(SpawnPlayer, bool(IPlayer& player))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(SetPlayerPos, bool(IPlayer& player, Vector3 pos)) {
+SCRIPT_API(SetPlayerPos, bool(IPlayer& player, Vector3 pos))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(SetPlayerPosFindZ, bool(IPlayer& player, Vector3 pos)) {
+SCRIPT_API(SetPlayerPosFindZ, bool(IPlayer& player, Vector3 pos))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(GetPlayerPos, bool(IPlayer& player, Vector3& pos)) {
+SCRIPT_API(GetPlayerPos, bool(IPlayer& player, Vector3& pos))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(SetPlayerFacingAngle, bool(IPlayer& player, float ang)) {
+SCRIPT_API(SetPlayerFacingAngle, bool(IPlayer& player, float ang))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(GetPlayerFacingAngle, bool(IPlayer& player, float& ang)) {
+SCRIPT_API(GetPlayerFacingAngle, bool(IPlayer& player, float& ang))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(IsPlayerInRangeOfPoint, bool(IPlayer& player, float range, Vector3 pos)) {
+SCRIPT_API(IsPlayerInRangeOfPoint, bool(IPlayer& player, float range, Vector3 pos))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(GetPlayerDistanceFromPoint, float(IPlayer& player, Vector3 pos)) {
+SCRIPT_API(GetPlayerDistanceFromPoint, int(IPlayer& player, Vector3 pos))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(IsPlayerStreamedIn, bool(IPlayer& player, int forplayerid)) {
+SCRIPT_API(IsPlayerStreamedIn, bool(int targetid, IPlayer& player))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(SetPlayerInterior, bool(IPlayer& player, int interiorid)) {
+SCRIPT_API(SetPlayerInterior, bool(IPlayer& player, int interiorid))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(GetPlayerInterior, bool(IPlayer& player)) {
+SCRIPT_API(GetPlayerInterior, int(IPlayer& player))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(SetPlayerHealth, bool(IPlayer& player, float health)) {
+SCRIPT_API(SetPlayerHealth, bool(IPlayer& player, float health))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(GetPlayerHealth, bool(IPlayer& player, float& health)) {
+SCRIPT_API(GetPlayerHealth, bool(IPlayer& player, float& health))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(SetPlayerArmour, bool(IPlayer& player, float armour)) {
+SCRIPT_API(SetPlayerArmour, bool(IPlayer& player, float armour))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(GetPlayerArmour, bool(IPlayer& player, float& armour)) {
+SCRIPT_API(GetPlayerArmour, bool(IPlayer& player, float& armour))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(SetPlayerAmmo, bool(IPlayer& player, int weaponid, int ammo)) {
+SCRIPT_API(SetPlayerAmmo, bool(IPlayer& player, int weaponslot, int ammo))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(GetPlayerAmmo, bool(IPlayer& player)) {
+SCRIPT_API(GetPlayerAmmo, int(IPlayer& player))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(GetPlayerWeaponState, bool(IPlayer& player)) {
+SCRIPT_API(GetPlayerWeaponState, int(IPlayer& player))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(GetPlayerTargetPlayer, bool(IPlayer& player)) {
+SCRIPT_API(GetPlayerTargetPlayer, int(IPlayer& player))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(GetPlayerTargetActor, bool(IPlayer& player)) {
+SCRIPT_API(GetPlayerTargetActor, int(IPlayer& player))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(SetPlayerTeam, bool(IPlayer& player, int teamid)) {
+SCRIPT_API(SetPlayerTeam, bool(IPlayer& player, int teamid))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(GetPlayerTeam, bool(IPlayer& player)) {
+SCRIPT_API(GetPlayerTeam, int(IPlayer& player))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(SetPlayerScore, bool(IPlayer& player, int score)) {
+SCRIPT_API(SetPlayerScore, bool(IPlayer& player, int score))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(GetPlayerScore, bool(IPlayer& player)) {
+SCRIPT_API(GetPlayerScore, int(IPlayer& player))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(GetPlayerDrunkLevel, bool(IPlayer& player)) {
+SCRIPT_API(GetPlayerDrunkLevel, int(IPlayer& player))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(SetPlayerDrunkLevel, bool(IPlayer& player, int level)) {
+SCRIPT_API(SetPlayerDrunkLevel, bool(IPlayer& player, int level))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(SetPlayerColor, bool(IPlayer& player, int color)) {
+SCRIPT_API(SetPlayerColor, bool(IPlayer& player, int colour))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(GetPlayerColor, bool(IPlayer& player)) {
+SCRIPT_API(GetPlayerColor, int(IPlayer& player))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(SetPlayerSkin, bool(IPlayer& player, int skinid)) {
+SCRIPT_API(SetPlayerSkin, bool(IPlayer& player, int skinid))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(GetPlayerSkin, bool(IPlayer& player)) {
+SCRIPT_API(GetPlayerSkin, int(IPlayer& player))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(GetPlayerCustomSkin, bool(IPlayer& player)) {
+SCRIPT_API(GetPlayerCustomSkin, int(IPlayer& player))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(GivePlayerWeapon, bool(IPlayer& player, int weaponid, int ammo)) {
+SCRIPT_API(GivePlayerWeapon, bool(IPlayer& player, int weaponid, int ammo))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(ResetPlayerWeapons, bool(IPlayer& player)) {
+SCRIPT_API(ResetPlayerWeapons, bool(IPlayer& player))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(SetPlayerArmedWeapon, bool(IPlayer& player, int weaponid)) {
+SCRIPT_API(SetPlayerArmedWeapon, bool(IPlayer& player, int weaponid))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(GetPlayerWeaponData, bool(IPlayer& player, int slot, int& weapons, int& ammo)) {
+SCRIPT_API(GetPlayerWeaponData, bool(IPlayer& player, int slot, int& weapons, int& ammo))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(GivePlayerMoney, bool(IPlayer& player, int money)) {
+SCRIPT_API(GivePlayerMoney, bool(IPlayer& player, int money))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(ResetPlayerMoney, bool(IPlayer& player)) {
+SCRIPT_API(ResetPlayerMoney, bool(IPlayer& player))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(SetPlayerName, bool(IPlayer& player, std::string const& name)) {
+SCRIPT_API(SetPlayerName, bool(IPlayer& player, std::string const& name))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(GetPlayerMoney, bool(IPlayer& player)) {
+SCRIPT_API(GetPlayerMoney, int(IPlayer& player))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(GetPlayerState, bool(IPlayer& player)) {
+SCRIPT_API(GetPlayerState, int(IPlayer& player))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(GetPlayerIp, bool(IPlayer& player, std::string& ip, int len)) {
+SCRIPT_API(GetPlayerIp, bool(IPlayer& player, std::string& ip))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(GetPlayerPing, bool(IPlayer& player)) {
+SCRIPT_API(GetPlayerPing, int(IPlayer& player))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(GetPlayerWeapon, bool(IPlayer& player)) {
+SCRIPT_API(GetPlayerWeapon, int(IPlayer& player))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(GetPlayerKeys, bool(IPlayer& player, int& keys, int& updown, int& leftright)) {
+SCRIPT_API(GetPlayerKeys, int(IPlayer& player, int& keys, int& updown, int& leftright))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(GetPlayerName, bool(IPlayer& player, std::string& name, int len)) {
+SCRIPT_API(GetPlayerName, bool(IPlayer& player, std::string& name))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(SetPlayerTime, bool(IPlayer& player, int hour, int minute)) {
+SCRIPT_API(SetPlayerTime, bool(IPlayer& player, int hour, int minute))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(GetPlayerTime, bool(IPlayer& player, int& hour, int& minute)) {
+SCRIPT_API(GetPlayerTime, bool(IPlayer& player, int& hour, int& minute))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(TogglePlayerClock, bool(IPlayer& player, int toggle)) {
+SCRIPT_API(TogglePlayerClock, bool(IPlayer& player, bool toggle))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(SetPlayerWeather, bool(IPlayer& player, int weather)) {
+SCRIPT_API(SetPlayerWeather, bool(IPlayer& player, int weather))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(ForceClassSelection, bool(IPlayer& player)) {
+SCRIPT_API(ForceClassSelection, bool(IPlayer& player))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(SetPlayerWantedLevel, bool(IPlayer& player, int level)) {
+SCRIPT_API(SetPlayerWantedLevel, bool(IPlayer& player, int level))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(GetPlayerWantedLevel, bool(IPlayer& player)) {
+SCRIPT_API(GetPlayerWantedLevel, int(IPlayer& player))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(SetPlayerFightingStyle, bool(IPlayer& player, int style)) {
+SCRIPT_API(SetPlayerFightingStyle, bool(IPlayer& player, int style))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(GetPlayerFightingStyle, bool(IPlayer& player)) {
+SCRIPT_API(GetPlayerFightingStyle, int(IPlayer& player))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(SetPlayerVelocity, bool(IPlayer& player, Vector3 pos)) {
+SCRIPT_API(SetPlayerVelocity, bool(IPlayer& player, Vector3 pos))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(GetPlayerVelocity, bool(IPlayer& player, Vector3& pos)) {
+SCRIPT_API(GetPlayerVelocity, bool(IPlayer& player, Vector3& pos))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(PlayCrimeReportForPlayer, bool(IPlayer& player, int suspectid, int crime)) {
+SCRIPT_API(PlayCrimeReportForPlayer, bool(IPlayer& player, int suspectid, int crime))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(PlayAudioStreamForPlayer, bool(IPlayer& player, std::string const& url, Vector3 pos, float distance, int usepos)) {
+SCRIPT_API(PlayAudioStreamForPlayer, bool(IPlayer& player, std::string const& url, Vector3 pos, float distance, bool usepos))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(StopAudioStreamForPlayer, bool(IPlayer& player)) {
+SCRIPT_API(StopAudioStreamForPlayer, bool(IPlayer& player))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(SetPlayerShopName, bool(IPlayer& player, std::string const& shopname)) {
+SCRIPT_API(SetPlayerShopName, bool(IPlayer& player, std::string const& shopname))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(SetPlayerSkillLevel, bool(IPlayer& player, int skill, int level)) {
+SCRIPT_API(SetPlayerSkillLevel, bool(IPlayer& player, int skill, int level))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(GetPlayerSurfingVehicleID, bool(IPlayer& player)) {
+SCRIPT_API(GetPlayerSurfingVehicleID, int(IPlayer& player))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(GetPlayerSurfingObjectID, bool(IPlayer& player)) {
+SCRIPT_API(GetPlayerSurfingObjectID, int(IPlayer& player))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(RemoveBuildingForPlayer, bool(IPlayer& player, int modelid, Vector3 pos, float radius)) {
+SCRIPT_API(RemoveBuildingForPlayer, bool(IPlayer& player, int modelid, Vector3 center, float radius))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(GetPlayerLastShotVectors, bool(IPlayer& player, Vector3& origin, Vector3& hitpos)) {
+SCRIPT_API(GetPlayerLastShotVectors, bool(IPlayer& player, Vector3& origin, Vector3& hitpos))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(SetPlayerAttachedObject, bool(IPlayer& player, int index, int modelid, int bone, Vector3 offset, Vector3 rot, Vector3 scale, int materialcolor1, int materialcolor2)) {
+SCRIPT_API(SetPlayerAttachedObject, bool(IPlayer& player, int index, int modelid, int bone, Vector3 offset, Vector3 rot, Vector3 scale, int materialcolour1, int materialcolour2))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(RemovePlayerAttachedObject, bool(IPlayer& player, int index)) {
+SCRIPT_API(RemovePlayerAttachedObject, bool(IPlayer& player, int index))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(IsPlayerAttachedObjectSlotUsed, bool(IPlayer& player, int index)) {
+SCRIPT_API(IsPlayerAttachedObjectSlotUsed, bool(IPlayer& player, int index))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(EditAttachedObject, bool(IPlayer& player, int index)) {
+SCRIPT_API(EditAttachedObject, bool(IPlayer& player, int index))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(CreatePlayerTextDraw, int(IPlayer& player, float x, float y, std::string const& text)) {
+SCRIPT_API(CreatePlayerTextDraw, int(IPlayer& player, Vector2 pos, std::string const& text))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(PlayerTextDrawDestroy, bool(IPlayer& player, ITextDraw& text)) {
+SCRIPT_API(PlayerTextDrawDestroy, bool(IPlayer& player, IPlayerTextDraw& text))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(PlayerTextDrawLetterSize, bool(IPlayer& player, ITextDraw& text, float x, float y)) {
+SCRIPT_API(PlayerTextDrawLetterSize, bool(IPlayer& player, IPlayerTextDraw& text, float width, float height))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(PlayerTextDrawTextSize, bool(IPlayer& player, ITextDraw& text, float x, float y)) {
+SCRIPT_API(PlayerTextDrawTextSize, bool(IPlayer& player, IPlayerTextDraw& text, float width, float height))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(PlayerTextDrawAlignment, bool(IPlayer& player, ITextDraw& text, int alignment)) {
+SCRIPT_API(PlayerTextDrawAlignment, bool(IPlayer& player, IPlayerTextDraw& text, int alignment))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(PlayerTextDrawColor, bool(IPlayer& player, ITextDraw& text, int color)) {
+SCRIPT_API(PlayerTextDrawColor, bool(IPlayer& player, IPlayerTextDraw& text, int colour))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(PlayerTextDrawUseBox, bool(IPlayer& player, ITextDraw& text, int use)) {
+SCRIPT_API(PlayerTextDrawUseBox, bool(IPlayer& player, IPlayerTextDraw& text, bool use))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(PlayerTextDrawBoxColor, bool(IPlayer& player, ITextDraw& text, int color)) {
+SCRIPT_API(PlayerTextDrawBoxColor, bool(IPlayer& player, IPlayerTextDraw& text, int colour))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(PlayerTextDrawSetShadow, bool(IPlayer& player, ITextDraw& text, int size)) {
+SCRIPT_API(PlayerTextDrawSetShadow, bool(IPlayer& player, IPlayerTextDraw& text, int size))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(PlayerTextDrawSetOutline, bool(IPlayer& player, ITextDraw& text, int size)) {
+SCRIPT_API(PlayerTextDrawSetOutline, bool(IPlayer& player, IPlayerTextDraw& text, int size))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(PlayerTextDrawBackgroundColor, bool(IPlayer& player, ITextDraw& text, int color)) {
+SCRIPT_API(PlayerTextDrawBackgroundColor, bool(IPlayer& player, IPlayerTextDraw& text, int colour))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(PlayerTextDrawFont, bool(IPlayer& player, ITextDraw& text, int font)) {
+SCRIPT_API(PlayerTextDrawFont, bool(IPlayer& player, IPlayerTextDraw& text, int font))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(PlayerTextDrawSetProportional, bool(IPlayer& player, ITextDraw& text, int set)) {
+SCRIPT_API(PlayerTextDrawSetProportional, bool(IPlayer& player, IPlayerTextDraw& text, bool set))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(PlayerTextDrawSetSelectable, bool(IPlayer& player, ITextDraw& text, int set)) {
+SCRIPT_API(PlayerTextDrawSetSelectable, bool(IPlayer& player, IPlayerTextDraw& text, bool set))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(PlayerTextDrawShow, bool(IPlayer& player, ITextDraw& text)) {
+SCRIPT_API(PlayerTextDrawShow, bool(IPlayer& player, IPlayerTextDraw& text))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(PlayerTextDrawHide, bool(IPlayer& player, ITextDraw& text)) {
+SCRIPT_API(PlayerTextDrawHide, bool(IPlayer& player, IPlayerTextDraw& text))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(PlayerTextDrawSetString, bool(IPlayer& player, ITextDraw& text, std::string const& string)) {
+SCRIPT_API(PlayerTextDrawSetString, bool(IPlayer& player, IPlayerTextDraw& text, std::string const& string))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(PlayerTextDrawSetPreviewModel, bool(IPlayer& player, ITextDraw& text, int modelindex)) {
+SCRIPT_API(PlayerTextDrawSetPreviewModel, bool(IPlayer& player, IPlayerTextDraw& text, int modelindex))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(PlayerTextDrawSetPreviewRot, bool(IPlayer& player, ITextDraw& text, Vector3 rot, float zoom)) {
+SCRIPT_API(PlayerTextDrawSetPreviewRot, bool(IPlayer& player, IPlayerTextDraw& text, Vector3 rot, float zoom))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(PlayerTextDrawSetPreviewVehCol, bool(IPlayer& player, ITextDraw& text, int color1, int color2)) {
+SCRIPT_API(PlayerTextDrawSetPreviewVehCol, bool(IPlayer& player, IPlayerTextDraw& text, int colour1, int colour2))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(SetPVarInt, bool(IPlayer& player, std::string const& varname, int int_value)) {
+SCRIPT_API(SetPVarInt, bool(IPlayer& player, std::string const& pvar, int value))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(GetPVarInt, bool(IPlayer& player, std::string const& varname)) {
+SCRIPT_API(GetPVarInt, int(IPlayer& player, std::string const& pvar))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(SetPVarString, bool(IPlayer& player, std::string const& varname, std::string const& string_value)) {
+SCRIPT_API(SetPVarString, bool(IPlayer& player, std::string const& pvar, std::string const& value))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(GetPVarString, bool(IPlayer& player, std::string const& varname, std::string& string_return, int len)) {
+SCRIPT_API(GetPVarString, bool(IPlayer& player, std::string const& pvar, std::string& output))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(SetPVarFloat, bool(IPlayer& player, std::string const& varname, float float_value)) {
+SCRIPT_API(SetPVarFloat, bool(IPlayer& player, std::string const& pvar, float value))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(GetPVarFloat, float(IPlayer& player, std::string const& varname)) {
+SCRIPT_API(GetPVarFloat, int(IPlayer& player, std::string const& pvar))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(DeletePVar, bool(IPlayer& player, std::string const& varname)) {
+SCRIPT_API(DeletePVar, bool(IPlayer& player, std::string const& pvar))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(GetPVarsUpperIndex, bool(IPlayer& player)) {
+SCRIPT_API(GetPVarsUpperIndex, int(IPlayer& player))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(GetPVarNameAtIndex, bool(IPlayer& player, int index, std::string& ret_varname, int ret_len)) {
+SCRIPT_API(GetPVarNameAtIndex, bool(IPlayer& player, int index, std::string& output))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(GetPVarType, bool(IPlayer& player, std::string const& varname)) {
+SCRIPT_API(GetPVarType, int(IPlayer& player, std::string const& pvar))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(SetPlayerChatBubble, bool(IPlayer& player, std::string const& text, int color, float drawdistance, int expiretime)) {
+SCRIPT_API(SetPlayerChatBubble, bool(IPlayer& player, std::string const& text, int colour, float drawdistance, int expiretime))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(PutPlayerInVehicle, bool(IPlayer& player, int vehicleid, int seatid)) {
+SCRIPT_API(PutPlayerInVehicle, bool(IPlayer& player, IVehicle& vehicle, int seatid))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(GetPlayerVehicleID, bool(IPlayer& player)) {
+SCRIPT_API(GetPlayerVehicleID, int(IPlayer& player))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(GetPlayerVehicleSeat, bool(IPlayer& player)) {
+SCRIPT_API(GetPlayerVehicleSeat, int(IPlayer& player))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(RemovePlayerFromVehicle, bool(IPlayer& player)) {
+SCRIPT_API(RemovePlayerFromVehicle, bool(IPlayer& player))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(TogglePlayerControllable, bool(IPlayer& player, int toggle)) {
+SCRIPT_API(TogglePlayerControllable, bool(IPlayer& player, bool toggle))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(PlayerPlaySound, bool(IPlayer& player, int soundid, Vector3 pos)) {
+SCRIPT_API(PlayerPlaySound, bool(IPlayer& player, int soundid, Vector3 pos))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(ApplyAnimation, bool(IPlayer& player, std::string const& animlib, std::string const& animname, float delta, int loop, int lockx, int locky, int freeze, int time, int forcesync)) {
+SCRIPT_API(ApplyAnimation, bool(IPlayer& player, std::string const& animationLibrary, std::string const& animationName, float delta, bool loop, bool lockx, bool locky, bool freeze, int time, bool forcesync))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(ClearAnimations, bool(IPlayer& player, int forcesync)) {
+SCRIPT_API(ClearAnimations, bool(IPlayer& player, bool forcesync))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(GetPlayerAnimationIndex, bool(IPlayer& player)) {
+SCRIPT_API(GetPlayerAnimationIndex, int(IPlayer& player))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(GetAnimationName, bool(int index, std::string& animlib, int len1, std::string& animname, int len2)) {
+SCRIPT_API(GetAnimationName, bool(int index, std::string& animationLibrary, std::string& animationName))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(GetPlayerSpecialAction, bool(IPlayer& player)) {
+SCRIPT_API(GetPlayerSpecialAction, int(IPlayer& player))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(SetPlayerSpecialAction, bool(IPlayer& player, int actionid)) {
+SCRIPT_API(SetPlayerSpecialAction, bool(IPlayer& player, int actionid))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(DisableRemoteVehicleCollisions, bool(IPlayer& player, int disable)) {
+SCRIPT_API(DisableRemoteVehicleCollisions, bool(IPlayer& player, bool disable))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(SetPlayerCheckpoint, bool(IPlayer& player, Vector3 pos, float size)) {
+SCRIPT_API(SetPlayerCheckpoint, bool(IPlayer& player, Vector3 pos, float size))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(DisablePlayerCheckpoint, bool(IPlayer& player)) {
+SCRIPT_API(DisablePlayerCheckpoint, bool(IPlayer& player))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(SetPlayerRaceCheckpoint, bool(IPlayer& player, int type, Vector3 pos, Vector3 next, float size)) {
+SCRIPT_API(SetPlayerRaceCheckpoint, bool(IPlayer& player, int type, Vector3 center, Vector3 next, float size))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(DisablePlayerRaceCheckpoint, bool(IPlayer& player)) {
+SCRIPT_API(DisablePlayerRaceCheckpoint, bool(IPlayer& player))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(SetPlayerWorldBounds, bool(IPlayer& player, float x_max, float x_min, float y_max, float y_min)) {
+SCRIPT_API(SetPlayerWorldBounds, bool(IPlayer& player, float maxX, float minX, float maxY, float minY))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(SetPlayerMarkerForPlayer, bool(IPlayer& player, int showplayerid, int color)) {
+SCRIPT_API(SetPlayerMarkerForPlayer, bool(IPlayer& player, int targetid, int colour))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(ShowPlayerNameTagForPlayer, bool(IPlayer& player, int showplayerid, int show)) {
+SCRIPT_API(ShowPlayerNameTagForPlayer, bool(IPlayer& player, int targetid, bool show))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(SetPlayerMapIcon, bool(IPlayer& player, int iconid, Vector3 pos, int markertype, int color, int style)) {
+SCRIPT_API(SetPlayerMapIcon, bool(IPlayer& player, int iconid, Vector3 pos, int markertype, int colour, int style))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(RemovePlayerMapIcon, bool(IPlayer& player, int iconid)) {
+SCRIPT_API(RemovePlayerMapIcon, bool(IPlayer& player, int iconid))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(AllowPlayerTeleport, bool(IPlayer& player, int allow)) {
+SCRIPT_API(AllowPlayerTeleport, bool(IPlayer& player, bool allow))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(SetPlayerCameraPos, bool(IPlayer& player, Vector3 pos)) {
+SCRIPT_API(SetPlayerCameraPos, bool(IPlayer& player, Vector3 pos))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(SetPlayerCameraLookAt, bool(IPlayer& player, Vector3 pos, int cut)) {
+SCRIPT_API(SetPlayerCameraLookAt, bool(IPlayer& player, Vector3 pos, int cut))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(SetCameraBehindPlayer, bool(IPlayer& player)) {
+SCRIPT_API(SetCameraBehindPlayer, bool(IPlayer& player))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(GetPlayerCameraPos, bool(IPlayer& player, Vector3& pos)) {
+SCRIPT_API(GetPlayerCameraPos, bool(IPlayer& player, Vector3& pos))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(GetPlayerCameraFrontVector, bool(IPlayer& player, Vector3& pos)) {
+SCRIPT_API(GetPlayerCameraFrontVector, bool(IPlayer& player, Vector3& pos))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(GetPlayerCameraMode, bool(IPlayer& player)) {
+SCRIPT_API(GetPlayerCameraMode, int(IPlayer& player))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(EnablePlayerCameraTarget, bool(IPlayer& player, int enable)) {
+SCRIPT_API(EnablePlayerCameraTarget, bool(IPlayer& player, bool enable))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(GetPlayerCameraTargetObject, bool(IPlayer& player)) {
+SCRIPT_API(GetPlayerCameraTargetObject, int(IPlayer& player))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(GetPlayerCameraTargetVehicle, bool(IPlayer& player)) {
+SCRIPT_API(GetPlayerCameraTargetVehicle, int(IPlayer& player))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(GetPlayerCameraTargetPlayer, bool(IPlayer& player)) {
+SCRIPT_API(GetPlayerCameraTargetPlayer, int(IPlayer& player))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(GetPlayerCameraTargetActor, bool(IPlayer& player)) {
+SCRIPT_API(GetPlayerCameraTargetActor, int(IPlayer& player))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(GetPlayerCameraAspectRatio, float(IPlayer& player)) {
+SCRIPT_API(GetPlayerCameraAspectRatio, int(IPlayer& player))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(GetPlayerCameraZoom, float(IPlayer& player)) {
+SCRIPT_API(GetPlayerCameraZoom, int(IPlayer& player))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(AttachCameraToObject, bool(IPlayer& player, int objectid)) {
+SCRIPT_API(AttachCameraToObject, bool(IPlayer& player, int objectid))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(AttachCameraToPlayerObject, bool(IPlayer& player, int playerobjectid)) {
+SCRIPT_API(AttachCameraToPlayerObject, bool(IPlayer& player, int objectid))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(InterpolateCameraPos, bool(IPlayer& player, Vector3 from, Vector3 to, int time, int cut)) {
+SCRIPT_API(InterpolateCameraPos, bool(IPlayer& player, Vector3 rom, Vector3 to, int time, int cut))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(InterpolateCameraLookAt, bool(IPlayer& player, Vector3 from, Vector3 to, int time, int cut)) {
+SCRIPT_API(InterpolateCameraLookAt, bool(IPlayer& player, Vector3 rom, Vector3 to, int time, int cut))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(IsPlayerConnected, bool(IPlayer& player)) {
+SCRIPT_API(IsPlayerConnected, bool(IPlayer& player))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(IsPlayerInVehicle, bool(IPlayer& player, int vehicleid)) {
+SCRIPT_API(IsPlayerInVehicle, bool(IPlayer& player, IVehicle& vehicle))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(IsPlayerInAnyVehicle, bool(IPlayer& player)) {
+SCRIPT_API(IsPlayerInAnyVehicle, bool(IPlayer& player))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(IsPlayerInCheckpoint, bool(IPlayer& player)) {
+SCRIPT_API(IsPlayerInCheckpoint, bool(IPlayer& player))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(IsPlayerInRaceCheckpoint, bool(IPlayer& player)) {
+SCRIPT_API(IsPlayerInRaceCheckpoint, bool(IPlayer& player))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(SetPlayerVirtualWorld, bool(IPlayer& player, int worldid)) {
+SCRIPT_API(SetPlayerVirtualWorld, bool(IPlayer& player, int virtualworld))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(GetPlayerVirtualWorld, bool(IPlayer& player)) {
+SCRIPT_API(GetPlayerVirtualWorld, int(IPlayer& player))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(EnableStuntBonusForPlayer, bool(IPlayer& player, int enable)) {
+SCRIPT_API(EnableStuntBonusForPlayer, bool(IPlayer& player, bool enable))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(EnableStuntBonusForAll, bool(int enable)) {
+SCRIPT_API(EnableStuntBonusForAll, bool(bool enable))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(TogglePlayerSpectating, bool(IPlayer& player, int toggle)) {
+SCRIPT_API(TogglePlayerSpectating, bool(IPlayer& player, bool toggle))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(PlayerSpectatePlayer, bool(IPlayer& player, int targetplayerid, int mode)) {
+SCRIPT_API(PlayerSpectatePlayer, bool(IPlayer& player, int targetid, int mode))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(PlayerSpectateVehicle, bool(IPlayer& player, int targetvehicleid, int mode)) {
+SCRIPT_API(PlayerSpectateVehicle, bool(IPlayer& player, int targetid, int mode))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(StartRecordingPlayerData, bool(IPlayer& player, int recordtype, std::string const& recordname)) {
+SCRIPT_API(StartRecordingPlayerData, bool(IPlayer& player, int recordtype, std::string const& recordFile))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(StopRecordingPlayerData, bool(IPlayer& player)) {
+SCRIPT_API(StopRecordingPlayerData, bool(IPlayer& player))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(SelectTextDraw, bool(IPlayer& player, int hovercolor)) {
+SCRIPT_API(SelectTextDraw, bool(IPlayer& player, int hovercolour))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(CancelSelectTextDraw, bool(IPlayer& player)) {
+SCRIPT_API(CancelSelectTextDraw, bool(IPlayer& player))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(CreateExplosionForPlayer, bool(IPlayer& player, Vector3 pos, int type, float radius)) {
+SCRIPT_API(CreateExplosionForPlayer, bool(IPlayer& player, Vector3 pos, int type, float radius))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(SendClientCheck, bool(IPlayer& player, int type, int memaddr, int memoffset, int bytecount)) {
+SCRIPT_API(SendClientCheck, bool(IPlayer& player, int type, int memoryaddress, int memoryoffset, int bytecount))
+{
     throw NotImplemented();
 }

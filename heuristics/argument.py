@@ -168,15 +168,20 @@ class Vector2Heuristic(ArgumentHeuristic):
                     and 'x' in x.name.lower()
                     and 'y' in y.name.lower()
                 ):
-                    name = self.autogenerate_name(x, y)
-                    return_value[index:index + 2] = [CPPArgument(
-                        name,
-                        'Vector2',
-                        is_reference=any(
-                            argument.is_reference
-                            for argument in (x, y)
-                        ),
-                    )]
+                    try:
+                        name = self.autogenerate_name(x, y)
+                    except ValueError:
+                        # Order doesn't make sense, eg. PlayerWorldBounds
+                        continue
+                    else:
+                        return_value[index:index + 2] = [CPPArgument(
+                            name,
+                            'Vector2',
+                            is_reference=any(
+                                argument.is_reference
+                                for argument in (x, y)
+                            ),
+                        )]
                     break
             else:
                 return return_value
@@ -272,7 +277,7 @@ class VehicleParamsHeuristic(ArgumentHeuristic):
                     continue
 
                 if all(
-                    argument.tag == '_'
+                    argument.tag == 'VEHICLE_PARAMS'
                     and argument.name == name
                     for argument, name in zip(
                         params,

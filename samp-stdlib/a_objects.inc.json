@@ -1,21 +1,8 @@
 {
     "constants": [
         "SAMP_CONST_CORRECT",
-        "OBJECT_MATERIAL_SIZE_32x32",
-        "OBJECT_MATERIAL_SIZE_64x32",
-        "OBJECT_MATERIAL_SIZE_64x64",
-        "OBJECT_MATERIAL_SIZE_128x32",
-        "OBJECT_MATERIAL_SIZE_128x64",
-        "OBJECT_MATERIAL_SIZE_128x128",
-        "OBJECT_MATERIAL_SIZE_256x32",
-        "OBJECT_MATERIAL_SIZE_256x64",
-        "OBJECT_MATERIAL_SIZE_256x128",
-        "OBJECT_MATERIAL_SIZE_256x256",
-        "OBJECT_MATERIAL_SIZE_512x64",
-        "OBJECT_MATERIAL_SIZE_512x128",
-        "OBJECT_MATERIAL_SIZE_512x256",
-        "OBJECT_MATERIAL_SIZE_512x512",
-        "OBJECT_MATERIAL_TEXT_ALIGN_LEFT",
+        "OBJECT_MATERIAL_SIZE:",
+        "OBJECT_MATERIAL_TEXT_ALIGN:",
         "OBJECT_MATERIAL_TEXT_ALIGN_CENTER",
         "OBJECT_MATERIAL_TEXT_ALIGN_RIGHT"
     ],
@@ -35,7 +22,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "X",
+                    "name": "x",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -43,7 +30,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "Y",
+                    "name": "y",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -51,7 +38,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "Z",
+                    "name": "z",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -59,7 +46,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "rX",
+                    "name": "rotX",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -67,7 +54,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "rY",
+                    "name": "rotY",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -75,7 +62,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "rZ",
+                    "name": "rotZ",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -83,7 +70,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "DrawDistance",
+                    "name": "drawDistance",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -107,7 +94,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "vehicleid",
+                    "name": "parentid",
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
@@ -115,7 +102,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "OffsetX",
+                    "name": "offsetX",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -123,7 +110,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "OffsetY",
+                    "name": "offsetY",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -131,7 +118,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "OffsetZ",
+                    "name": "offsetZ",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -139,7 +126,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "RotX",
+                    "name": "rotX",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -147,7 +134,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "RotY",
+                    "name": "rotY",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -155,7 +142,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "RotZ",
+                    "name": "rotZ",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -179,7 +166,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "attachtoid",
+                    "name": "parentid",
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
@@ -187,7 +174,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "OffsetX",
+                    "name": "offsetX",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -195,7 +182,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "OffsetY",
+                    "name": "offsetY",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -203,7 +190,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "OffsetZ",
+                    "name": "offsetZ",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -211,7 +198,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "RotX",
+                    "name": "rotX",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -219,7 +206,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "RotY",
+                    "name": "rotY",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -227,7 +214,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "RotZ",
+                    "name": "rotZ",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -235,11 +222,11 @@
                     "is_reference": false
                 },
                 {
-                    "name": "SyncRotation",
-                    "tag": "_",
+                    "name": "syncRotation",
+                    "tag": "bool",
                     "is_const": false,
                     "is_array": false,
-                    "default_value": 1,
+                    "default_value": "true",
                     "is_reference": false
                 }
             ]
@@ -259,7 +246,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "playerid",
+                    "name": "parentid",
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
@@ -267,7 +254,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "OffsetX",
+                    "name": "offsetX",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -275,7 +262,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "OffsetY",
+                    "name": "offsetY",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -283,7 +270,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "OffsetZ",
+                    "name": "offsetZ",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -291,7 +278,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "RotX",
+                    "name": "rotX",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -299,7 +286,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "RotY",
+                    "name": "rotY",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -307,7 +294,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "RotZ",
+                    "name": "rotZ",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -331,7 +318,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "X",
+                    "name": "x",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -339,7 +326,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "Y",
+                    "name": "y",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -347,7 +334,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "Z",
+                    "name": "z",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -371,7 +358,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "X",
+                    "name": "x",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -379,7 +366,7 @@
                     "is_reference": true
                 },
                 {
-                    "name": "Y",
+                    "name": "y",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -387,7 +374,7 @@
                     "is_reference": true
                 },
                 {
-                    "name": "Z",
+                    "name": "z",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -411,7 +398,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "RotX",
+                    "name": "rotX",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -419,7 +406,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "RotY",
+                    "name": "rotY",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -427,7 +414,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "RotZ",
+                    "name": "rotZ",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -451,7 +438,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "RotX",
+                    "name": "rotX",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -459,7 +446,7 @@
                     "is_reference": true
                 },
                 {
-                    "name": "RotY",
+                    "name": "rotY",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -467,7 +454,7 @@
                     "is_reference": true
                 },
                 {
-                    "name": "RotZ",
+                    "name": "rotZ",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -510,7 +497,7 @@
         },
         {
             "name": "IsValidObject",
-            "tag": "_",
+            "tag": "bool",
             "is_callback": false,
             "is_variadic": false,
             "arguments": [
@@ -555,7 +542,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "X",
+                    "name": "x",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -563,7 +550,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "Y",
+                    "name": "y",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -571,7 +558,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "Z",
+                    "name": "z",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -579,7 +566,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "Speed",
+                    "name": "speed",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -587,7 +574,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "RotX",
+                    "name": "rotX",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -595,7 +582,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "RotY",
+                    "name": "rotY",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -603,7 +590,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "RotZ",
+                    "name": "rotZ",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -630,7 +617,7 @@
         },
         {
             "name": "IsObjectMoving",
-            "tag": "_",
+            "tag": "bool",
             "is_callback": false,
             "is_variadic": false,
             "arguments": [
@@ -747,7 +734,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "X",
+                    "name": "x",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -755,7 +742,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "Y",
+                    "name": "y",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -763,7 +750,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "Z",
+                    "name": "z",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -771,7 +758,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "rX",
+                    "name": "rotX",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -779,7 +766,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "rY",
+                    "name": "rotY",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -787,7 +774,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "rZ",
+                    "name": "rotZ",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -795,7 +782,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "DrawDistance",
+                    "name": "drawDistance",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -827,7 +814,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "vehicleid",
+                    "name": "parentid",
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
@@ -835,7 +822,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "fOffsetX",
+                    "name": "offsetX",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -843,7 +830,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "fOffsetY",
+                    "name": "offsetY",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -851,7 +838,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "fOffsetZ",
+                    "name": "offsetZ",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -859,7 +846,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "fRotX",
+                    "name": "rotX",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -867,7 +854,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "fRotY",
+                    "name": "rotY",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -875,7 +862,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "RotZ",
+                    "name": "rotZ",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -907,7 +894,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "X",
+                    "name": "x",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -915,7 +902,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "Y",
+                    "name": "y",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -923,7 +910,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "Z",
+                    "name": "z",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -955,7 +942,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "X",
+                    "name": "x",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -963,7 +950,7 @@
                     "is_reference": true
                 },
                 {
-                    "name": "Y",
+                    "name": "y",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -971,7 +958,7 @@
                     "is_reference": true
                 },
                 {
-                    "name": "Z",
+                    "name": "z",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -1003,7 +990,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "RotX",
+                    "name": "rotX",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -1011,7 +998,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "RotY",
+                    "name": "rotY",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -1019,7 +1006,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "RotZ",
+                    "name": "rotZ",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -1051,7 +1038,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "RotX",
+                    "name": "rotX",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -1059,7 +1046,7 @@
                     "is_reference": true
                 },
                 {
-                    "name": "RotY",
+                    "name": "rotY",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -1067,7 +1054,7 @@
                     "is_reference": true
                 },
                 {
-                    "name": "RotZ",
+                    "name": "rotZ",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -1126,7 +1113,7 @@
         },
         {
             "name": "IsValidPlayerObject",
-            "tag": "_",
+            "tag": "bool",
             "is_callback": false,
             "is_variadic": false,
             "arguments": [
@@ -1195,7 +1182,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "X",
+                    "name": "x",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -1203,7 +1190,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "Y",
+                    "name": "y",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -1211,7 +1198,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "Z",
+                    "name": "z",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -1219,7 +1206,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "Speed",
+                    "name": "speed",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -1227,7 +1214,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "RotX",
+                    "name": "rotX",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -1235,7 +1222,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "RotY",
+                    "name": "rotY",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -1243,7 +1230,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "RotZ",
+                    "name": "rotZ",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -1278,7 +1265,7 @@
         },
         {
             "name": "IsPlayerObjectMoving",
-            "tag": "_",
+            "tag": "bool",
             "is_callback": false,
             "is_variadic": false,
             "arguments": [
@@ -1307,7 +1294,7 @@
             "is_variadic": false,
             "arguments": [
                 {
-                    "name": "objectplayer",
+                    "name": "playerid",
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
@@ -1323,7 +1310,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "attachplayer",
+                    "name": "parentid",
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
@@ -1331,7 +1318,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "OffsetX",
+                    "name": "offsetX",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -1339,7 +1326,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "OffsetY",
+                    "name": "offsetY",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -1347,7 +1334,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "OffsetZ",
+                    "name": "offsetZ",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -1355,7 +1342,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "rX",
+                    "name": "rotX",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -1363,7 +1350,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "rY",
+                    "name": "rotY",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -1371,7 +1358,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "rZ",
+                    "name": "rotZ",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -1395,7 +1382,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "materialindex",
+                    "name": "materialIndex",
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
@@ -1411,7 +1398,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "txdname",
+                    "name": "textureLibrary",
                     "tag": "_",
                     "is_const": true,
                     "is_array": true,
@@ -1419,7 +1406,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "texturename",
+                    "name": "textureName",
                     "tag": "_",
                     "is_const": true,
                     "is_array": true,
@@ -1427,7 +1414,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "materialcolor",
+                    "name": "materialColour",
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
@@ -1459,7 +1446,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "materialindex",
+                    "name": "materialIndex",
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
@@ -1475,7 +1462,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "txdname",
+                    "name": "textureLibrary",
                     "tag": "_",
                     "is_const": true,
                     "is_array": true,
@@ -1483,7 +1470,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "texturename",
+                    "name": "textureName",
                     "tag": "_",
                     "is_const": true,
                     "is_array": true,
@@ -1491,7 +1478,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "materialcolor",
+                    "name": "materialColour",
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
@@ -1523,7 +1510,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "materialindex",
+                    "name": "materialIndex",
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
@@ -1531,15 +1518,15 @@
                     "is_reference": false
                 },
                 {
-                    "name": "materialsize",
-                    "tag": "_",
+                    "name": "materialSize",
+                    "tag": "OBJECT_MATERIAL_SIZE",
                     "is_const": false,
                     "is_array": false,
                     "default_value": "OBJECT_MATERIAL_SIZE_256x128",
                     "is_reference": false
                 },
                 {
-                    "name": "fontface",
+                    "name": "fontFace",
                     "tag": "_",
                     "is_const": true,
                     "is_array": true,
@@ -1547,7 +1534,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "fontsize",
+                    "name": "fontSize",
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
@@ -1556,14 +1543,14 @@
                 },
                 {
                     "name": "bold",
-                    "tag": "_",
+                    "tag": "bool",
                     "is_const": false,
                     "is_array": false,
-                    "default_value": 1,
+                    "default_value": "true",
                     "is_reference": false
                 },
                 {
-                    "name": "fontcolor",
+                    "name": "fontColour",
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
@@ -1571,7 +1558,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "backcolor",
+                    "name": "backgroundColour",
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
@@ -1580,10 +1567,10 @@
                 },
                 {
                     "name": "textalignment",
-                    "tag": "_",
+                    "tag": "OBJECT_MATERIAL_TEXT_ALIGN",
                     "is_const": false,
                     "is_array": false,
-                    "default_value": 0,
+                    "default_value": "OBJECT_MATERIAL_TEXT_ALIGN_LEFT",
                     "is_reference": false
                 }
             ]
@@ -1619,7 +1606,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "materialindex",
+                    "name": "materialIndex",
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
@@ -1627,15 +1614,15 @@
                     "is_reference": false
                 },
                 {
-                    "name": "materialsize",
-                    "tag": "_",
+                    "name": "materialSize",
+                    "tag": "OBJECT_MATERIAL_SIZE",
                     "is_const": false,
                     "is_array": false,
                     "default_value": "OBJECT_MATERIAL_SIZE_256x128",
                     "is_reference": false
                 },
                 {
-                    "name": "fontface",
+                    "name": "fontFace",
                     "tag": "_",
                     "is_const": true,
                     "is_array": true,
@@ -1643,7 +1630,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "fontsize",
+                    "name": "fontSize",
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
@@ -1652,14 +1639,14 @@
                 },
                 {
                     "name": "bold",
-                    "tag": "_",
+                    "tag": "bool",
                     "is_const": false,
                     "is_array": false,
-                    "default_value": 1,
+                    "default_value": "true",
                     "is_reference": false
                 },
                 {
-                    "name": "fontcolor",
+                    "name": "fontColour",
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
@@ -1667,7 +1654,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "backcolor",
+                    "name": "backgroundColour",
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
@@ -1676,10 +1663,10 @@
                 },
                 {
                     "name": "textalignment",
-                    "tag": "_",
+                    "tag": "OBJECT_MATERIAL_TEXT_ALIGN",
                     "is_const": false,
                     "is_array": false,
-                    "default_value": 0,
+                    "default_value": "OBJECT_MATERIAL_TEXT_ALIGN_LEFT",
                     "is_reference": false
                 }
             ]
@@ -1692,7 +1679,7 @@
             "arguments": [
                 {
                     "name": "disable",
-                    "tag": "_",
+                    "tag": "bool",
                     "is_const": false,
                     "is_array": false,
                     "default_value": null,

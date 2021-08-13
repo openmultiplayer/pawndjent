@@ -1,63 +1,79 @@
-SCRIPT_API(CreateActor, bool(int modelid, float X, float Y, float Z, float Rotation)) {
+SCRIPT_API(CreateActor, bool(int modelid, Vector3 pos, float angle))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(DestroyActor, bool(IActor& actor)) {
+SCRIPT_API(DestroyActor, bool(IActor& actor))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(IsActorStreamedIn, bool(IActor& actor, int forplayerid)) {
+SCRIPT_API(IsActorStreamedIn, bool(IActor& actor, IPlayer& player))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(SetActorVirtualWorld, bool(IActor& actor, int vworld)) {
+SCRIPT_API(SetActorVirtualWorld, bool(IActor& actor, int virtualworld))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(GetActorVirtualWorld, bool(IActor& actor)) {
+SCRIPT_API(GetActorVirtualWorld, int(IActor& actor))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(ApplyActorAnimation, bool(IActor& actor, int animlib, int animname, float fDelta, int loop, int lockx, int locky, int freeze, int time)) {
+SCRIPT_API(ApplyActorAnimation, bool(IActor& actor, std::string const& animationLibrary, std::string const& animationName, float delta, bool loop, bool lockx, bool locky, bool freeze, int time))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(ClearActorAnimations, bool(IActor& actor)) {
+SCRIPT_API(ClearActorAnimations, bool(IActor& actor))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(SetActorPos, bool(IActor& actor, float X, float Y, float Z)) {
+SCRIPT_API(SetActorPos, bool(IActor& actor, Vector3 pos))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(GetActorPos, bool(IActor& actor, float& X, float& Y, float& Z)) {
+SCRIPT_API(GetActorPos, bool(IActor& actor, Vector3& pos))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(SetActorFacingAngle, bool(IActor& actor, float ang)) {
+SCRIPT_API(SetActorFacingAngle, bool(IActor& actor, float angle))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(GetActorFacingAngle, bool(IActor& actor, float& ang)) {
+SCRIPT_API(GetActorFacingAngle, bool(IActor& actor, float& angle))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(SetActorHealth, bool(IActor& actor, float health)) {
+SCRIPT_API(SetActorHealth, bool(IActor& actor, float health))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(GetActorHealth, bool(IActor& actor, float& health)) {
+SCRIPT_API(GetActorHealth, bool(IActor& actor, float& health))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(SetActorInvulnerable, bool(IActor& actor, int invulnerable)) {
+SCRIPT_API(SetActorInvulnerable, bool(IActor& actor, bool invulnerable))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(IsActorInvulnerable, bool(IActor& actor)) {
+SCRIPT_API(IsActorInvulnerable, bool(IActor& actor))
+{
     throw NotImplemented();
 }
 
-SCRIPT_API(IsValidActor, bool(IActor& actor)) {
+SCRIPT_API(IsValidActor, bool(IActor& actor))
+{
     throw NotImplemented();
 }

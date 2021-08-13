@@ -1,4 +1,4 @@
-SCRIPT_API(CreateVehicle, bool(int vehicletype, Vector3 pos, float rotation, int color1, int color2, int respawn_delay, int addsiren))
+SCRIPT_API(CreateVehicle, bool(int modelid, Vector3 pos, float rotation, int colour1, int colour2, int respawndelay, bool addsiren))
 {
     throw NotImplemented();
 }
@@ -8,12 +8,12 @@ SCRIPT_API(DestroyVehicle, bool(IVehicle& vehicle))
     throw NotImplemented();
 }
 
-SCRIPT_API(IsVehicleStreamedIn, bool(IVehicle& vehicle, IPlayer const& forplayer))
+SCRIPT_API(IsVehicleStreamedIn, bool(IVehicle& vehicle, IPlayer& player))
 {
     throw NotImplemented();
 }
 
-SCRIPT_API(GetVehiclePos, int(IVehicle& vehicle, Vector3& pos))
+SCRIPT_API(GetVehiclePos, bool(IVehicle& vehicle, Vector3& pos))
 {
     throw NotImplemented();
 }
@@ -23,7 +23,7 @@ SCRIPT_API(SetVehiclePos, bool(IVehicle& vehicle, Vector3 pos))
     throw NotImplemented();
 }
 
-SCRIPT_API(GetVehicleZAngle, bool(IVehicle& vehicle, float& z_angle))
+SCRIPT_API(GetVehicleZAngle, bool(IVehicle& vehicle, float& angle))
 {
     throw NotImplemented();
 }
@@ -38,12 +38,12 @@ SCRIPT_API(GetVehicleDistanceFromPoint, int(IVehicle& vehicle, Vector3 pos))
     throw NotImplemented();
 }
 
-SCRIPT_API(SetVehicleZAngle, bool(IVehicle& vehicle, float z_angle))
+SCRIPT_API(SetVehicleZAngle, bool(IVehicle& vehicle, float angle))
 {
     throw NotImplemented();
 }
 
-SCRIPT_API(SetVehicleParamsForPlayer, bool(IVehicle& vehicle, IPlayer& player, int objective, int doorslocked))
+SCRIPT_API(SetVehicleParamsForPlayer, bool(IVehicle& vehicle, IPlayer& player, int objective, int doors))
 {
     throw NotImplemented();
 }
@@ -68,22 +68,22 @@ SCRIPT_API(GetVehicleParamsSirenState, int(IVehicle& vehicle))
     throw NotImplemented();
 }
 
-SCRIPT_API(SetVehicleParamsCarDoors, bool(IVehicle& vehicle, int driver, int passenger, int backleft, int backright))
+SCRIPT_API(SetVehicleParamsCarDoors, bool(IVehicle& vehicle, int frontleft, int frontright, int rearleft, int rearright))
 {
     throw NotImplemented();
 }
 
-SCRIPT_API(GetVehicleParamsCarDoors, bool(IVehicle& vehicle, int& driver, int& passenger, int& backleft, int& backright))
+SCRIPT_API(GetVehicleParamsCarDoors, bool(IVehicle& vehicle, int& frontleft, int& frontright, int& rearleft, int& rearright))
 {
     throw NotImplemented();
 }
 
-SCRIPT_API(SetVehicleParamsCarWindows, bool(IVehicle& vehicle, int driver, int passenger, int backleft, int backright))
+SCRIPT_API(SetVehicleParamsCarWindows, bool(IVehicle& vehicle, int frontleft, int frontright, int rearleft, int rearright))
 {
     throw NotImplemented();
 }
 
-SCRIPT_API(GetVehicleParamsCarWindows, bool(IVehicle& vehicle, int& driver, int& passenger, int& backleft, int& backright))
+SCRIPT_API(GetVehicleParamsCarWindows, bool(IVehicle& vehicle, int& frontleft, int& frontright, int& rearleft, int& rearright))
 {
     throw NotImplemented();
 }
@@ -108,7 +108,7 @@ SCRIPT_API(RemoveVehicleComponent, bool(IVehicle& vehicle, int componentid))
     throw NotImplemented();
 }
 
-SCRIPT_API(ChangeVehicleColor, bool(IVehicle& vehicle, int color1, int color2))
+SCRIPT_API(ChangeVehicleColor, bool(IVehicle& vehicle, int colour1, int colour2))
 {
     throw NotImplemented();
 }
@@ -148,7 +148,7 @@ SCRIPT_API(GetVehicleTrailer, int(IVehicle& vehicle))
     throw NotImplemented();
 }
 
-SCRIPT_API(SetVehicleNumberPlate, bool(IVehicle& vehicle, std::string const& numberplate))
+SCRIPT_API(SetVehicleNumberPlate, bool(IVehicle& vehicle, std::string const& numberPlate))
 {
     throw NotImplemented();
 }
@@ -173,7 +173,7 @@ SCRIPT_API(RepairVehicle, bool(IVehicle& vehicle))
     throw NotImplemented();
 }
 
-SCRIPT_API(GetVehicleVelocity, int(IVehicle& vehicle, Vector3& pos))
+SCRIPT_API(GetVehicleVelocity, bool(IVehicle& vehicle, Vector3& pos))
 {
     throw NotImplemented();
 }
@@ -198,12 +198,12 @@ SCRIPT_API(UpdateVehicleDamageStatus, bool(IVehicle& vehicle, int panels, int do
     throw NotImplemented();
 }
 
-SCRIPT_API(GetVehicleModelInfo, int(int vehiclemodel, int infotype, Vector3& pos))
+SCRIPT_API(GetVehicleModelInfo, bool(int vehiclemodel, int infotype, Vector3& pos))
 {
     throw NotImplemented();
 }
 
-SCRIPT_API(SetVehicleVirtualWorld, bool(IVehicle& vehicle, int worldid))
+SCRIPT_API(SetVehicleVirtualWorld, bool(IVehicle& vehicle, int virtualworld))
 {
     throw NotImplemented();
 }
@@ -213,7 +213,7 @@ SCRIPT_API(GetVehicleVirtualWorld, int(IVehicle& vehicle))
     throw NotImplemented();
 }
 
-SCRIPT_API(IsValidVehicle, _(IVehicle& vehicle))
+SCRIPT_API(IsValidVehicle, bool(IVehicle& vehicle))
 {
     throw NotImplemented();
 }

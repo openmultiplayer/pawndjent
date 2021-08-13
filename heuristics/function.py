@@ -7,24 +7,46 @@ class FunctionHeuristic:
 
 
 class IntHeuristic(FunctionHeuristic):
+    non_matches = {
+        'not_const': {
+            'type': (
+                'std::string',
+            ),
+        },
+        'reference': {
+            'type': (
+                'float',
+                'Vector2',
+                'Vector3',
+                'VehicleParams',
+            ),
+            'tag': (
+                '_',
+            ),
+        },
+    }
+
     def apply(self, function, arguments):
         if(
             function.name.startswith('Get')
-            and not any(
-                (
-                    getattr(argument, 'type', None) == 'std::string'
-                    and not argument.is_const
-                ) or (
-                    getattr(argument, 'type', None) == 'float'
-                    and argument.is_reference
-                ) or (
-                    getattr(argument, 'type', None) == 'VehicleParams'
-                    and argument.is_reference
-                ) or (
-                    getattr(argument, 'tag', None) == '_'
-                    and argument.is_reference
+            and not (
+                any(
+                    (
+                        getattr(argument, key, None) == value
+                        and not argument.is_const
+                    )
+                    for key, values in self.non_matches['not_const'].items()
+                    for value in values
+                    for argument in arguments
+                ) or any(
+                    (
+                        getattr(argument, key, None) == value
+                        and argument.is_reference
+                    )
+                    for key, values in self.non_matches['reference'].items()
+                    for value in values
+                    for argument in arguments
                 )
-                for argument in arguments
             )
         ):
             return CPPFunction(

@@ -18,7 +18,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "X",
+                    "name": "x",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -26,7 +26,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "Y",
+                    "name": "y",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -34,7 +34,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "Z",
+                    "name": "z",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -42,7 +42,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "Rotation",
+                    "name": "angle",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -69,7 +69,7 @@
         },
         {
             "name": "IsActorStreamedIn",
-            "tag": "_",
+            "tag": "bool",
             "is_callback": false,
             "is_variadic": false,
             "arguments": [
@@ -82,7 +82,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "forplayerid",
+                    "name": "playerid",
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
@@ -106,7 +106,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "vworld",
+                    "name": "virtualWorld",
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
@@ -146,7 +146,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "animlib",
+                    "name": "animationLibrary",
                     "tag": "_",
                     "is_const": true,
                     "is_array": true,
@@ -154,7 +154,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "animname",
+                    "name": "animationName",
                     "tag": "_",
                     "is_const": true,
                     "is_array": true,
@@ -162,7 +162,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "fDelta",
+                    "name": "delta",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -171,23 +171,23 @@
                 },
                 {
                     "name": "loop",
-                    "tag": "_",
+                    "tag": "bool",
                     "is_const": false,
                     "is_array": false,
                     "default_value": null,
                     "is_reference": false
                 },
                 {
-                    "name": "lockx",
-                    "tag": "_",
+                    "name": "lockX",
+                    "tag": "bool",
                     "is_const": false,
                     "is_array": false,
                     "default_value": null,
                     "is_reference": false
                 },
                 {
-                    "name": "locky",
-                    "tag": "_",
+                    "name": "lockY",
+                    "tag": "bool",
                     "is_const": false,
                     "is_array": false,
                     "default_value": null,
@@ -195,7 +195,7 @@
                 },
                 {
                     "name": "freeze",
-                    "tag": "_",
+                    "tag": "bool",
                     "is_const": false,
                     "is_array": false,
                     "default_value": null,
@@ -242,7 +242,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "X",
+                    "name": "x",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -250,7 +250,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "Y",
+                    "name": "y",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -258,7 +258,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "Z",
+                    "name": "z",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -282,7 +282,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "X",
+                    "name": "x",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -290,7 +290,7 @@
                     "is_reference": true
                 },
                 {
-                    "name": "Y",
+                    "name": "y",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -298,7 +298,7 @@
                     "is_reference": true
                 },
                 {
-                    "name": "Z",
+                    "name": "z",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -322,7 +322,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "ang",
+                    "name": "angle",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -346,7 +346,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "ang",
+                    "name": "angle",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -419,7 +419,7 @@
                 },
                 {
                     "name": "invulnerable",
-                    "tag": "_",
+                    "tag": "bool",
                     "is_const": false,
                     "is_array": false,
                     "default_value": "true",
@@ -429,7 +429,7 @@
         },
         {
             "name": "IsActorInvulnerable",
-            "tag": "_",
+            "tag": "bool",
             "is_callback": false,
             "is_variadic": false,
             "arguments": [
@@ -445,7 +445,7 @@
         },
         {
             "name": "IsValidActor",
-            "tag": "_",
+            "tag": "bool",
             "is_callback": false,
             "is_variadic": false,
             "arguments": [

@@ -91,10 +91,10 @@ native db_num_fields(DBResult:result);
 /// <param name="size">The max length of the field</param>
 /// <remarks>Using an <b>invalid handle</b> will crash your server! Get a <b>valid handle</b> by using <a href="#db_open">db_open</a>. But it's protected against <b><c>NULL</c></b> references</remarks>
 /// <returns>Returns <b><c>1</c></b>, if the function was successful, otherwise <b><c>0</c></b> if <b><c>DBResult:result</c></b> is a <b><c>NULL</c></b> reference or the column index not available.</returns>
-native bool:DB_FieldName(DBResult:result, field, output[], size = sizeof (output)) = db_field_name;
+native bool:DB_FieldName(DBResult:result, field, output[], size = sizeof output) = db_field_name;
 
 #pragma deprecated Use `DB_FieldName`.
-native bool:db_field_name(DBResult:result, field, output[], size = sizeof (output));
+native bool:db_field_name(DBResult:result, field, output[], size = sizeof output);
 
 /// <summary>Get the content of a field from <a href="#db_query">db_query</a>.</summary>
 /// <param name="result">The result to get the data from</param>
@@ -103,10 +103,10 @@ native bool:db_field_name(DBResult:result, field, output[], size = sizeof (outpu
 /// <param name="size">The max length of the field</param>
 /// <remarks>Using an <b>invalid handle</b> will crash your server! Get a <b>valid handle</b> by using <a href="#db_open">db_open</a>. But it's protected against <b><c>NULL</c></b> references</remarks>
 /// <returns>Returns <b><c>1</c></b> if successful, otherwise <b><c>0</c></b> if <b><c>DBResult:result</c></b> is a <b><c>NULL</c></b> reference or the column index not available.</returns>
-native bool:DB_GetField(DBResult:result, field, output[], size = sizeof (output)) = db_get_field;
+native bool:DB_GetField(DBResult:result, field, output[], size = sizeof output) = db_get_field;
 
 #pragma deprecated Use `DB_GetField`.
-native bool:db_get_field(DBResult:result, field, output[], size = sizeof (output));
+native bool:db_get_field(DBResult:result, field, output[], size = sizeof output);
 
 /// <summary>Get the content of a field as an integer from <a href="#db_query">db_query</a>.</summary>
 /// <param name="result">The result to get the data from</param>
@@ -135,10 +135,10 @@ native Float:db_get_field_float(DBResult:result, field = 0);
 /// <param name="size">The max length of the field</param>
 /// <remarks>Using an <b>invalid handle</b> will crash your server! Get a <b>valid handle</b> by using <a href="#db_open">db_open</a>. But it's protected against <b><c>NULL</c></b> references</remarks>
 /// <returns>Returns <b><c>1</c></b> if successful, otherwise <b><c>0</c></b> if <b><c>DBResult:result</c></b> is a <b><c>NULL</c></b> reference or the column index not available.</returns>
-native bool:DB_GetFieldAssoc(DBResult:result, const field[], output[], size = sizeof (output)) = db_get_field_assoc;
+native bool:DB_GetFieldAssoc(DBResult:result, const field[], output[], size = sizeof output) = db_get_field_assoc;
 
 #pragma deprecated Use `DB_GetFieldAssoc`.
-native bool:db_get_field_assoc(DBResult:result, const field[], output[], size = sizeof (output));
+native bool:db_get_field_assoc(DBResult:result, const field[], output[], size = sizeof output);
 
 /// <summary>Get the contents of field as an integer with specified name.</summary>
 /// <param name="result">The result to get the data from</param>

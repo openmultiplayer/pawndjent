@@ -3,64 +3,15 @@
         "SAMP_CONST_CORRECT",
         "MAX_PLAYER_ATTACHED_OBJECTS",
         "MAX_CHATBUBBLE_LENGTH",
-        "SPECIAL_ACTION_NONE",
-        "SPECIAL_ACTION_DUCK",
-        "SPECIAL_ACTION_USEJETPACK",
-        "SPECIAL_ACTION_ENTER_VEHICLE",
-        "SPECIAL_ACTION_EXIT_VEHICLE",
-        "SPECIAL_ACTION_DANCE1",
-        "SPECIAL_ACTION_DANCE2",
-        "SPECIAL_ACTION_DANCE3",
-        "SPECIAL_ACTION_DANCE4",
-        "SPECIAL_ACTION_HANDSUP",
-        "SPECIAL_ACTION_USECELLPHONE",
-        "SPECIAL_ACTION_SITTING",
-        "SPECIAL_ACTION_STOPUSECELLPHONE",
-        "SPECIAL_ACTION_DRINK_BEER",
-        "SPECIAL_ACTION_SMOKE_CIGGY",
-        "SPECIAL_ACTION_DRINK_WINE",
-        "SPECIAL_ACTION_DRINK_SPRUNK",
-        "SPECIAL_ACTION_PISSING",
-        "SPECIAL_ACTION_CUFFED",
-        "SPECIAL_ACTION_CARRY",
-        "FIGHT_STYLE_NORMAL",
-        "FIGHT_STYLE_BOXING",
-        "FIGHT_STYLE_KUNGFU",
-        "FIGHT_STYLE_KNEEHEAD",
-        "FIGHT_STYLE_GRABKICK",
-        "FIGHT_STYLE_ELBOW",
-        "WEAPONSKILL_PISTOL",
-        "WEAPONSKILL_PISTOL_SILENCED",
-        "WEAPONSKILL_DESERT_EAGLE",
-        "WEAPONSKILL_SHOTGUN",
-        "WEAPONSKILL_SAWNOFF_SHOTGUN",
-        "WEAPONSKILL_SPAS12_SHOTGUN",
-        "WEAPONSKILL_MICRO_UZI",
-        "WEAPONSKILL_MP5",
-        "WEAPONSKILL_AK47",
-        "WEAPONSKILL_M4",
-        "WEAPONSKILL_SNIPERRIFLE",
-        "WEAPONSTATE_UNKNOWN",
-        "WEAPONSTATE_NO_BULLETS",
-        "WEAPONSTATE_LAST_BULLET",
-        "WEAPONSTATE_MORE_BULLETS",
-        "WEAPONSTATE_RELOADING",
-        "PLAYER_VARTYPE_NONE",
-        "PLAYER_VARTYPE_INT",
-        "PLAYER_VARTYPE_STRING",
-        "PLAYER_VARTYPE_FLOAT",
-        "MAPICON_LOCAL",
-        "MAPICON_GLOBAL",
-        "MAPICON_LOCAL_CHECKPOINT",
-        "MAPICON_GLOBAL_CHECKPOINT",
-        "CAMERA_CUT",
-        "CAMERA_MOVE",
-        "SPECTATE_MODE_NORMAL",
-        "SPECTATE_MODE_FIXED",
-        "SPECTATE_MODE_SIDE",
-        "PLAYER_RECORDING_TYPE_NONE",
-        "PLAYER_RECORDING_TYPE_DRIVER",
-        "PLAYER_RECORDING_TYPE_ONFOOT"
+        "SPECIAL_ACTION:",
+        "FIGHT_STYLE:",
+        "WEAPONSKILL:",
+        "WEAPONSTATE:",
+        "PLAYER_VARTYPE:",
+        "MAPICON:",
+        "CAMERA:",
+        "SPECTATE_MODE:",
+        "PLAYER_RECORDING_TYPE:"
     ],
     "functions": [
         {
@@ -134,7 +85,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "weapon1_ammo",
+                    "name": "ammo1",
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
@@ -150,7 +101,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "weapon2_ammo",
+                    "name": "ammo2",
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
@@ -166,7 +117,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "weapon3_ammo",
+                    "name": "ammo3",
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
@@ -361,7 +312,7 @@
         },
         {
             "name": "IsPlayerInRangeOfPoint",
-            "tag": "_",
+            "tag": "bool",
             "is_callback": false,
             "is_variadic": false,
             "arguments": [
@@ -422,7 +373,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "X",
+                    "name": "x",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -430,7 +381,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "Y",
+                    "name": "y",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -438,7 +389,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "Z",
+                    "name": "z",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -449,12 +400,12 @@
         },
         {
             "name": "IsPlayerStreamedIn",
-            "tag": "_",
+            "tag": "bool",
             "is_callback": false,
             "is_variadic": false,
             "arguments": [
                 {
-                    "name": "playerid",
+                    "name": "targetid",
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
@@ -462,7 +413,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "forplayerid",
+                    "name": "playerid",
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
@@ -622,7 +573,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "weaponid",
+                    "name": "weaponslot",
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
@@ -657,7 +608,7 @@
         },
         {
             "name": "GetPlayerWeaponState",
-            "tag": "_",
+            "tag": "WEAPONSTATE",
             "is_callback": false,
             "is_variadic": false,
             "arguments": [
@@ -838,7 +789,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "color",
+                    "name": "colour",
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
@@ -1113,7 +1064,7 @@
         },
         {
             "name": "GetPlayerState",
-            "tag": "_",
+            "tag": "PLAYER_STATE",
             "is_callback": false,
             "is_variadic": false,
             "arguments": [
@@ -1207,7 +1158,7 @@
                 },
                 {
                     "name": "keys",
-                    "tag": "_",
+                    "tag": "KEY",
                     "is_const": false,
                     "is_array": false,
                     "default_value": null,
@@ -1215,7 +1166,7 @@
                 },
                 {
                     "name": "updown",
-                    "tag": "_",
+                    "tag": "KEY",
                     "is_const": false,
                     "is_array": false,
                     "default_value": null,
@@ -1223,7 +1174,7 @@
                 },
                 {
                     "name": "leftright",
-                    "tag": "_",
+                    "tag": "KEY",
                     "is_const": false,
                     "is_array": false,
                     "default_value": null,
@@ -1343,7 +1294,7 @@
                 },
                 {
                     "name": "toggle",
-                    "tag": "_",
+                    "tag": "bool",
                     "is_const": false,
                     "is_array": false,
                     "default_value": null,
@@ -1447,7 +1398,7 @@
                 },
                 {
                     "name": "style",
-                    "tag": "_",
+                    "tag": "FIGHT_STYLE",
                     "is_const": false,
                     "is_array": false,
                     "default_value": null,
@@ -1457,7 +1408,7 @@
         },
         {
             "name": "GetPlayerFightingStyle",
-            "tag": "_",
+            "tag": "FIGHT_STYLE",
             "is_callback": false,
             "is_variadic": false,
             "arguments": [
@@ -1486,7 +1437,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "X",
+                    "name": "x",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -1494,7 +1445,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "Y",
+                    "name": "y",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -1502,7 +1453,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "Z",
+                    "name": "z",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -1526,7 +1477,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "X",
+                    "name": "x",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -1534,7 +1485,7 @@
                     "is_reference": true
                 },
                 {
-                    "name": "Y",
+                    "name": "y",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -1542,7 +1493,7 @@
                     "is_reference": true
                 },
                 {
-                    "name": "Z",
+                    "name": "z",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -1639,10 +1590,10 @@
                 },
                 {
                     "name": "usepos",
-                    "tag": "_",
+                    "tag": "bool",
                     "is_const": false,
                     "is_array": false,
-                    "default_value": 0,
+                    "default_value": "false",
                     "is_reference": false
                 }
             ]
@@ -1703,7 +1654,7 @@
                 },
                 {
                     "name": "skill",
-                    "tag": "_",
+                    "tag": "WEAPONSKILL",
                     "is_const": false,
                     "is_array": false,
                     "default_value": null,
@@ -1774,7 +1725,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "fX",
+                    "name": "centerX",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -1782,7 +1733,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "fY",
+                    "name": "centerY",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -1790,7 +1741,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "fZ",
+                    "name": "centerZ",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -1798,7 +1749,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "fRadius",
+                    "name": "radius",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -1822,7 +1773,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "fOriginX",
+                    "name": "originX",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -1830,7 +1781,7 @@
                     "is_reference": true
                 },
                 {
-                    "name": "fOriginY",
+                    "name": "originY",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -1838,7 +1789,7 @@
                     "is_reference": true
                 },
                 {
-                    "name": "fOriginZ",
+                    "name": "originZ",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -1846,7 +1797,7 @@
                     "is_reference": true
                 },
                 {
-                    "name": "fHitPosX",
+                    "name": "hitPosX",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -1854,7 +1805,7 @@
                     "is_reference": true
                 },
                 {
-                    "name": "fHitPosY",
+                    "name": "hitPosY",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -1862,7 +1813,7 @@
                     "is_reference": true
                 },
                 {
-                    "name": "fHitPosZ",
+                    "name": "hitPosZ",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -1910,7 +1861,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "fOffsetX",
+                    "name": "offsetX",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -1918,7 +1869,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "fOffsetY",
+                    "name": "offsetY",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -1926,7 +1877,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "fOffsetZ",
+                    "name": "offsetZ",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -1934,7 +1885,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "fRotX",
+                    "name": "rotX",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -1942,7 +1893,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "fRotY",
+                    "name": "rotY",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -1950,7 +1901,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "fRotZ",
+                    "name": "rotZ",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -1958,7 +1909,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "fScaleX",
+                    "name": "scaleX",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -1966,7 +1917,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "fScaleY",
+                    "name": "scaleY",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -1974,7 +1925,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "fScaleZ",
+                    "name": "scaleZ",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -1982,7 +1933,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "materialcolor1",
+                    "name": "materialColour1",
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
@@ -1990,7 +1941,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "materialcolor2",
+                    "name": "materialColour2",
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
@@ -2025,7 +1976,7 @@
         },
         {
             "name": "IsPlayerAttachedObjectSlotUsed",
-            "tag": "_",
+            "tag": "bool",
             "is_callback": false,
             "is_variadic": false,
             "arguments": [
@@ -2158,7 +2109,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "x",
+                    "name": "width",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -2166,7 +2117,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "y",
+                    "name": "height",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -2198,7 +2149,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "x",
+                    "name": "width",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -2206,7 +2157,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "y",
+                    "name": "height",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -2239,7 +2190,7 @@
                 },
                 {
                     "name": "alignment",
-                    "tag": "_",
+                    "tag": "TEXT_DRAW_ALIGN",
                     "is_const": false,
                     "is_array": false,
                     "default_value": null,
@@ -2270,7 +2221,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "color",
+                    "name": "colour",
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
@@ -2303,7 +2254,7 @@
                 },
                 {
                     "name": "use",
-                    "tag": "_",
+                    "tag": "bool",
                     "is_const": false,
                     "is_array": false,
                     "default_value": null,
@@ -2334,7 +2285,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "color",
+                    "name": "colour",
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
@@ -2430,7 +2381,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "color",
+                    "name": "colour",
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
@@ -2495,7 +2446,7 @@
                 },
                 {
                     "name": "set",
-                    "tag": "_",
+                    "tag": "bool",
                     "is_const": false,
                     "is_array": false,
                     "default_value": null,
@@ -2527,7 +2478,7 @@
                 },
                 {
                     "name": "set",
-                    "tag": "_",
+                    "tag": "bool",
                     "is_const": false,
                     "is_array": false,
                     "default_value": null,
@@ -2638,7 +2589,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "modelindex",
+                    "name": "modelIndex",
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
@@ -2670,7 +2621,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "fRotX",
+                    "name": "rotX",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -2678,7 +2629,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "fRotY",
+                    "name": "rotY",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -2686,7 +2637,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "fRotZ",
+                    "name": "rotZ",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -2694,7 +2645,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "fZoom",
+                    "name": "zoom",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -2726,7 +2677,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "color1",
+                    "name": "colour1",
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
@@ -2734,7 +2685,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "color2",
+                    "name": "colour2",
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
@@ -2758,7 +2709,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "varname",
+                    "name": "pvar",
                     "tag": "_",
                     "is_const": true,
                     "is_array": true,
@@ -2766,7 +2717,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "int_value",
+                    "name": "value",
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
@@ -2790,7 +2741,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "varname",
+                    "name": "pvar",
                     "tag": "_",
                     "is_const": true,
                     "is_array": true,
@@ -2814,7 +2765,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "varname",
+                    "name": "pvar",
                     "tag": "_",
                     "is_const": true,
                     "is_array": true,
@@ -2822,7 +2773,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "string_value",
+                    "name": "value",
                     "tag": "_",
                     "is_const": true,
                     "is_array": true,
@@ -2846,7 +2797,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "varname",
+                    "name": "pvar",
                     "tag": "_",
                     "is_const": true,
                     "is_array": true,
@@ -2854,7 +2805,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "string_return",
+                    "name": "output",
                     "tag": "_",
                     "is_const": false,
                     "is_array": true,
@@ -2866,7 +2817,7 @@
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
-                    "default_value": "sizeof string_return",
+                    "default_value": "sizeof output",
                     "is_reference": false
                 }
             ]
@@ -2886,7 +2837,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "varname",
+                    "name": "pvar",
                     "tag": "_",
                     "is_const": true,
                     "is_array": true,
@@ -2894,7 +2845,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "float_value",
+                    "name": "value",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -2918,7 +2869,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "varname",
+                    "name": "pvar",
                     "tag": "_",
                     "is_const": true,
                     "is_array": true,
@@ -2942,7 +2893,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "varname",
+                    "name": "pvar",
                     "tag": "_",
                     "is_const": true,
                     "is_array": true,
@@ -2990,7 +2941,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "ret_varname",
+                    "name": "output",
                     "tag": "_",
                     "is_const": false,
                     "is_array": true,
@@ -2998,18 +2949,18 @@
                     "is_reference": true
                 },
                 {
-                    "name": "ret_len",
+                    "name": "size",
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
-                    "default_value": "sizeof ret_varname",
+                    "default_value": "sizeof output",
                     "is_reference": false
                 }
             ]
         },
         {
             "name": "GetPVarType",
-            "tag": "_",
+            "tag": "PLAYER_VARTYPE",
             "is_callback": false,
             "is_variadic": false,
             "arguments": [
@@ -3022,7 +2973,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "varname",
+                    "name": "pvar",
                     "tag": "_",
                     "is_const": true,
                     "is_array": true,
@@ -3054,7 +3005,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "color",
+                    "name": "colour",
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
@@ -3175,7 +3126,7 @@
                 },
                 {
                     "name": "toggle",
-                    "tag": "_",
+                    "tag": "bool",
                     "is_const": false,
                     "is_array": false,
                     "default_value": null,
@@ -3246,7 +3197,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "animlib",
+                    "name": "animationLibrary",
                     "tag": "_",
                     "is_const": true,
                     "is_array": true,
@@ -3254,7 +3205,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "animname",
+                    "name": "animationName",
                     "tag": "_",
                     "is_const": true,
                     "is_array": true,
@@ -3262,7 +3213,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "fDelta",
+                    "name": "delta",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -3271,23 +3222,23 @@
                 },
                 {
                     "name": "loop",
-                    "tag": "_",
+                    "tag": "bool",
                     "is_const": false,
                     "is_array": false,
                     "default_value": null,
                     "is_reference": false
                 },
                 {
-                    "name": "lockx",
-                    "tag": "_",
+                    "name": "lockX",
+                    "tag": "bool",
                     "is_const": false,
                     "is_array": false,
                     "default_value": null,
                     "is_reference": false
                 },
                 {
-                    "name": "locky",
-                    "tag": "_",
+                    "name": "lockY",
+                    "tag": "bool",
                     "is_const": false,
                     "is_array": false,
                     "default_value": null,
@@ -3295,7 +3246,7 @@
                 },
                 {
                     "name": "freeze",
-                    "tag": "_",
+                    "tag": "bool",
                     "is_const": false,
                     "is_array": false,
                     "default_value": null,
@@ -3310,11 +3261,11 @@
                     "is_reference": false
                 },
                 {
-                    "name": "forcesync",
-                    "tag": "_",
+                    "name": "forceSync",
+                    "tag": "bool",
                     "is_const": false,
                     "is_array": false,
-                    "default_value": 0,
+                    "default_value": "false",
                     "is_reference": false
                 }
             ]
@@ -3334,11 +3285,11 @@
                     "is_reference": false
                 },
                 {
-                    "name": "forcesync",
-                    "tag": "_",
+                    "name": "forceSync",
+                    "tag": "bool",
                     "is_const": false,
                     "is_array": false,
-                    "default_value": 0,
+                    "default_value": "false",
                     "is_reference": false
                 }
             ]
@@ -3374,7 +3325,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "animlib",
+                    "name": "animationLibrary",
                     "tag": "_",
                     "is_const": false,
                     "is_array": true,
@@ -3386,11 +3337,11 @@
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
-                    "default_value": "sizeof animlib",
+                    "default_value": "sizeof animationLibrary",
                     "is_reference": false
                 },
                 {
-                    "name": "animname",
+                    "name": "animationName",
                     "tag": "_",
                     "is_const": false,
                     "is_array": true,
@@ -3402,14 +3353,14 @@
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
-                    "default_value": "sizeof animname",
+                    "default_value": "sizeof animationName",
                     "is_reference": false
                 }
             ]
         },
         {
             "name": "GetPlayerSpecialAction",
-            "tag": "_",
+            "tag": "SPECIAL_ACTION",
             "is_callback": false,
             "is_variadic": false,
             "arguments": [
@@ -3439,7 +3390,7 @@
                 },
                 {
                     "name": "actionid",
-                    "tag": "_",
+                    "tag": "SPECIAL_ACTION",
                     "is_const": false,
                     "is_array": false,
                     "default_value": null,
@@ -3463,7 +3414,7 @@
                 },
                 {
                     "name": "disable",
-                    "tag": "_",
+                    "tag": "bool",
                     "is_const": false,
                     "is_array": false,
                     "default_value": null,
@@ -3558,7 +3509,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "x",
+                    "name": "centerX",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -3566,7 +3517,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "y",
+                    "name": "centerY",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -3574,7 +3525,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "z",
+                    "name": "centerZ",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -3582,7 +3533,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "nextx",
+                    "name": "nextX",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -3590,7 +3541,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "nexty",
+                    "name": "nextY",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -3598,7 +3549,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "nextz",
+                    "name": "nextZ",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -3646,7 +3597,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "x_max",
+                    "name": "maxX",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -3654,7 +3605,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "x_min",
+                    "name": "minX",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -3662,7 +3613,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "y_max",
+                    "name": "maxY",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -3670,7 +3621,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "y_min",
+                    "name": "minY",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -3694,7 +3645,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "showplayerid",
+                    "name": "targetid",
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
@@ -3702,7 +3653,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "color",
+                    "name": "colour",
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
@@ -3726,7 +3677,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "showplayerid",
+                    "name": "targetid",
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
@@ -3735,7 +3686,7 @@
                 },
                 {
                     "name": "show",
-                    "tag": "_",
+                    "tag": "bool",
                     "is_const": false,
                     "is_array": false,
                     "default_value": null,
@@ -3790,7 +3741,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "markertype",
+                    "name": "markerType",
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
@@ -3798,7 +3749,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "color",
+                    "name": "colour",
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
@@ -3807,7 +3758,7 @@
                 },
                 {
                     "name": "style",
-                    "tag": "_",
+                    "tag": "MAPICON",
                     "is_const": false,
                     "is_array": false,
                     "default_value": "MAPICON_LOCAL",
@@ -3855,7 +3806,7 @@
                 },
                 {
                     "name": "allow",
-                    "tag": "_",
+                    "tag": "bool",
                     "is_const": false,
                     "is_array": false,
                     "default_value": null,
@@ -3943,7 +3894,7 @@
                 },
                 {
                     "name": "cut",
-                    "tag": "_",
+                    "tag": "CAMERA",
                     "is_const": false,
                     "is_array": false,
                     "default_value": "CAMERA_CUT",
@@ -4079,7 +4030,7 @@
                 },
                 {
                     "name": "enable",
-                    "tag": "_",
+                    "tag": "bool",
                     "is_const": false,
                     "is_array": false,
                     "default_value": null,
@@ -4222,7 +4173,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "playerobjectid",
+                    "name": "objectid",
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
@@ -4246,7 +4197,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "FromX",
+                    "name": "fromX",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -4254,7 +4205,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "FromY",
+                    "name": "fromY",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -4262,7 +4213,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "FromZ",
+                    "name": "fromZ",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -4270,7 +4221,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "ToX",
+                    "name": "toX",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -4278,7 +4229,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "ToY",
+                    "name": "toY",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -4286,7 +4237,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "ToZ",
+                    "name": "toZ",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -4303,7 +4254,7 @@
                 },
                 {
                     "name": "cut",
-                    "tag": "_",
+                    "tag": "CAMERA",
                     "is_const": false,
                     "is_array": false,
                     "default_value": "CAMERA_CUT",
@@ -4326,7 +4277,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "FromX",
+                    "name": "fromX",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -4334,7 +4285,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "FromY",
+                    "name": "fromY",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -4342,7 +4293,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "FromZ",
+                    "name": "fromZ",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -4350,7 +4301,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "ToX",
+                    "name": "toX",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -4358,7 +4309,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "ToY",
+                    "name": "toY",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -4366,7 +4317,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "ToZ",
+                    "name": "toZ",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -4383,7 +4334,7 @@
                 },
                 {
                     "name": "cut",
-                    "tag": "_",
+                    "tag": "CAMERA",
                     "is_const": false,
                     "is_array": false,
                     "default_value": "CAMERA_CUT",
@@ -4393,7 +4344,7 @@
         },
         {
             "name": "IsPlayerConnected",
-            "tag": "_",
+            "tag": "bool",
             "is_callback": false,
             "is_variadic": false,
             "arguments": [
@@ -4409,7 +4360,7 @@
         },
         {
             "name": "IsPlayerInVehicle",
-            "tag": "_",
+            "tag": "bool",
             "is_callback": false,
             "is_variadic": false,
             "arguments": [
@@ -4433,7 +4384,7 @@
         },
         {
             "name": "IsPlayerInAnyVehicle",
-            "tag": "_",
+            "tag": "bool",
             "is_callback": false,
             "is_variadic": false,
             "arguments": [
@@ -4449,7 +4400,7 @@
         },
         {
             "name": "IsPlayerInCheckpoint",
-            "tag": "_",
+            "tag": "bool",
             "is_callback": false,
             "is_variadic": false,
             "arguments": [
@@ -4465,7 +4416,7 @@
         },
         {
             "name": "IsPlayerInRaceCheckpoint",
-            "tag": "_",
+            "tag": "bool",
             "is_callback": false,
             "is_variadic": false,
             "arguments": [
@@ -4494,7 +4445,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "worldid",
+                    "name": "virtualWorld",
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
@@ -4535,7 +4486,7 @@
                 },
                 {
                     "name": "enable",
-                    "tag": "_",
+                    "tag": "bool",
                     "is_const": false,
                     "is_array": false,
                     "default_value": null,
@@ -4551,7 +4502,7 @@
             "arguments": [
                 {
                     "name": "enable",
-                    "tag": "_",
+                    "tag": "bool",
                     "is_const": false,
                     "is_array": false,
                     "default_value": null,
@@ -4575,7 +4526,7 @@
                 },
                 {
                     "name": "toggle",
-                    "tag": "_",
+                    "tag": "bool",
                     "is_const": false,
                     "is_array": false,
                     "default_value": null,
@@ -4598,7 +4549,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "targetplayerid",
+                    "name": "targetid",
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
@@ -4607,7 +4558,7 @@
                 },
                 {
                     "name": "mode",
-                    "tag": "_",
+                    "tag": "SPECTATE_MODE",
                     "is_const": false,
                     "is_array": false,
                     "default_value": "SPECTATE_MODE_NORMAL",
@@ -4630,7 +4581,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "targetvehicleid",
+                    "name": "targetid",
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
@@ -4639,7 +4590,7 @@
                 },
                 {
                     "name": "mode",
-                    "tag": "_",
+                    "tag": "SPECTATE_MODE",
                     "is_const": false,
                     "is_array": false,
                     "default_value": "SPECTATE_MODE_NORMAL",
@@ -4662,15 +4613,15 @@
                     "is_reference": false
                 },
                 {
-                    "name": "recordtype",
-                    "tag": "_",
+                    "name": "recordType",
+                    "tag": "PLAYER_RECORDING_TYPE",
                     "is_const": false,
                     "is_array": false,
                     "default_value": null,
                     "is_reference": false
                 },
                 {
-                    "name": "recordname",
+                    "name": "recordFile",
                     "tag": "_",
                     "is_const": true,
                     "is_array": true,
@@ -4710,7 +4661,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "hovercolor",
+                    "name": "hoverColour",
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
@@ -4750,7 +4701,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "X",
+                    "name": "x",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -4758,7 +4709,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "Y",
+                    "name": "y",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -4766,7 +4717,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "Z",
+                    "name": "z",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -4782,7 +4733,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "Radius",
+                    "name": "radius",
                     "tag": "Float",
                     "is_const": false,
                     "is_array": false,
@@ -4814,7 +4765,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "memAddr",
+                    "name": "memoryAddress",
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
@@ -4822,7 +4773,7 @@
                     "is_reference": false
                 },
                 {
-                    "name": "memOffset",
+                    "name": "memoryOffset",
                     "tag": "_",
                     "is_const": false,
                     "is_array": false,
