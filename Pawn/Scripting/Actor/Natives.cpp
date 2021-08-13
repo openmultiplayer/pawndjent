@@ -13,7 +13,7 @@ SCRIPT_API(IsActorStreamedIn, bool(IActor& actor, IPlayer& player))
     throw NotImplemented();
 }
 
-SCRIPT_API(SetActorVirtualWorld, bool(IActor& actor, int virtualworld))
+SCRIPT_API(SetActorVirtualWorld, bool(IActor& actor, int virtualWorld))
 {
     throw NotImplemented();
 }
@@ -23,7 +23,7 @@ SCRIPT_API(GetActorVirtualWorld, int(IActor& actor))
     throw NotImplemented();
 }
 
-SCRIPT_API(ApplyActorAnimation, bool(IActor& actor, std::string const& animationLibrary, std::string const& animationName, float delta, bool loop, bool lockx, bool locky, bool freeze, int time))
+SCRIPT_API(ApplyActorAnimation, bool(IActor& actor, std::string const& animationLibrary, std::string const& animationName, float delta, bool loop, bool lockX, bool lockY, bool freeze, int time))
 {
     throw NotImplemented();
 }

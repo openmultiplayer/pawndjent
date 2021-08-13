@@ -1,4 +1,4 @@
-SCRIPT_API(CreateVehicle, bool(int modelid, Vector3 pos, float rotation, int colour1, int colour2, int respawndelay, bool addsiren))
+SCRIPT_API(CreateVehicle, bool(int modelid, Vector3 pos, float rotation, int colour1, int colour2, int respawnDelay, bool addSiren))
 {
     throw NotImplemented();
 }
@@ -53,12 +53,12 @@ SCRIPT_API(ManualVehicleEngineAndLights, bool())
     throw NotImplemented();
 }
 
-SCRIPT_API(SetVehicleParamsEx, bool(IVehicle& vehicle, bool engine, bool lights, bool alarm, bool doors, bool bonnet, bool boot, bool objective))
+SCRIPT_API(SetVehicleParamsEx, bool(IVehicle& vehicle, int engine, int lights, int alarm, int doors, int bonnet, int boot, int objective))
 {
     throw NotImplemented();
 }
 
-SCRIPT_API(GetVehicleParamsEx, bool(IVehicle& vehicle, bool& engine, bool& lights, bool& alarm, bool& doors, bool& bonnet, bool& boot, bool& objective))
+SCRIPT_API(GetVehicleParamsEx, bool(IVehicle& vehicle, int& engine, int& lights, int& alarm, int& doors, int& bonnet, int& boot, int& objective))
 {
     throw NotImplemented();
 }
@@ -68,22 +68,22 @@ SCRIPT_API(GetVehicleParamsSirenState, int(IVehicle& vehicle))
     throw NotImplemented();
 }
 
-SCRIPT_API(SetVehicleParamsCarDoors, bool(IVehicle& vehicle, int frontleft, int frontright, int rearleft, int rearright))
+SCRIPT_API(SetVehicleParamsCarDoors, bool(IVehicle& vehicle, int frontLeft, int frontRight, int rearLeft, int rearRight))
 {
     throw NotImplemented();
 }
 
-SCRIPT_API(GetVehicleParamsCarDoors, bool(IVehicle& vehicle, int& frontleft, int& frontright, int& rearleft, int& rearright))
+SCRIPT_API(GetVehicleParamsCarDoors, bool(IVehicle& vehicle, int& frontLeft, int& frontRight, int& rearLeft, int& rearRight))
 {
     throw NotImplemented();
 }
 
-SCRIPT_API(SetVehicleParamsCarWindows, bool(IVehicle& vehicle, int frontleft, int frontright, int rearleft, int rearright))
+SCRIPT_API(SetVehicleParamsCarWindows, bool(IVehicle& vehicle, int frontLeft, int frontRight, int rearLeft, int rearRight))
 {
     throw NotImplemented();
 }
 
-SCRIPT_API(GetVehicleParamsCarWindows, bool(IVehicle& vehicle, int& frontleft, int& frontright, int& rearleft, int& rearright))
+SCRIPT_API(GetVehicleParamsCarWindows, bool(IVehicle& vehicle, int& frontLeft, int& frontRight, int& rearLeft, int& rearRight))
 {
     throw NotImplemented();
 }
@@ -203,7 +203,7 @@ SCRIPT_API(GetVehicleModelInfo, bool(int vehiclemodel, int infotype, Vector3& po
     throw NotImplemented();
 }
 
-SCRIPT_API(SetVehicleVirtualWorld, bool(IVehicle& vehicle, int virtualworld))
+SCRIPT_API(SetVehicleVirtualWorld, bool(IVehicle& vehicle, int virtualWorld))
 {
     throw NotImplemented();
 }
