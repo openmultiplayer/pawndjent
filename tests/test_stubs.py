@@ -43,7 +43,7 @@ cases = [
             '''
                 SCRIPT_API(SetPlayerDrunkLevel, bool(IPlayer& player, int level))
                 {
-                    throw NotImplemented();
+                    throw pawn_natives::NotImplemented();
                 }
             ''',
         ),
@@ -85,7 +85,7 @@ cases = [
             '''
                 SCRIPT_API(SendDeathMessage, bool(IPlayer* killer, IPlayer& killee, int weapon))
                 {
-                    throw NotImplemented();
+                    throw pawn_natives::NotImplemented();
                 }
             ''',
         ),
@@ -157,9 +157,9 @@ cases = [
                 },
             ''',
             '''
-                SCRIPT_API(PlayAudioStreamForPlayer, bool(IPlayer& player, std::string const& url, Vector3 const& pos, float distance, bool usepos))
+                SCRIPT_API(PlayAudioStreamForPlayer, bool(IPlayer& player, std::string const& url, Vector3 pos, float distance, bool usepos))
                 {
-                    throw NotImplemented();
+                    throw pawn_natives::NotImplemented();
                 }
             ''',
         ),
@@ -193,7 +193,7 @@ cases = [
             '''
                 SCRIPT_API(SetPlayerHealth, bool(IPlayer& player, float health))
                 {
-                    throw NotImplemented();
+                    throw pawn_natives::NotImplemented();
                 }
             ''',
         ),
@@ -227,7 +227,7 @@ cases = [
             '''
                 SCRIPT_API(GetPlayerHealth, bool(IPlayer& player, float& health))
                 {
-                    throw NotImplemented();
+                    throw pawn_natives::NotImplemented();
                 }
             ''',
         ),
@@ -269,7 +269,7 @@ cases = [
             '''
                 SCRIPT_API(GetPlayerName, bool(IPlayer& player, std::string& name))
                 {
-                    throw NotImplemented();
+                    throw pawn_natives::NotImplemented();
                 }
             ''',
         ),
@@ -317,9 +317,9 @@ cases = [
                 },
             ''',
             '''
-                SCRIPT_API(CreatePlayerTextDraw, int(IPlayer& player, Vector2 const& pos, std::string const& text))
+                SCRIPT_API(CreatePlayerTextDraw, int(IPlayer& player, Vector2 pos, std::string const& text))
                 {
-                    throw NotImplemented();
+                    throw pawn_natives::NotImplemented();
                 }
             ''',
         ),
@@ -353,7 +353,7 @@ cases = [
             '''
                 SCRIPT_API(PlayerTextDrawDestroy, bool(IPlayer& player, IPlayerTextDraw& text))
                 {
-                    throw NotImplemented();
+                    throw pawn_natives::NotImplemented();
                 }
             ''',
         ),
@@ -379,7 +379,7 @@ cases = [
             '''
                 SCRIPT_API(TextDrawDestroy, bool(ITextDraw& text))
                 {
-                    throw NotImplemented();
+                    throw pawn_natives::NotImplemented();
                 }
             ''',
         ),
@@ -405,7 +405,7 @@ cases = [
             '''
                 SCRIPT_API(GetPlayerTeam, int(IPlayer& player))
                 {
-                    throw NotImplemented();
+                    throw pawn_natives::NotImplemented();
                 }
             ''',
         ),
@@ -455,7 +455,7 @@ cases = [
             '''
                 SCRIPT_API(GetPlayerKeys, bool(IPlayer& player, int& keys, int& updown, int& leftright))
                 {
-                    throw NotImplemented();
+                    throw pawn_natives::NotImplemented();
                 }
             ''',
         ),
@@ -537,7 +537,7 @@ cases = [
             '''
                 SCRIPT_API(SetVehicleParamsEx, bool(IVehicle& vehicle, int engine, int lights, int alarm, int doors, int bonnet, int boot, int objective))
                 {
-                    throw NotImplemented();
+                    throw pawn_natives::NotImplemented();
                 }
             ''',
         ),
@@ -619,7 +619,7 @@ cases = [
             '''
                 SCRIPT_API(GetVehicleParamsEx, bool(IVehicle& vehicle, int& engine, int& lights, int& alarm, int& doors, int& bonnet, int& boot, int& objective))
                 {
-                    throw NotImplemented();
+                    throw pawn_natives::NotImplemented();
                 }
             ''',
         ),
@@ -653,7 +653,7 @@ cases = [
             '''
                 SCRIPT_API(IsVehicleStreamedIn, bool(IVehicle& vehicle, IPlayer& forplayer))
                 {
-                    throw NotImplemented();
+                    throw pawn_natives::NotImplemented();
                 }
             ''',
         ),
@@ -703,7 +703,7 @@ cases = [
             '''
                 SCRIPT_API(GetPlayerPos, bool(IPlayer& player, Vector3& pos))
                 {
-                    throw NotImplemented();
+                    throw pawn_natives::NotImplemented();
                 }
             ''',
         ),
@@ -737,7 +737,7 @@ cases = [
             '''
                 SCRIPT_API(IsActorStreamedIn, bool(IActor& actor, IPlayer& player))
                 {
-                    throw NotImplemented();
+                    throw pawn_natives::NotImplemented();
                 }
             ''',
         ),
@@ -787,7 +787,7 @@ cases = [
             '''
                 SCRIPT_API(SetVehicleParamsForPlayer, bool(IVehicle& vehicle, IPlayer& player, int objective, int doors))
                 {
-                    throw NotImplemented();
+                    throw pawn_natives::NotImplemented();
                 }
             ''',
         ),

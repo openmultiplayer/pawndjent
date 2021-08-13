@@ -103,7 +103,7 @@ class CPPFunction:
         return textwrap.dedent(f'''
             SCRIPT_API({name}, {type}({', '.join(argument_stubs)}))
             {{
-                throw NotImplemented();
+                throw pawn_natives::NotImplemented();
             }}
         ''').strip()
 
