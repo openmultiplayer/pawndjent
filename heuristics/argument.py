@@ -168,7 +168,8 @@ class Vector2Heuristic(ArgumentHeuristic):
                         return_value[index:index + 2] = [CPPArgument(
                             name,
                             'Vector2',
-                            is_reference=any(
+                            is_reference=True,
+                            is_const=not any(
                                 argument.is_reference
                                 for argument in (x, y)
                             ),
@@ -229,7 +230,8 @@ class Vector3Heuristic(ArgumentHeuristic):
                     return_value[index:index + 3] = [CPPArgument(
                         name,
                         'Vector3',
-                        is_reference=any(
+                        is_reference=True,
+                        is_const=not any(
                             argument.is_reference
                             for argument in (x, y, z)
                         ),

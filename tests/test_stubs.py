@@ -157,7 +157,7 @@ cases = [
                 },
             ''',
             '''
-                SCRIPT_API(PlayAudioStreamForPlayer, bool(IPlayer& player, std::string const& url, Vector3 pos, float distance, bool usepos))
+                SCRIPT_API(PlayAudioStreamForPlayer, bool(IPlayer& player, std::string const& url, Vector3 const& pos, float distance, bool usepos))
                 {
                     throw NotImplemented();
                 }
@@ -317,7 +317,7 @@ cases = [
                 },
             ''',
             '''
-                SCRIPT_API(CreatePlayerTextDraw, int(IPlayer& player, Vector2 pos, std::string const& text))
+                SCRIPT_API(CreatePlayerTextDraw, int(IPlayer& player, Vector2 const& pos, std::string const& text))
                 {
                     throw NotImplemented();
                 }
