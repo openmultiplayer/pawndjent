@@ -273,7 +273,6 @@ class VehicleParamsHeuristic(ArgumentHeuristic):
 
                 if all(
                     argument.tag == '_'
-                    and argument.is_reference
                     and argument.name == name
                     for argument, name in zip(
                         params,
