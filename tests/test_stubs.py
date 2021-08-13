@@ -791,6 +791,56 @@ cases = [
                 }
             ''',
         ),
+        (
+            '''
+                {
+                    "name": "GetVehicleDistanceFromPoint",
+                    "tag": "Float",
+                    "is_callback": false,
+                    "is_variadic": false,
+                    "arguments": [
+                        {
+                            "name": "vehicleid",
+                            "tag": "_",
+                            "is_const": false,
+                            "is_array": false,
+                            "default_value": null,
+                            "is_reference": false
+                        },
+                        {
+                            "name": "x",
+                            "tag": "Float",
+                            "is_const": false,
+                            "is_array": false,
+                            "default_value": null,
+                            "is_reference": false
+                        },
+                        {
+                            "name": "y",
+                            "tag": "Float",
+                            "is_const": false,
+                            "is_array": false,
+                            "default_value": null,
+                            "is_reference": false
+                        },
+                        {
+                            "name": "z",
+                            "tag": "Float",
+                            "is_const": false,
+                            "is_array": false,
+                            "default_value": null,
+                            "is_reference": false
+                        }
+                    ]
+                },
+            ''',
+            '''
+                SCRIPT_API(GetVehicleDistanceFromPoint, float(IVehicle& vehicle, Vector3 pos))
+                {
+                    throw pawn_natives::NotImplemented();
+                }
+            ''',
+        ),
     )
 ]
 
