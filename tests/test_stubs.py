@@ -651,7 +651,7 @@ cases = [
                 },
             ''',
             '''
-                SCRIPT_API(IsVehicleStreamedIn, bool(IVehicle& vehicle, IPlayer const& forplayer))
+                SCRIPT_API(IsVehicleStreamedIn, bool(IVehicle& vehicle, IPlayer& forplayer))
                 {
                     throw NotImplemented();
                 }

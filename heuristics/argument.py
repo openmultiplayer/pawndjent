@@ -35,12 +35,7 @@ class PlayerHeuristic(SingleArgumentHeuristic):
         'playerid': CPPArgument('player', 'IPlayer', is_reference=True),
         'killer': CPPArgument('killer', 'IPlayer', is_pointer=True),
         'killee': CPPArgument('killee', 'IPlayer', is_reference=True),
-        'forplayerid': CPPArgument(
-            'forplayer',
-            'IPlayer',
-            is_reference=True,
-            is_const=True,
-        ),
+        'forplayerid': CPPArgument('forplayer', 'IPlayer', is_reference=True),
     }
 
 
