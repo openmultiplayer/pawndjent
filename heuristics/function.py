@@ -31,7 +31,7 @@ class IntHeuristic(FunctionHeuristic):
     def apply(self, function, arguments):
         if(
             function.name.startswith('Get')
-            and function.tag == '_'
+            and function.tag not in ('Float', 'bool')
             and not (
                 any(
                     (
