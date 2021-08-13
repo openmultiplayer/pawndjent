@@ -841,6 +841,96 @@ cases = [
                 }
             ''',
         ),
+        (
+            '''
+                {
+                    "name": "CreateVehicle",
+                    "tag": "_",
+                    "is_callback": false,
+                    "is_variadic": false,
+                    "arguments": [
+                        {
+                            "name": "modelid",
+                            "tag": "_",
+                            "is_const": false,
+                            "is_array": false,
+                            "default_value": null,
+                            "is_reference": false
+                        },
+                        {
+                            "name": "x",
+                            "tag": "Float",
+                            "is_const": false,
+                            "is_array": false,
+                            "default_value": null,
+                            "is_reference": false
+                        },
+                        {
+                            "name": "y",
+                            "tag": "Float",
+                            "is_const": false,
+                            "is_array": false,
+                            "default_value": null,
+                            "is_reference": false
+                        },
+                        {
+                            "name": "z",
+                            "tag": "Float",
+                            "is_const": false,
+                            "is_array": false,
+                            "default_value": null,
+                            "is_reference": false
+                        },
+                        {
+                            "name": "rotation",
+                            "tag": "Float",
+                            "is_const": false,
+                            "is_array": false,
+                            "default_value": null,
+                            "is_reference": false
+                        },
+                        {
+                            "name": "colour1",
+                            "tag": "_",
+                            "is_const": false,
+                            "is_array": false,
+                            "default_value": null,
+                            "is_reference": false
+                        },
+                        {
+                            "name": "colour2",
+                            "tag": "_",
+                            "is_const": false,
+                            "is_array": false,
+                            "default_value": null,
+                            "is_reference": false
+                        },
+                        {
+                            "name": "respawnDelay",
+                            "tag": "_",
+                            "is_const": false,
+                            "is_array": false,
+                            "default_value": null,
+                            "is_reference": false
+                        },
+                        {
+                            "name": "addSiren",
+                            "tag": "bool",
+                            "is_const": false,
+                            "is_array": false,
+                            "default_value": "false",
+                            "is_reference": false
+                        }
+                    ]
+                },
+            ''',
+            '''
+                SCRIPT_API(CreateVehicle, int(int modelid, Vector3 pos, float rotation, int colour1, int colour2, int respawnDelay, bool addSiren))
+                {
+                    throw pawn_natives::NotImplemented();
+                }
+            ''',
+        ),
     )
 ]
 

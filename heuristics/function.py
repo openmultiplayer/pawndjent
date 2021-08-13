@@ -30,7 +30,10 @@ class IntHeuristic(FunctionHeuristic):
 
     def apply(self, function, arguments):
         if(
-            function.name.startswith('Get')
+            (
+                function.name.startswith('Get')
+                or function.name.startswith('Create')
+            )
             and function.tag not in ('Float', 'bool')
             and not (
                 any(
