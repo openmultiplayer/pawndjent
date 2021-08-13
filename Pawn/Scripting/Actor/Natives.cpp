@@ -1,4 +1,4 @@
-SCRIPT_API(CreateActor, bool(int modelid, Vector3 pos, float angle))
+SCRIPT_API(CreateActor, bool(int modelid, Vector3 const& pos, float angle))
 {
     throw NotImplemented();
 }
@@ -33,7 +33,7 @@ SCRIPT_API(ClearActorAnimations, bool(IActor& actor))
     throw NotImplemented();
 }
 
-SCRIPT_API(SetActorPos, bool(IActor& actor, Vector3 pos))
+SCRIPT_API(SetActorPos, bool(IActor& actor, Vector3 const& pos))
 {
     throw NotImplemented();
 }

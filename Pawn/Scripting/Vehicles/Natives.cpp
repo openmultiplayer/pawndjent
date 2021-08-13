@@ -1,4 +1,4 @@
-SCRIPT_API(CreateVehicle, bool(int modelid, Vector3 pos, float rotation, int colour1, int colour2, int respawnDelay, bool addSiren))
+SCRIPT_API(CreateVehicle, bool(int modelid, Vector3 const& pos, float rotation, int colour1, int colour2, int respawnDelay, bool addSiren))
 {
     throw NotImplemented();
 }
@@ -18,7 +18,7 @@ SCRIPT_API(GetVehiclePos, bool(IVehicle& vehicle, Vector3& pos))
     throw NotImplemented();
 }
 
-SCRIPT_API(SetVehiclePos, bool(IVehicle& vehicle, Vector3 pos))
+SCRIPT_API(SetVehiclePos, bool(IVehicle& vehicle, Vector3 const& pos))
 {
     throw NotImplemented();
 }
@@ -33,7 +33,7 @@ SCRIPT_API(GetVehicleRotationQuat, bool(IVehicle& vehicle, float& w, Vector3& po
     throw NotImplemented();
 }
 
-SCRIPT_API(GetVehicleDistanceFromPoint, int(IVehicle& vehicle, Vector3 pos))
+SCRIPT_API(GetVehicleDistanceFromPoint, float(IVehicle& vehicle, Vector3 const& pos))
 {
     throw NotImplemented();
 }
@@ -178,12 +178,12 @@ SCRIPT_API(GetVehicleVelocity, bool(IVehicle& vehicle, Vector3& pos))
     throw NotImplemented();
 }
 
-SCRIPT_API(SetVehicleVelocity, bool(IVehicle& vehicle, Vector3 pos))
+SCRIPT_API(SetVehicleVelocity, bool(IVehicle& vehicle, Vector3 const& pos))
 {
     throw NotImplemented();
 }
 
-SCRIPT_API(SetVehicleAngularVelocity, bool(IVehicle& vehicle, Vector3 pos))
+SCRIPT_API(SetVehicleAngularVelocity, bool(IVehicle& vehicle, Vector3 const& pos))
 {
     throw NotImplemented();
 }
