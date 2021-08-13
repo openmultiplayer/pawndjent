@@ -33,7 +33,7 @@ SCRIPT_API(GetVehicleRotationQuat, bool(IVehicle& vehicle, float& w, Vector3& po
     throw pawn_natives::NotImplemented();
 }
 
-SCRIPT_API(GetVehicleDistanceFromPoint, int(IVehicle& vehicle, Vector3 pos))
+SCRIPT_API(GetVehicleDistanceFromPoint, float(IVehicle& vehicle, Vector3 pos))
 {
     throw pawn_natives::NotImplemented();
 }

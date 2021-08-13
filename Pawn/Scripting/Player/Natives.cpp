@@ -38,7 +38,7 @@ SCRIPT_API(IsPlayerInRangeOfPoint, bool(IPlayer& player, float range, Vector3 po
     throw pawn_natives::NotImplemented();
 }
 
-SCRIPT_API(GetPlayerDistanceFromPoint, int(IPlayer& player, Vector3 pos))
+SCRIPT_API(GetPlayerDistanceFromPoint, float(IPlayer& player, Vector3 pos))
 {
     throw pawn_natives::NotImplemented();
 }
@@ -473,7 +473,7 @@ SCRIPT_API(SetPVarFloat, bool(IPlayer& player, std::string const& pvar, float va
     throw pawn_natives::NotImplemented();
 }
 
-SCRIPT_API(GetPVarFloat, int(IPlayer& player, std::string const& pvar))
+SCRIPT_API(GetPVarFloat, float(IPlayer& player, std::string const& pvar))
 {
     throw pawn_natives::NotImplemented();
 }
@@ -673,12 +673,12 @@ SCRIPT_API(GetPlayerCameraTargetActor, int(IPlayer& player))
     throw pawn_natives::NotImplemented();
 }
 
-SCRIPT_API(GetPlayerCameraAspectRatio, int(IPlayer& player))
+SCRIPT_API(GetPlayerCameraAspectRatio, float(IPlayer& player))
 {
     throw pawn_natives::NotImplemented();
 }
 
-SCRIPT_API(GetPlayerCameraZoom, int(IPlayer& player))
+SCRIPT_API(GetPlayerCameraZoom, float(IPlayer& player))
 {
     throw pawn_natives::NotImplemented();
 }

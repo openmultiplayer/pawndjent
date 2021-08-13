@@ -158,7 +158,7 @@ SCRIPT_API(SetSVarFloat, bool(std::string const& svar, float value))
     throw pawn_natives::NotImplemented();
 }
 
-SCRIPT_API(GetSVarFloat, int(std::string const& svar))
+SCRIPT_API(GetSVarFloat, float(std::string const& svar))
 {
     throw pawn_natives::NotImplemented();
 }
@@ -273,7 +273,7 @@ SCRIPT_API(SetWeather, bool(int weatherid))
     throw pawn_natives::NotImplemented();
 }
 
-SCRIPT_API(GetGravity, int())
+SCRIPT_API(GetGravity, float())
 {
     throw pawn_natives::NotImplemented();
 }
@@ -433,7 +433,7 @@ SCRIPT_API(GetServerVarAsInt, int(std::string const& cvar))
     throw pawn_natives::NotImplemented();
 }
 
-SCRIPT_API(GetServerVarAsBool, int(std::string const& cvar))
+SCRIPT_API(GetServerVarAsBool, bool(std::string const& cvar))
 {
     throw pawn_natives::NotImplemented();
 }
@@ -448,7 +448,7 @@ SCRIPT_API(GetConsoleVarAsInt, int(std::string const& cvar))
     throw pawn_natives::NotImplemented();
 }
 
-SCRIPT_API(GetConsoleVarAsBool, int(std::string const& cvar))
+SCRIPT_API(GetConsoleVarAsBool, bool(std::string const& cvar))
 {
     throw pawn_natives::NotImplemented();
 }
