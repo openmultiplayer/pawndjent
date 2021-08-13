@@ -15,8 +15,12 @@ class CPPArgument:
     tag_types = {
         '_': 'int',
         'bool': 'bool',
+        'Float': 'float',
+        'Menu': 'IMenu&',
         'Text': 'ITextDraw&',
+        'Text3D': 'ITextLabel&',
         'PlayerText': 'IPlayerTextDraw&',
+        'PlayerText3D': 'IPlayerTextLabel&',
     }
 
     @classmethod
