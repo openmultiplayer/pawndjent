@@ -147,10 +147,10 @@ cases = [
                         },
                         {
                             "name": "usepos",
-                            "tag": "_",
+                            "tag": "bool",
                             "is_const": false,
                             "is_array": false,
-                            "default_value": 0,
+                            "default_value": "false",
                             "is_reference": false
                         }
                     ]
@@ -535,7 +535,7 @@ cases = [
                 },
             ''',
             '''
-                SCRIPT_API(GetVehicleParamsEx, bool(IVehicle& vehicle, VehicleParams& params))
+                SCRIPT_API(GetVehicleParamsEx, bool(IVehicle& vehicle, bool& engine, bool& lights, bool& alarm, bool& doors, bool& bonnet, bool& boot, bool& objective))
                 {
                     throw NotImplemented();
                 }
@@ -651,7 +651,7 @@ cases = [
                 },
             ''',
             '''
-                SCRIPT_API(SetVehicleParamsEx, bool(IVehicle& vehicle, VehicleParams params))
+                SCRIPT_API(SetVehicleParamsEx, bool(IVehicle& vehicle, bool engine, bool lights, bool alarm, bool doors, bool bonnet, bool boot, bool objective))
                 {
                     throw NotImplemented();
                 }

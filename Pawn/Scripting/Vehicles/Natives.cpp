@@ -53,12 +53,12 @@ SCRIPT_API(ManualVehicleEngineAndLights, bool())
     throw NotImplemented();
 }
 
-SCRIPT_API(SetVehicleParamsEx, bool(IVehicle& vehicle, VehicleParams params))
+SCRIPT_API(SetVehicleParamsEx, bool(IVehicle& vehicle, bool engine, bool lights, bool alarm, bool doors, bool bonnet, bool boot, bool objective))
 {
     throw NotImplemented();
 }
 
-SCRIPT_API(GetVehicleParamsEx, bool(IVehicle& vehicle, VehicleParams& params))
+SCRIPT_API(GetVehicleParamsEx, bool(IVehicle& vehicle, bool& engine, bool& lights, bool& alarm, bool& doors, bool& bonnet, bool& boot, bool& objective))
 {
     throw NotImplemented();
 }

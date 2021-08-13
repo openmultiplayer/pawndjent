@@ -288,7 +288,7 @@ SCRIPT_API(PlayCrimeReportForPlayer, bool(IPlayer& player, int suspectid, int cr
     throw NotImplemented();
 }
 
-SCRIPT_API(PlayAudioStreamForPlayer, bool(IPlayer& player, std::string const& url, Vector3 pos, float distance, bool usepos))
+SCRIPT_API(PlayAudioStreamForPlayer, bool(IPlayer& player, std::string const& url, Vector3 pos, float distance, bool usePos))
 {
     throw NotImplemented();
 }

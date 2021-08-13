@@ -21,7 +21,7 @@ class CPPArgument:
 
     @classmethod
     def from_argument(cls, argument):
-        if type(argument) is cls:
+        if isinstance(argument, cls):
             return argument
 
         name = argument.name

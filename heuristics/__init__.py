@@ -4,7 +4,6 @@ argument_heuristics = (
     argument.PlayerHeuristic(),
     argument.ActorHeuristic(),
     argument.VehicleHeuristic(),
-    argument.VehicleParamsHeuristic(),
     argument.BoolHeuristic(),
     argument.StringHeuristic(),
     argument.StrLenHeuristic(),

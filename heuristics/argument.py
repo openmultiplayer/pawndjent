@@ -54,10 +54,33 @@ class VehicleHeuristic(SingleArgumentHeuristic):
     }
 
 
-class BoolHeuristic(SingleArgumentHeuristic):
+class BoolHeuristic(ArgumentHeuristic):
     argument_names_to_types = {
-        'usepos': CPPArgument('usePos', 'bool'),
+        'usepos': ('usePos', 'bool'),
+        'engine': ('engine', 'bool'),
+        'lights': ('lights', 'bool'),
+        'alarm': ('alarm', 'bool'),
+        'doors': ('doors', 'bool'),
+        'bonnet': ('bonnet', 'bool'),
+        'boot': ('boot', 'bool'),
+        'objective': ('objective', 'bool'),
     }
+
+    def apply_single(self, argument):
+        if hasattr(argument, 'type'):
+            return super().apply_single(argument)
+
+        if(
+            argument.tag in ('bool', 'VEHICLE_PARAMS')
+            and argument.name in self.argument_names_to_types
+        ):
+            return_value = CPPArgument(
+                *self.argument_names_to_types[argument.name]
+            )
+            return_value.is_reference = argument.is_reference
+            return return_value
+
+        return super().apply_single(argument)
 
 
 class FloatHeuristic(ArgumentHeuristic):
@@ -241,55 +264,6 @@ class Vector3Heuristic(ArgumentHeuristic):
                         is_reference=any(
                             argument.is_reference
                             for argument in (x, y, z)
-                        ),
-                    )]
-                    break
-            else:
-                return return_value
-
-
-class VehicleParamsHeuristic(ArgumentHeuristic):
-    param_names = (
-        'engine',
-        'lights',
-        'alarm',
-        'doors',
-        'bonnet',
-        'boot',
-        'objective',
-    )
-
-    def apply(self, arguments):
-        if len(arguments) < 7:
-            return arguments
-
-        return_value = arguments.copy()
-
-        while True:
-            for index, params in enumerate(zip(*[
-                return_value[index:]
-                for index in range(7)
-            ])):
-                if any(
-                    hasattr(argument, 'type')
-                    for argument in params
-                ):
-                    continue
-
-                if all(
-                    argument.tag == 'VEHICLE_PARAMS'
-                    and argument.name == name
-                    for argument, name in zip(
-                        params,
-                        self.param_names,
-                    )
-                ):
-                    return_value[index:index + 7] = [CPPArgument(
-                        'params',
-                        'VehicleParams',
-                        is_reference=any(
-                            argument.is_reference
-                            for argument in params
                         ),
                     )]
                     break

@@ -15,10 +15,10 @@ class IntHeuristic(FunctionHeuristic):
         },
         'reference': {
             'type': (
+                'bool',
                 'float',
                 'Vector2',
                 'Vector3',
-                'VehicleParams',
             ),
             'tag': (
                 '_',
