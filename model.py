@@ -16,6 +16,8 @@ class CPPArgument:
         '_': 'int',
         'bool': 'bool',
         'Float': 'float',
+        'DB': 'int',
+        'DBResult': 'int',
         'Menu': 'IMenu&',
         'Text': 'ITextDraw&',
         'Text3D': 'ITextLabel&',
