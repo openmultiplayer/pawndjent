@@ -1,4 +1,4 @@
-SCRIPT_API(CreateActor, bool(int modelid, Vector3 pos, float angle))
+SCRIPT_API(CreateActor, int(int modelid, Vector3 pos, float angle))
 {
     throw pawn_natives::NotImplemented();
 }

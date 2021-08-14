@@ -218,7 +218,7 @@ SCRIPT_API(AddStaticPickup, bool(int model, int type, Vector3 pos, int virtualWo
     throw pawn_natives::NotImplemented();
 }
 
-SCRIPT_API(CreatePickup, bool(int model, int type, Vector3 pos, int virtualWorld))
+SCRIPT_API(CreatePickup, int(int model, int type, Vector3 pos, int virtualWorld))
 {
     throw pawn_natives::NotImplemented();
 }
@@ -503,7 +503,7 @@ SCRIPT_API(NetStats_GetIpPort, bool(IPlayer& player, std::string& output))
     throw pawn_natives::NotImplemented();
 }
 
-SCRIPT_API(CreateMenu, IMenu&(std::string const& title, int columns, Vector2 pos, float col1width, float col2width))
+SCRIPT_API(CreateMenu, int(std::string const& title, int columns, Vector2 pos, float col1width, float col2width))
 {
     throw pawn_natives::NotImplemented();
 }
@@ -713,7 +713,7 @@ SCRIPT_API(GangZoneStopFlashForAll, bool(int zone))
     throw pawn_natives::NotImplemented();
 }
 
-SCRIPT_API(Create3DTextLabel, ITextLabel&(std::string const& text, int colour, Vector3 pos, float drawDistance, int virtualWorld, bool testLOS))
+SCRIPT_API(Create3DTextLabel, int(std::string const& text, int colour, Vector3 pos, float drawDistance, int virtualWorld, bool testLOS))
 {
     throw pawn_natives::NotImplemented();
 }
@@ -738,7 +738,7 @@ SCRIPT_API(Update3DTextLabelText, bool(ITextLabel& textid, int colour, std::stri
     throw pawn_natives::NotImplemented();
 }
 
-SCRIPT_API(CreatePlayer3DTextLabel, IPlayerTextLabel&(IPlayer& player, std::string const& text, int colour, Vector3 pos, float drawDistance, int parentPlayerid, int parentVehicleid, bool testLOS))
+SCRIPT_API(CreatePlayer3DTextLabel, int(IPlayer& player, std::string const& text, int colour, Vector3 pos, float drawDistance, int parentPlayerid, int parentVehicleid, bool testLOS))
 {
     throw pawn_natives::NotImplemented();
 }

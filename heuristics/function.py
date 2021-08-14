@@ -34,11 +34,7 @@ class IntHeuristic(FunctionHeuristic):
                 function.name.startswith('Get')
                 or function.name.startswith('Create')
             )
-            and function.tag not in [
-                tag
-                for tag in CPPArgument.tag_types
-                if tag != '_'
-            ]
+            and function.tag not in ('Float', 'bool')
             and 'Explosion' not in function.name
             and not (
                 any(

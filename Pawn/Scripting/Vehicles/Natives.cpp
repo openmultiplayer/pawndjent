@@ -1,4 +1,4 @@
-SCRIPT_API(CreateVehicle, bool(int modelid, Vector3 pos, float rotation, int colour1, int colour2, int respawnDelay, bool addSiren))
+SCRIPT_API(CreateVehicle, int(int modelid, Vector3 pos, float rotation, int colour1, int colour2, int respawnDelay, bool addSiren))
 {
     throw pawn_natives::NotImplemented();
 }

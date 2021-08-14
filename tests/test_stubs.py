@@ -1131,7 +1131,7 @@ cases = [
                 },
             ''',
             '''
-                SCRIPT_API(Create3DTextLabel, ITextLabel&(std::string const& text, int colour, Vector3 pos, float drawDistance, int virtualWorld, bool testLOS))
+                SCRIPT_API(Create3DTextLabel, int(std::string const& text, int colour, Vector3 pos, float drawDistance, int virtualWorld, bool testLOS))
                 {
                     throw pawn_natives::NotImplemented();
                 }
@@ -1229,7 +1229,7 @@ cases = [
                 },
             ''',
             '''
-                SCRIPT_API(CreatePlayer3DTextLabel, IPlayerTextLabel&(IPlayer& player, std::string const& text, int colour, Vector3 pos, float drawDistance, int parentPlayerid, int parentVehicleid, bool testLOS))
+                SCRIPT_API(CreatePlayer3DTextLabel, int(IPlayer& player, std::string const& text, int colour, Vector3 pos, float drawDistance, int parentPlayerid, int parentVehicleid, bool testLOS))
                 {
                     throw pawn_natives::NotImplemented();
                 }
